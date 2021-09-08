@@ -1,0 +1,147 @@
+paste:
+  command_type: text
+  doc_string: Paste the text on the clipboard at the text selection location(s), replacing
+    the selected text.
+  type: core
+paste_and_indent:
+  command_type: text
+  doc_string: Paste the text on the clipboard at the text selection location(s), replacing the selected text, and making the base indentation level match that of the target location(s).
+  type: core
+prev_bookmark:
+  command_type: text
+  doc_string: Navigate to the previous bookmark in the document.
+  type: core
+prev_field:
+  command_type: text
+  doc_string: Navigate to the previous field in the snippet.
+  type: core
+prev_misspelling:
+  command_type: text
+  doc_string: Navigate to the previous misspelling in the document.
+  type: core
+prev_modification:
+  command_type: text
+  doc_string: Navigate to the previous modification in the document.
+  type: core
+prev_os_tab:
+  command_type: window
+  doc_string: Set the focus to the previous window in the os tab.
+  added: 4050
+  type: core
+prev_result:
+  command_type: window
+  doc_string: Jump to the previous build result.
+  type: core
+prev_view:
+  command_type: window
+  doc_string: Set the focus to the previous view by index.
+  args:
+    - name: extend
+      doc_string: 
+      type: boolean
+  type: core
+prev_view_in_stack:
+  command_type: window
+  doc_string: Sets the focus to the previous view in the stack of recent edited view.
+  type: core
+prompt_add_folder:
+  command_type: window
+  doc_string: Shows the OS native open dialog, so the user can choose what folder they want to add to the sidebar.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_open:
+  command_type: window
+  doc_string: Shows the MacOS native open dialog, so that the user can choose what file they want to open.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_open_file:
+  command_type: window
+  doc_string: Shows the OS native open dialog, so that the user can choose what file they want to open.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_open_folder:
+  command_type: window
+  doc_string: Shows the OS native open dialog, so that the user can choose what folder they want to open.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_open_project_or_workspace:
+  command_type: window
+  doc_string: Show the OS' native open dialog, so the user can choose what project they
+    want to open.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_save_as:
+  command_type: window
+  doc_string: Show the OS native save as dialog, so the user can choose the path where they want the file to be saved.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_select_workspace:
+  command_type: window
+  doc_string: Quick Switch Project.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+prompt_switch_project_or_workspace:
+  command_type: window
+  doc_string: Show the OS native open dialog, so the user can choose what project they want to switch to.
+  args:
+    - name: initial_directory
+      doc_string: An absolute folder path on disk, where the native dialog will initially open.
+      type: string
+  type: core
+purchase_license:
+  command_type: application
+  doc_string: Navigates to the url https://www.sublimehq.com/store/text in the default browser.
+  type: core
+profile_plugins:
+  command_type: window
+  doc_string: Generates a report on the time taken by each plugin to respond to an event.
+  type: default
+  location: Default/profile.py
+profile_syntax_definition:
+  command_type: window
+  doc_string: Runs the syntax performance test on the given view.
+  type: default
+  location: Default/run_syntax_tests.py
+permute_lines:
+  command_type: text
+  doc_string: 
+  args:
+    - name: operation
+      doc_string: 
+      type: string
+  type: default
+  location: Default/sort.py
+permute_selection:
+  command_type: text
+  doc_string: 
+  args:
+    - name: operation
+      doc_string: 
+      type: string
+  type: default
+  location: Default/sort.py
+paste_selection_clipboard:
+  command_type: text
+  doc_string: 
+  core: 

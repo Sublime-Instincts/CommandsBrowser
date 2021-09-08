@@ -1,0 +1,21 @@
+build:
+  command_type: window
+  doc_string: 'Execute the provided build system or prompt for selection (select: true) and choose a default.
+    build_system should be a resource path to a build system file or the name of a project-specific build system'
+  args:
+    - name: select
+      doc_string: Whether to prompt for selecting a build system.
+      type: boolean
+    - name: build_system
+      doc_string: A resource path to a .sublime-build file.
+      type: string
+    - name: variant
+      doc_string: The name of the variant present in the build system as specified by the 'name' key.
+      type: string
+    - name: choice_build_system
+      doc_string:
+      type: boolean
+    - name: choice_variant
+      doc_string:
+      type: boolean
+  type: core

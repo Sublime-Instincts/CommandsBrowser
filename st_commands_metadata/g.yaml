@@ -1,0 +1,37 @@
+goto_symbol_in_project:
+  command_type: window
+  doc_string: Open the Goto Symbol In Project quick panel.
+  type: core
+goto_definition:
+  command_type: window
+  doc_string: 
+  args:
+    - name: symbol
+      doc_string: The symbol information.
+      type: string
+    - name: kind
+      doc_string: 
+      type: 
+    - name: side_by_side
+      doc_string: 
+      type: boolean
+  type: default
+  location: Default/symbol.py
+goto_reference:
+  command_type: window
+  doc_string:
+  args:
+    - name: symbol
+      doc_string:
+      type: string
+  type: default
+  location: Default/symbol.py
+goto_line:
+  command_type: text
+  doc_string: Navigates to the specified line, additionally scrolling the viewport such that the given line is in the middle of the available viewport. 
+  args:
+    - name: line
+      doc_string: The line number to navigate to. 
+      type: int
+  type: default
+  location: Default/goto_line.py

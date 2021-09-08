@@ -1,0 +1,72 @@
+delete_word:
+  command_type: text
+  doc_string: Delete the (sub-)word in front of or after each caret.
+  args:
+    - name: forward
+      doc_string: Whether the forward (sub-)word should be deleted.
+      type: boolean
+    - name: sub_words
+      doc_string: 
+      type: boolean
+  type: core
+delete_file:
+  command_type: window
+  doc_string: Deletes the given file(s) by moving the file(s) to the system trash bin.
+  args:
+    - name: files
+      doc_string: The absolute path(s) to the given file(s) on disk.
+      type: List<string>
+    - name: prompt
+      doc_string: Whether to prompt the user to confirm the deletion by showing a dialog box.
+      type: boolean
+  type: core
+delete_folder:
+  command_type: window
+  doc_string: Deletes the given folder(s) by moving the folder(s) to the system trash bin.
+  args:
+    - name: dirs
+      doc_string: The absolute path(s) to the given folder(s) on disk.
+      type: List<string>
+    - name: prompt
+      doc_string: Whether to prompt the user to confirm the deletion by showing a dialog box.
+      type: boolean
+  type: core
+delete_to_mark:
+  command_type: text
+  doc_string:
+  type: default
+  location: Default/mark.py
+detect_indentation:
+  command_type: text
+  doc_string: Guess indentation settings from the text content.
+  args:
+    - name: show_message
+      doc_string:
+      type: boolean 
+  added: 4050
+  type: core
+duplicate_line:
+  command_type: text
+  doc_string: Create a copy of each caret's line.
+decrease_font_size:
+  command_type: application
+  doc_string: Increases the global font size.
+  type: default
+  location: Default/font.py
+drag_select:
+  command_type: text
+  doc_string: 
+  args:
+    - name: by
+      doc_string: The mode of selection. Valid values are words, columns and lines.
+      type: string.
+    - name: event
+      doc_string: An object that consists of the x & y window coordinates & the button detail via the button key.
+      type: object
+    - name: additive
+      doc_string: Whether to add the selection to the existing selection(s).
+      type: boolean
+    - name: subtractive
+      doc_string: Whether to remoove the existing selection(s) before adding the new selection.
+      type: boolean
+  type: core

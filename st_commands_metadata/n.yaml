@@ -1,0 +1,105 @@
+new_build_system:
+  command_type: window
+  doc_string: Creates a new view and populates it with a simple build system boilerplate.
+  type: default
+  location: Default/new_templates.py
+new_plugin:
+  command_type: window
+  doc_string: Creates a new view and populates it with a simple plugin boilerplate.
+  type: default
+  location: Default/new_templates.py
+new_snippet:
+  command_type: window
+  doc_string: Creates a new view and populates it with a simple snippet boilerplate.
+  type: default
+  location: Default/new_templates.py
+new_syntax:
+  command_type: window
+  doc_string: Creates a new view and populates it with a simple syntax boilerplate.
+  added: 3084
+  type: default
+  location: Default/new_templates.py
+new_file:
+  command_type: window
+  doc_string: Create a new empty tab in the active window.
+  args:
+    - name: syntax
+      doc_string: 
+      type: string
+  type: core
+new_file_at:
+  command_type: window
+  doc_string: Creates a new empty tab in the active window.
+  args:
+    - name: dirs
+      doc_string: A list of absolute directory paths were the new tab has to be saved. Only the first value is considered.
+      type: List<string>
+  type: default
+  location: Default/side_bar.py
+new_folder:
+  command_type: window
+  doc_string: Creates a new folder in the given directory.
+  args:
+    - name: dirs
+      doc_string: A list of absolute directory paths. Only the first is considered for creating the new folder.
+      type: List<string>
+  type: default
+  location: Default/side_bar.py
+new_os_tab:
+  command_type: window
+  doc_string: Create a new empty window in the os tab.
+  added: 4050
+  type: core
+new_window:
+  command_type: application
+  doc_string: Open a new ST window.
+  type: core
+new_window_for_project:
+  command_type: window
+  doc_string: Clone project into a new workspace.
+  type: core
+next_bookmark:
+  command_type: text
+  doc_string: Navigate to the next bookmark in the document.
+  type: core
+next_field:
+  command_type: text
+  doc_string: Navigate to the next field in the snippet.
+  type: core
+next_misspelling:
+  command_type: text
+  doc_string: Navigate to the next misspelling in the document.
+  type: core
+next_modification:
+  command_type: text
+  doc_string: Navigate to the next modification in the document.
+  type: core
+next_os_tab:
+  command_type: window
+  doc_string: Set the focus to the next window in the os tab.
+  added: 4050
+  type: core
+next_result:
+  command_type: window
+  doc_string: Jump to the next build result.
+  type: core
+next_view:
+  args:
+    - name: extend
+      doc_string: 
+      type: boolean
+  command_type: window
+  doc_string: Set the focus to the next view by index.
+  type: core
+next_view_in_stack:
+  command_type: window
+  doc_string: Set the focus to the next view in the stack of recent edited view.
+new_pane:
+  command_type: window
+  doc_string: 
+  args:
+    - name: move
+      doc_string: 
+      type: boolean
+  type: default
+  location: Default/pane.py

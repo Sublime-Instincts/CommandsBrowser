@@ -1,0 +1,20 @@
+wrap_block:
+  command_type: text
+  doc_string:
+  args:
+    - name: begin
+      doc_string:
+      type: string
+    - name: end
+      doc_string:
+      type: string
+  type: default
+  location: Default/block.py  
+wrap_lines:
+  command_type: text
+  doc_string: Hard-wrap all lines at the ruler.
+  args:
+    - name: width
+      doc_string: The column at which the lines should be hard wraped.
+      type: int
+  type: core

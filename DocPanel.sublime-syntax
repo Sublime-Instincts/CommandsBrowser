@@ -1,0 +1,34 @@
+%YAML 1.2
+---
+file_extensions:
+  - doc_panel
+hidden: true
+scope: text.doc_panel
+contexts:
+  main:
+    - include: arg_type_brackets
+    - include: single_quoted_string
+
+  arg_type_brackets:
+    - match: '\('
+      scope: punctuation.section.parens.begin.doc_panel
+      push: arg_type_brackets_body
+
+  arg_type_brackets_body:
+    - meta_scope: meta.parens.doc_panel
+    - match: '\)'
+      scope: punctuation.section.parens.end.doc_panel
+      pop: 1
+    - match: \b(string|int|object|boolean)\b
+      scope: storage.type.doc_panel
+
+  single_quoted_string:
+    - match: \'
+      scope: punctuation.definition.string.begin.doc_panel
+      push: single_quoted_string_body
+
+  single_quoted_string_body:
+    - meta_scope: meta.string.doc_panel string.quoted.single.doc_panel
+    - match: \'
+      scope: punctuation.definition.string.end.doc_panel
+      pop: 1

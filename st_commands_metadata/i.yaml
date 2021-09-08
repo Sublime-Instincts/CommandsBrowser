@@ -1,0 +1,38 @@
+increase_font_size:
+  command_type: application
+  doc_string: Increases the global font size.
+  type: default
+  location: Default/font.py
+indent:
+  command_type: text
+  doc_string: Increase the indentation level of the text selection(s).
+  type: core
+insert:
+  command_type: text
+  doc_string: Insert the specified text into the document at the text caret location(s).
+  args:
+    - name: characters
+      doc_string: The string to be inserted.
+      type: string
+  type: core
+insert_snippet:
+  command_type: text
+  doc_string: Insert the specified snippet content into the document at the text caret location(s).
+  args:
+    - name: contents
+      doc_string: The snippet as a string to be inserted. Accepts snippet like variables, including built in ones. The backslashes have to be escaped like in case of every JSON string.
+      type: string
+    - name: name
+      doc_string: Relative path to a .sublime-snippet file, the contents of which will be inserted.
+      type: string
+  type: core
+install_package_control:
+  command_type: application
+  doc_string: Installs Package Control in a freshly installed application.
+  type: default
+  location: Default/install_package_control.py
+invert_selection:
+  command_type: text
+  doc_string: Inverts the given selection(s) i.e the non selected region(s) are selected & the selected region(s) are removed from the selection.
+  added: 3014
+  type: core

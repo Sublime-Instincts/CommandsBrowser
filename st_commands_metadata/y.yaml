@@ -1,0 +1,5 @@
+yank:
+  command_type: text
+  doc_string:
+  type: default
+  location: Default/kill_ring.py

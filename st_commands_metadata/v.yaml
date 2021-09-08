@@ -1,0 +1,10 @@
+view_resource:
+  command_type: window
+  doc_string: Shows the given resource file in a read only mode (unless the respective package name is present in Packages/). If the resource path is not given via 'name', a ListInputHandler is shown to allow the user to pick a resource file.
+  args:
+    - name: name
+      doc_string: The path to the resource file, relative to the package name.
+      type: string
+  added: 3154
+  type: default
+  location: Default/ui.py

@@ -1,0 +1,142 @@
+tab:
+  command_type: text
+  doc_string:
+  args:
+    - name: set_translate_tabs
+      doc_string: 
+      type: boolean
+    - name: whole_buffer
+      doc_string: 
+      type: boolean
+  type: default
+  location: Default/indentation.py
+toggle_bookmark:
+  command_type: text
+  doc_string: Toggles the bookmarked state for each selection.
+toggle_case_sensitive:
+  command_type: find
+  doc_string: Toggles the <b>Case sensitive</b> flag in the Find/Replace/Incremental Find/Find in Files panel.
+toggle_distraction_free:
+  command_type: window
+  doc_string: Toggles the distraction free mode.
+  type: core
+toggle_full_screen:
+  command_type: window
+  doc_string: Toggles whether the current Sublime Text window is in full screen mode.
+  type: core
+toggle_inline_diff:
+  command_type: text
+  doc_string: Toggles whether the inline diff of the modifications under the cursor is displayed.
+  args:
+    - name: prefer_hide
+      doc_string: Whether to hide the other visible diffs, while showing the one(s) under the cursor(s). 
+      type: boolean 
+  added: 3206
+  type: core
+toggle_menu:
+  command_type: window
+  doc_string: Toggles the visibility of the menu bar.
+  type: core
+toggle_minimap:
+  command_type: window
+  doc_string: Toggles the visibility of the minimap.
+  type: core
+toggle_overwrite:
+  command_type: text
+  doc_string: Toggles whether the caret is in insert mode or overwrite mode.
+  type: core
+toggle_preserve_case:
+  command_type: find
+  doc_string: Toggles the Preserve case flag in the Replace panel. 
+  type: core 
+toggle_record_macro:
+  command_type: text
+  doc_string: Start or stop to record a macro.
+  type: core
+toggle_regex:
+  command_type: find
+  doc_string: Toggles the Regular expression flag in the Find/Replace/Incremental Find/Find in Files panel.
+  type: core
+toggle_save_all_on_build:
+  command_type: window
+  doc_string: Enable/Disable saving all open files before running a build command.
+  type: core
+toggle_setting:
+  command_type: text
+  doc_string: Toggles the specified boolean setting.
+  args:
+    - name: setting
+      doc_string: The boolean setting to toggle.
+      type: string
+  type: core
+toggle_show_open_files:
+  command_type: window
+  doc_string: Toggles the visibility of the list of open files in the sidebar.
+  type: core
+toggle_side_bar:
+  command_type: window
+  doc_string: Toggles the visibility of the side bar.
+  type: core
+toggle_status_bar:
+  command_type: window
+  doc_string: Toggles the visibility of the status bar.
+  type: core
+toggle_tabs:
+  command_type: window
+  doc_string: Toggles the visibility of the tabs.
+  type: core
+toggle_whole_word:
+  command_type: find
+  doc_string: Toggles the Whole word flag in the Find/Replace/Incremental Find/Find in Files panel.
+toggle_wrap:
+  command_type: find
+  doc_string: Toggles the wrap flag in Find/Replace/Incremental Find panel.
+trim_trailing_white_space:
+  command_type: text
+  doc_string: Delete trailing whitespace from all lines.
+  added: 4050
+toggle_in_selection:
+  command_type: find
+  doc_string: Toggles the In selection flag in the Find/Replace/Incremental Find panel.
+  type: core
+toggle_highlight:
+  command_type: find
+  doc_string: Toggles the Highlight matches flag in the Find/Replace/Incremental Find panel.
+  type: core
+toggle_show_context:
+  command_type: find
+  doc_string: Toggles the Show Context flag in the Find in Files panel.
+  type: core
+toggle_use_buffer:
+  command_type: find
+  doc_string: Toggles the Use Buffer flag in the Find in Files panel.
+  type: core
+toggle_use_gitignore:
+  command_type: find
+  doc_string: Toggles the Use gitignore flag in the Find in Files panel.
+  added: 4072
+  type: core
+transpose:
+  command_type: text
+  doc_string:
+  type: default
+  location: Default/transpose.py
+toggle_comment:
+  command_type: text
+  doc_string: Toggles the comment for the particular scope based on the metadata file.
+  args:
+    - name: block
+      doc_string: Whether the comment to be toggled should be a block comment.
+      type: boolean
+  type: default
+  location: Default/comment.py
+title_case:
+  command_type: text
+  doc_string: Converts the selection(s) to title case.
+  type: default
+  location: Default/transform.py
+transformer:
+  command_type: text
+  doc_string: 
+  type: default
+  location: Default/transform.py
