@@ -1,0 +1,156 @@
+{
+    "echo": {
+        "command_type": "application",
+        "doc_string": "Prints any given arbitrary arguments to the console output.",
+        "type": "default",
+        "location": "Default/echo.py"
+    },
+    "edit_settings": {
+        "command_type": "application",
+        "doc_string": "Opens the default settings file and its user version in a split layout window.",
+        "args": [
+            {
+                "name": "base_file",
+                "doc_string": "A unicode string of the path to the base settings file. Typically this will be in the form: ${packages}/PackageName/Package.sublime-settings",
+                "type": "string"
+            },
+            {
+                "name": "user_file",
+                "doc_string": "An optional file path to the users editable version of the settings file. If not provided, the filename from base_file will be appended to ${packages}/User/",
+                "type": "string"
+            },
+            {
+                "name": "default",
+                "doc_string": "An optional unicode string of the default contents if the user version of the settings file does not yet exist. Use '$0' to place the cursor.",
+                "type": "string"
+            }
+        ],
+        "type": "default",
+        "location": "Default/settings.py"
+    },
+    "edit_syntax_settings": {
+        "command_type": "window",
+        "doc_string": "Opens the syntax-specific settings file for the currently active view in a split window layout. The left handow window contains the default syntax specific settings & the right handow contains the user syntax specific settings.",
+        "type": "default",
+        "location": "Default/settings.py"
+    },
+    "exec": {
+        "command_type": "window",
+        "doc_string": "Runs an external process asynchronously. This is the default target option for any build system.",
+        "args": [
+            {
+                "name": "cmd",
+                "doc_string": "The executable to run, plus any arguments to pass to it. Shell constructs such as piping and redirection are not supported.",
+                "type": "List<string>"
+            },
+            {
+                "name": "shell_cmd",
+                "doc_string": "A shell command to execute. Unlike the cmd option, this does allow piping and redirection. Will use bash on Mac and Linux machine, and cmd.exe on Windows.",
+                "type": "string"
+            },
+            {
+                "name": "file_regex",
+                "doc_string": "A regular expression to run on the build output to match file information. The matched file information is used to enable result navigation",
+                "type": "string"
+            },
+            {
+                "name": "line_regex",
+                "doc_string": "A regular expression to run on the build output to match line information. The matched file information is used to enable result navigation",
+                "type": "string"
+            },
+            {
+                "name": "working_dir",
+                "doc_string": "The absolute path to the directory where the build process has to be launched. The default value is an empty string, which means that the process will be launched in the active view's directory.",
+                "type": "string"
+            },
+            {
+                "name": "encoding",
+                "doc_string": "The encoding of the build system output. Defaults to 'utf-8'.",
+                "type": "string"
+            },
+            {
+                "name": "env",
+                "doc_string": "Any environment variables to be made available when the build launches.",
+                "type": "object"
+            },
+            {
+                "name": "quiet",
+                "doc_string": "Reduces the amount of output about the build system invocation.",
+                "type": "boolean"
+            },
+            {
+                "name": "kill",
+                "doc_string": "Whether to kill the running process. The default value is False.",
+                "type": "boolean"
+            },
+            {
+                "name": "kill_previous",
+                "doc_string": "Whether to kill the previously running process before starting a new build.",
+                "type": "boolean"
+            },
+            {
+                "name": "update_annotations_only",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "word_wrap",
+                "doc_string": "Whether to apply word wrap on the build output. The default value is True",
+                "type": "boolean"
+            },
+            {
+                "name": "syntax",
+                "doc_string": "The path to a syntax file to be applied on the build output. This will be in the form ${packages}/. The default value is Packages/Text/Plain text.tmLanguage.",
+                "type": "string"
+            }
+        ],
+        "type": "default",
+        "location": "Default/exec.py"
+    },
+    "exit": {
+        "command_type": "application",
+        "doc_string": "Closes all windows and exists the application.",
+        "type": "core"
+    },
+    "expand_selection": {
+        "command_type": "text",
+        "doc_string": "Expands the current text caret selection(s) to the specified location.",
+        "args": [
+            {
+                "name": "to",
+                "doc_string": "The entity to expand the caret selection(s) to. Valid values can be line, scope, brackets, indentation, tag, bol, hardbol, eol, hardeol, bof, eof, brackets and smart.",
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "expand_selection_to_paragraph": {
+        "command_type": "text",
+        "doc_string": "Expands the current text caret selection(s) to the paragraph(s).",
+        "type": "core"
+    },
+    "expand_snippet": {
+        "command_type": "text",
+        "doc_string": "Expands the snippet under the cursor.",
+        "added": 4050,
+        "type": "core"
+    },
+    "expand_tabs": {
+        "command_type": "text",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "set_translate_tabs",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "whole_buffer",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "type": "default",
+        "location": "Default/indentation.py"
+    }
+}
