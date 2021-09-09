@@ -1,0 +1,281 @@
+{
+    "cancel_build": {
+        "command_type": "window",
+        "doc_string": "Cancel the current build.",
+        "type": "core"
+    },
+    "clear_bookmarks": {
+        "command_type": "text",
+        "doc_string": "Remove(s) all bookmark(s) in the current document.",
+        "args": [
+            {
+                "name": "mark",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "clear_fields": {
+        "command_type": "text",
+        "doc_string": "Clears the fields of the current snippet.",
+        "type": "core"
+    },
+    "clear_location": {
+        "command_type": "find",
+        "doc_string": "Clears the 'Where' field in the Find in Files panel.",
+        "type": "core"
+    },
+    "clear_recent_files": {
+        "command_type": "window",
+        "doc_string": "Clears the list of recently opened files.",
+        "type": "core"
+    },
+    "clear_recent_projects_and_workspaces": {
+        "command_type": "window",
+        "doc_string": "Clears the list of recently opened projects and workspaces.",
+        "type": "core"
+    },
+    "close": {
+        "command_type": "window",
+        "doc_string": "Close the active view.",
+        "type": "core"
+    },
+    "clone_file": {
+        "command_type": "window",
+        "doc_string": "Create a new view into the file.",
+        "args": [
+            {
+                "name": "add_to_selection",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "group",
+                "doc_string": null,
+                "type": null
+            },
+            {
+                "name": "index",
+                "doc_string": null,
+                "type": null
+            }
+        ],
+        "type": "core"
+    },
+    "close_all": {
+        "command_type": "window",
+        "doc_string": "Closes all views.",
+        "type": "core"
+    },
+    "close_by_index": {
+        "args": {
+            "group": -1,
+            "index": -1
+        },
+        "command_type": "window",
+        "doc_string": "Close a view of a group by index. A value of -1 means active group/view."
+    },
+    "close_deleted_files": {
+        "command_type": "window",
+        "doc_string": "Closes all views into deleted files.",
+        "args": [
+            {
+                "name": "group",
+                "doc_string": null,
+                "type": "int"
+            }
+        ],
+        "added": 4050,
+        "type": "core"
+    },
+    "close_file": {
+        "command_type": "window",
+        "doc_string": "Closes the active file.",
+        "type": "core"
+    },
+    "close_folder_list": {
+        "command_type": "window",
+        "doc_string": "Removes all the folder(s) from the sidebar and hides it.",
+        "type": "core"
+    },
+    "close_others_by_index": {
+        "command_type": "window",
+        "doc_string": "Close all views of a group but the one identified by group and index. A value of -1 means active group/view.",
+        "args": {
+            "group": -1,
+            "index": -1
+        },
+        "added": 4050,
+        "type": "core"
+    },
+    "close_selected": {
+        "command_type": "window",
+        "doc_string": "Close all selected views in a group. A value of -1 means active group.",
+        "args": {
+            "group": -1
+        },
+        "added": 4050,
+        "type": "core"
+    },
+    "close_tag": {
+        "command_type": "window",
+        "doc_string": "Close an HTML/XML tag.",
+        "args": [
+            {
+                "name": "insert_slash",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "type": "core"
+    },
+    "close_to_right_by_index": {
+        "command_type": "window",
+        "doc_string": "Close all views of a group right of the one identified by index. A value of -1 means active group/view.",
+        "args": {
+            "group": -1,
+            "index": -1
+        },
+        "added": 4050,
+        "type": "core"
+    },
+    "close_transient": {
+        "command_type": "window",
+        "doc_string": "Close all transient sheets and views.",
+        "added": 4050
+    },
+    "close_unmodified": {
+        "command_type": "window",
+        "doc_string": "Close all unmodified views of a group. A value of -1 means active group.",
+        "args": {
+            "group": -1,
+            "index": -1
+        },
+        "added": 4050,
+        "type": "core"
+    },
+    "close_unmodified_to_right_by_index": {
+        "command_type": "window",
+        "doc_string": "Close all unmodified views of a group right of the one identified by index. A value of -1 means active group/view.",
+        "args": {
+            "group": -1,
+            "index": -1
+        },
+        "added": 4050,
+        "type": "core"
+    },
+    "close_window": {
+        "command_type": "window",
+        "doc_string": "Close the active window.",
+        "type": "core"
+    },
+    "close_workspace": {
+        "command_type": "window",
+        "doc_string": "Close the active workspace.",
+        "type": "core"
+    },
+    "commit_completion": {
+        "command_type": "text",
+        "doc_string": "Inserts the selected completion into the text and closes the AC panel.",
+        "type": "core"
+    },
+    "console_python_version": {
+        "command_type": "window",
+        "doc_string": "Switch the python interpreter version in console input.",
+        "args": [
+            {
+                "name": "version",
+                "doc_string": "The version of the python interpreter. Valid values are \"3.3\" & \"3.8\".",
+                "type": "string"
+            }
+        ],
+        "added": 4050,
+        "type": "core"
+    },
+    "context_menu": {
+        "command_type": "window",
+        "doc_string": "Shows the context menu.",
+        "type": "core"
+    },
+    "copy": {
+        "command_type": "text",
+        "doc_string": "Copies the given selection(s) to the system clipboard.",
+        "type": "core"
+    },
+    "cut": {
+        "command_type": "text",
+        "doc_string": "Cut(s) the given selection(s) to the system clipboard.",
+        "type": "core"
+    },
+    "convert_color_scheme": {
+        "command_type": "window",
+        "doc_string": "Converts a color scheme from the older .tmTheme format to the newer .sublime-color-scheme format provided the active view is a .tmTheme file.",
+        "args": [
+            {
+                "name": "use_variables",
+                "doc_string": "Indicates how the color values in the .tmTheme file has to be transformed. Valid values are 'hsl', 'yes', 'no'.",
+                "type": "string"
+            }
+        ],
+        "type": "default",
+        "location": "Default/convert_color_scheme.py"
+    },
+    "convert_syntax": {
+        "command_type": "window",
+        "doc_string": "Converts a syntax file from the older .tmLanguage format to the newer .sublime-syntax format, provided the active view is a .tmLanguage file.",
+        "added": 3084,
+        "type": "default",
+        "location": "Default/convert_syntax.py"
+    },
+    "copy_path": {
+        "command_type": "text",
+        "doc_string": "Copies the active view's file name to the clipboard, if the active view represents a file on disk.",
+        "type": "default",
+        "location": "Default/copy_path.py"
+    },
+    "cancel_find": {
+        "command_type": "find",
+        "doc_string": "Cancels the Find in Files panel, closing it.",
+        "added": 4075,
+        "type": "core"
+    },
+    "close_pane": {
+        "command_type": "window",
+        "doc_string": "Closes a group, given by its index.",
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the group to close. It has a default value of -1 indicating the active group.",
+                "type": "int"
+            }
+        ],
+        "type": "default",
+        "location": "Default/pane.py"
+    },
+    "copy_as_html": {
+        "command_type": "text",
+        "doc_string": "Copies the contents of the current view as rich HTML to the system clipboard.",
+        "args": [
+            {
+                "name": "enclosing_tags",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "font_size",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 4091,
+        "type": "core"
+    },
+    "chain": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": null,
+        "added": 4103,
+        "type": "core"
+    }
+}
