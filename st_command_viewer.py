@@ -7,7 +7,7 @@ import sublime_plugin
 kind_mapping = {
     "window": (sublime.KIND_ID_FUNCTION, "W", "Window Command"),
     "text": (sublime.KIND_ID_NAMESPACE, "T", "Text Command"),
-    "application": (sublime.KIND_ID_FUNCTION, "A", "Application Command"),
+    "application": (sublime.KIND_ID_TYPE, "A", "Application Command"),
     "find": (sublime.KIND_ID_MARKUP, "F", "Find Command")
 }
 
