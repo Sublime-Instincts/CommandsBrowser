@@ -1,0 +1,156 @@
+{
+    "add_directory": {
+        "command_type": "find",
+        "doc_string": "Opens an OS dialog box to prompt for a folder to the 'Where' field in the Find in Files panel.",
+        "type": "core"
+    },
+    "add_where_snippet": {
+        "command_type": "find",
+        "doc_string": "Adds a snippet to the 'Where' field in the Find in Files panel.",
+        "args": [
+            {
+                "name": "snippet",
+                "doc_string": "The string to be inserted into the 'Where' field in the Find in Files panel. Supports snippet like variables.",
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "add_to_kill_ring": {
+        "command_type": "text",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "forward",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 2024,
+        "type": "default",
+        "location": "Default/kill_ring.py"
+    },
+    "append": {
+        "command_type": "text",
+        "doc_string": "Append the given text string to the end of the buffer.",
+        "args": [
+            {
+                "name": "characters",
+                "doc_string": "The string to be appended to the end of the text buffer.",
+                "type": "string"
+            },
+            {
+                "name": "force",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "scroll_to_end",
+                "doc_string": "Whether to scroll to the end of the buffer after appending.",
+                "type": "boolean"
+            },
+            {
+                "name": "disable_tab_translation",
+                "doc_string": "Whether to translate tabs to spaces.",
+                "type": "boolean"
+            }
+        ],
+        "type": "core"
+    },
+    "arithmetic": {
+        "command_type": "text",
+        "doc_string": "Evaluates the given expression. If the expression is not provided, it launches a TextInputHandler to gather the expression from the user.",
+        "args": [
+            {
+                "name": "expr",
+                "doc_string": "The expression to evaluate.",
+                "type": "string"
+            }
+        ],
+        "added": 3154,
+        "type": "default",
+        "location": "Default/arithmetic.py"
+    },
+    "auto_complete": {
+        "command_type": "text",
+        "doc_string": "Show the auto completion popup.",
+        "args": [
+            {
+                "name": "api_completions_only",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "disable_auto_insert",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "next_completion_if_showing",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "auto_complete_commit_on_tab",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "mini",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "default",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "auto_complete_prev": {
+        "command_type": "text",
+        "doc_string": "Goes to the previous entry in the AC panel.",
+        "type": "core"
+    },
+    "auto_indent_tag": {
+        "command_type": "text",
+        "doc_string": "Indents HTML & XML like tags.",
+        "type": "default",
+        "location": "Default/auto_indent_tag.py"
+    },
+    "add_jump_record": {
+        "command_type": "text",
+        "doc_string": "Allows packages/plugins to add a jump point without changing the selection.",
+        "args": [
+            {
+                "name": "selection",
+                "doc_string": "The selection to be added to the jump history. Can be an integer, a list of 2 integers or a list of list of 2 integers.",
+                "type": "int|List<int>|List<List<int>>"
+            }
+        ],
+        "added": 4082,
+        "type": "default",
+        "location": "Default/history_list.py"
+    },
+    "auto_complete_goto_definition": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "symbol",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 4073,
+        "type": "default",
+        "location": "Default/symbol.py"
+    },
+    "auto_complete_open_link": {
+        "command_type": "text",
+        "doc_string": "Opens the first link in the details pane of the AC panel, when the AC panel is visible.",
+        "added": 4073,
+        "type": "core"
+    }
+}
