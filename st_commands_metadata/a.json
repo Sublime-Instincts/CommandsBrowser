@@ -77,7 +77,7 @@
         "args": [
             {
                 "name": "api_completions_only",
-                "doc_string": null,
+                "doc_string": "Whether to include completions from snippets/completions file in the AC panel.",
                 "type": "boolean"
             },
             {
