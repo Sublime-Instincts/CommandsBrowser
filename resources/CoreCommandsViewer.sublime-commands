@@ -1,0 +1,16 @@
+[
+    {
+        "caption": "Core Commands Viewer: View Sublime Text commands",
+        "command": "core_commands_viewer",
+        "args": {
+            "application": "st"
+        },
+    },
+    {
+        "caption": "Core Commands Viewer: View Sublime Merge commands",
+        "command": "core_commands_viewer",
+        "args": {
+            "application": "sm"
+        },
+    }
+]
