@@ -1,5 +1,5 @@
 import os
-import yaml
+import json
 import string
 import sublime
 import sublime_plugin
@@ -15,12 +15,11 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
 
     def run(self):
         metadata_folder = os.path.join(os.path.dirname(__file__), "st_commands_metadata")
-        yaml_file_names = [name + ".yaml" for name in list(string.ascii_lowercase)]
+        yaml_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
         final_dict = {}
         for file_name in yaml_file_names:
             with open(os.path.join(metadata_folder, file_name), "r") as file:
-                command_data = file.read()
-                data = yaml.load(command_data, Loader=yaml.FullLoader)
+                data = json.loads(file.read())
                 if data is not None:
                     final_dict.update(data)
         items = []
