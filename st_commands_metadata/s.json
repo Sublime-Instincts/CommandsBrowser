@@ -174,7 +174,7 @@
     },
     "show_license_window": {
         "command_type": "application",
-        "doc_string": "Displays the license dialog.",
+        "doc_string": "Displays the license dialog. This will only work if you are running an unregistered copy of Sublime Text.",
         "type": "core"
     },
     "show_overlay": {
@@ -193,12 +193,17 @@
             },
             {
                 "name": "show_files",
-                "doc_string": null,
+                "doc_string": "Whether to show files in the overlay. Only makes sense when 'name' is set to 'goto'.",
                 "type": "boolean"
             },
             {
                 "name": "command",
-                "doc_string": null,
+                "doc_string": "The name of the command. Only makes sense when 'name' is set to 'command_palette'",
+                "type": "string"
+            },
+            {
+                "name": "args",
+                "doc_string": "Arguments to be passed on to the command, if any.",
                 "type": "string"
             }
         ],
@@ -215,7 +220,7 @@
             },
             {
                 "name": "toggle",
-                "doc_string": null,
+                "doc_string": "Whether to toggle the visibility of said panel.",
                 "type": "boolean"
             },
             {
@@ -271,6 +276,11 @@
             {
                 "name": "use_gitignore",
                 "doc_string": "Whether to activate the Use gitignore option.",
+                "type": "boolean"
+            },
+            {
+                "name": "where",
+                "doc_string": "The text to be put in the 'Where' field of Find in Files panel. Only makes sense when the 'panel' equals 'find_in_files'.",
                 "type": "boolean"
             }
         ],
