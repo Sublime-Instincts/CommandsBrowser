@@ -1,0 +1,13 @@
+{
+    "left_delete": {
+        "command_type": "text",
+        "doc_string": "Deletes the character(s) to the left of the text selection caret(s).",
+        "type": "core"
+    },
+    "lower_case": {
+        "command_type": "text",
+        "doc_string": "Converts the word under the cursor(s) to lower case.",
+        "type": "default",
+        "location": "Default/transform.py"
+    }
+}

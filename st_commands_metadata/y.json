@@ -1,0 +1,8 @@
+{
+    "yank": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "default",
+        "location": "Default/kill_ring.py"
+    }
+}

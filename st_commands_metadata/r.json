@@ -1,0 +1,196 @@
+{
+    "redo": {
+        "command_type": "text",
+        "doc_string": "Redo the last undo.",
+        "type": "core"
+    },
+    "redo_or_repeat": {
+        "command_type": "text",
+        "doc_string": "Redo the last undo or repeat the last action if there is no undo to revert.",
+        "type": "core"
+    },
+    "refresh_folder_list": {
+        "command_type": "window",
+        "doc_string": "Refresh the folder list in the sidebar from the filesystem.",
+        "type": "core"
+    },
+    "reindent": {
+        "command_type": "text",
+        "doc_string": "Reindent the lines.",
+        "args": [
+            {
+                "name": "single_line",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "force_indent",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "type": "core"
+    },
+    "remove_folder": {
+        "args": [
+            {
+                "name": "dirs",
+                "doc_string": null,
+                "type": "List<string>"
+            }
+        ],
+        "command_type": "window",
+        "doc_string": "Remove dirs from sidebar."
+    },
+    "remove_license": {
+        "command_type": "application",
+        "doc_string": "Removes the license.",
+        "type": "core"
+    },
+    "reopen": {
+        "command_type": "text",
+        "doc_string": "Reopen the file with a given encoding.",
+        "args": [
+            {
+                "name": "encoding",
+                "doc_string": "The encoding to be used when the file is reopened.",
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "reopen_last_file": {
+        "command_type": "window",
+        "doc_string": "Reopen the most recently closed file."
+    },
+    "replace_all": {
+        "command_type": "find",
+        "doc_string": "Replace all tokens in the view, which match the pattern in the Find Input Field."
+    },
+    "replace_completion_with_auto_complete": {
+        "command_type": "text",
+        "doc_string": "Replace the most recently inserted completion with the next result provided by the auto completion engine."
+    },
+    "replace_next": {
+        "command_type": "find",
+        "doc_string": "Replace the next token in the view, which matches the pattern in the Find Input Field."
+    },
+    "resize_window": {
+        "command_type": "window",
+        "doc_string": "Resize the window's external bounds to the width and height specified.",
+        "args": [
+            {
+                "name": "width",
+                "doc_string": "The external width of the window.",
+                "type": "int"
+            },
+            {
+                "name": "height",
+                "doc_string": "The external height of the window.",
+                "type": "int"
+            }
+        ],
+        "type": "core"
+    },
+    "reveal_link_source": {
+        "command_type": "window",
+        "doc_string": "Resolve a symlink to expand the folder it represents.",
+        "args": [
+            {
+                "name": "dirs",
+                "doc_string": null,
+                "type": "List<string>"
+            }
+        ],
+        "type": "core"
+    },
+    "reveal_in_side_bar": {
+        "command_type": "window",
+        "doc_string": "Reveals the active view's file in the sidebar.",
+        "type": "core"
+    },
+    "revert": {
+        "command_type": "text",
+        "doc_string": "Reload the file.",
+        "type": "core"
+    },
+    "revert_hunk": {
+        "command_type": "text",
+        "doc_string": "Revert a diff hunk.",
+        "added": 4053,
+        "type": "core"
+    },
+    "revert_modification": {
+        "command_type": "text",
+        "doc_string": "Revert a single modification.",
+        "type": "core"
+    },
+    "right_delete": {
+        "command_type": "text",
+        "doc_string": "Delete the character to the right of the text selection caret(s).",
+        "type": "core"
+    },
+    "run_macro": {
+        "command_type": "text",
+        "doc_string": "Runs the last recorded macro.",
+        "type": "core"
+    },
+    "run_macro_file": {
+        "command_type": "text",
+        "doc_string": "Runs a macro saved in a macro file.",
+        "args": [
+            {
+                "name": "file",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "rename_path": {
+        "command_type": "window",
+        "doc_string": "Renames a given file on disk.",
+        "args": [
+            {
+                "name": "paths",
+                "doc_string": "A list of absolute file paths. Only the first element is considered.",
+                "type": "List<string>"
+            }
+        ],
+        "type": "default",
+        "location": "Default/side_bar.py"
+    },
+    "rename_file": {
+        "command_type": "window",
+        "doc_string": "Renames the file on disk. Uses a TextInputHandler if the new name is not provided.",
+        "args": [
+            {
+                "name": "new_name",
+                "doc_string": "The new name for the file.",
+                "type": "string"
+            }
+        ],
+        "added": 3155,
+        "type": "default",
+        "location": "Default/rename.py"
+    },
+    "run_syntax_tests": {
+        "command_type": "window",
+        "doc_string": "Runs all the syntax test(s) associated with a given .sublime-syntax or .tmLanguage file or a single syntax test file if the active view's file name starts with 'syntax_test'",
+        "args": [
+            {
+                "name": "find_all",
+                "doc_string": "Whether to run the syntax test for all files that begin with 'syntax_test'. The default value is False, indicating the syntax test is run only for the active 'syntax_test' file.",
+                "type": "boolean"
+            }
+        ],
+        "type": "default",
+        "location": "Default/run_syntax_tests.py"
+    },
+    "rot13": {
+        "command_type": "text",
+        "doc_string": "Uses the Rot13 algorithm to encode the given selection(s).",
+        "type": "default",
+        "location": "Default/transform.py"
+    }
+}
