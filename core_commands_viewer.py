@@ -15,9 +15,9 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
 
     def run(self):
         metadata_folder = os.path.join(os.path.dirname(__file__), "st_commands_metadata")
-        yaml_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
+        json_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
         final_dict = {}
-        for file_name in yaml_file_names:
+        for file_name in json_file_names:
             with open(os.path.join(metadata_folder, file_name), "r") as file:
                 data = json.loads(file.read())
                 if data is not None:
@@ -62,9 +62,9 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
         final_doc_string = ""
         if docs is not None:
             for doc in docs:
-                initial_string = """
-                {} ({}) - {}
-                """.format(doc["name"], doc["type"], doc["doc_string"])
+                initial_string = f"""
+                {doc["name"]} ({doc["type"]}){"":^10} - {doc["doc_string"]}
+                """
                 final_doc_string += initial_string.strip() + "\n"
         else:
             final_doc_string = "No args exist for this command."
