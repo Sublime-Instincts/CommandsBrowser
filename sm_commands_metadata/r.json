@@ -1,0 +1,89 @@
+{
+    "rebase_branch": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "branch",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "rename_branch": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "branch",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "revert_commit": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "rename_remote": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2024,
+        "type": "core"
+    },
+    "restore_tab": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2000,
+        "type": "core"
+    },
+    "reset": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "mode",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "resolve_merge_conflict": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1104,
+        "type": "core"
+    }
+}

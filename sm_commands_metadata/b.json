@@ -1,0 +1,15 @@
+{
+    "blame": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    }
+}

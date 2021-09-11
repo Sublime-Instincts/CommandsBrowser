@@ -1,0 +1,120 @@
+{
+    "copy_to_clipboard": {
+        "command_type": "window",
+        "doc_string": "Copies the given text to the clipboard",
+        "args": [
+            {
+                "name": "text",
+                "doc_string": "The text to be copied to the clipboard.",
+                "type": "string."
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "commit": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "mode",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "checkout_branch": {
+        "command_type": "window",
+        "doc_string": "Checkouts the given branch",
+        "args": [
+            {
+                "name": "branch",
+                "doc_string": "The branch to checkout.",
+                "type": "string"
+            },
+            {
+                "name": "local_refs",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "remote_refs",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "create_branch": {
+        "command_type": "window",
+        "doc_string": "Create the given branch.",
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "clear_recent": {
+        "command_type": "window",
+        "doc_string": "Clears all the recently opened repositories from the session file.",
+        "added": 1055,
+        "type": "core"
+    },
+    "create_tag": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "cherry_pick": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "create_branch_from_remote_branch": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "clean_working_dir": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "close_tab": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2000,
+        "type": "core"
+    },
+    "close_window": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    }
+}

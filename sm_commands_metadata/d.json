@@ -1,0 +1,94 @@
+{
+    "display_clone_page": {
+        "command_type": "window",
+        "doc_string": "Displays the clone page dialog for cloning a new repository.",
+        "added": 1055,
+        "type": "core"
+    },
+    "delete_branch": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "prompt",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "local_refs",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "remote_refs",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "delete_remote": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "remote",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "delete_tag": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "prompt",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "drop_stash": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "stash",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "drop_commits": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1085,
+        "type": "core"
+    },
+    "discard_file": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1104,
+        "type": "core"
+    }
+}

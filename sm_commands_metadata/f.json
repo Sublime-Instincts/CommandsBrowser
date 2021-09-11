@@ -1,0 +1,27 @@
+{
+    "fetch": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "remote",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "file_history": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "fixup_commits": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1085,
+        "type": "core"
+    }
+}

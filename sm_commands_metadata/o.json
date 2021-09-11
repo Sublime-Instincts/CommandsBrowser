@@ -1,0 +1,75 @@
+{
+    "open_recent": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "index",
+                "doc_string": null,
+                "type": "int"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "open_in_editor": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "line",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "col",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "default",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "open_dir_in_sublime_text": {
+        "command_type": "window",
+        "doc_string": 1090,
+        "args": [
+            {
+                "name": "dir",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": null,
+        "type": "core"
+    },
+    "open_preferences": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1098,
+        "type": "core"
+    },
+    "open_submodule": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "submodule_path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1072,
+        "type": "core"
+    }
+}

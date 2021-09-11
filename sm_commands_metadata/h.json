@@ -1,0 +1,28 @@
+{
+    "hide_ref": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1100,
+        "type": "core"
+    },
+    "hide_all_refs_except": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1100,
+        "type": "core"
+    }
+}

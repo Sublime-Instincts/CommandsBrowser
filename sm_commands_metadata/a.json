@@ -1,0 +1,27 @@
+{
+    "add_remote": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "apply_stash": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "stash",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1065,
+        "type": "core"
+    },
+    "add_submodule": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1072,
+        "type": "core"
+    }
+}

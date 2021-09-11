@@ -1,0 +1,27 @@
+{
+    "edit_commit": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "edit_commit_contents": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1085,
+        "type": "core"
+    },
+    "edit_gitflow_config": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1072,
+        "type": "core"
+    }
+}

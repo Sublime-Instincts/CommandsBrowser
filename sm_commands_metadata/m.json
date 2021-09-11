@@ -1,0 +1,33 @@
+{
+    "merge_branch": {
+        "command_type": "window",
+        "doc_string": "Merges the given branch to master.",
+        "args": [
+            {
+                "name": "branch",
+                "doc_string": "The branch to merge.",
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "move_commit": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "down",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 1076,
+        "type": "core"
+    }
+}

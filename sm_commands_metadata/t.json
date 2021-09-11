@@ -1,0 +1,63 @@
+{
+    "toggle_search": {
+        "command_type": "window",
+        "doc_string": "Toggles the search commit dialog box.",
+        "added": 1055,
+        "type": "core"
+    },
+    "toggle_side_bar": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "toggle_full_screen": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "toggle_ignore_diff_whitespace": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1080,
+        "type": "core"
+    },
+    "toggle_console": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1202,
+        "type": "core"
+    },
+    "take_ours": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1114,
+        "type": "core"
+    },
+    "take_theirs": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1114,
+        "type": "core"
+    },
+    "toggle_preference": {
+        "command_type": "window",
+        "doc_string": "Toggles the given setting, true if it is false & vice versa.",
+        "args": [
+            {
+                "name": "setting",
+                "doc_string": "The setting to toggle. Must be a boolean setting",
+                "type": "string"
+            }
+        ],
+        "added": 1200,
+        "type": "core"
+    },
+    "toggle_full_context": {
+        "command_type": "window",
+        "doc_string": "Toggles the diff to show the entire file.",
+        "added": null,
+        "type": "core"
+    }
+}

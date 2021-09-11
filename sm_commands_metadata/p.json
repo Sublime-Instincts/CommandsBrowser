@@ -1,0 +1,70 @@
+{
+    "prompt_new_repository": {
+        "command_type": "window",
+        "doc_string": "Opens the default folder manager to open a new repository. The new repository opens in a seperate tab.",
+        "added": 1055,
+        "type": "core"
+    },
+    "prompt_open_repository": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "push": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "pull": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "remote",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "push_tag": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1055,
+        "type": "core"
+    },
+    "pop_stash": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "preferences": {
+        "command_type": "window",
+        "doc_string": "Opens the preferences GUI window.",
+        "added": 1055,
+        "type": "core"
+    },
+    "prev_tab": {
+        "command_type": "window",
+        "doc_string": "Navigates to the previous repository tab.",
+        "added": 2000,
+        "type": "core"
+    },
+    "prev_file_tab": {
+        "command_type": "window",
+        "doc_string": "Navigates to the previous repository tab.",
+        "added": 2001,
+        "type": "core"
+    }
+}

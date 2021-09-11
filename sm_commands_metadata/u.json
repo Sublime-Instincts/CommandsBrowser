@@ -1,0 +1,39 @@
+{
+    "unstage_all": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "unstage_file": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1104,
+        "type": "core"
+    },
+    "update_submodule": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "recursive",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "initialize",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 1072,
+        "type": "core"
+    }
+}

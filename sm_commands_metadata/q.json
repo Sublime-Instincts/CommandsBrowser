@@ -1,0 +1,14 @@
+{
+    "quick_switch_repository": {
+        "command_type": "window",
+        "doc_string": "Opens the Select repository window to switch to a new repository.",
+        "added": 1055,
+        "type": "core"
+    },
+    "quick_open_repository": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "navigate_back": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "navigate_forward": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "navigate_to_commit_message": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "navigate_to_head": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "navigate_to_commit": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "navigate_to_branch": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1100,
+        "type": "core"
+    },
+    "navigate_to_tag": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1100,
+        "type": "core"
+    },
+    "navigate_to_child": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1200,
+        "type": "core"
+    },
+    "navigate_to_parent": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1104,
+        "type": "core"
+    },
+    "next_file_tab": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2001,
+        "type": "core"
+    },
+    "next_tab": {
+        "command_type": "window",
+        "doc_string": "Navigates to the next repository tab.",
+        "added": 2000,
+        "type": "core"
+    },
+    "new_window": {
+        "command_type": "window",
+        "doc_string": "Opens a new window for cloning a new repository, opening an existing repository or creating a new repository.",
+        "added": 1055,
+        "type": "core"
+    }
+}
