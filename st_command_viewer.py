@@ -69,7 +69,7 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
         else:
             final_doc_string = "No args exist for this command."
         doc_panel.run_command("insert", { "characters": final_doc_string })
-        doc_panel.settings().set("syntax", "Packages/CoreCommandsViewer/DocPanel.sublime-syntax")
+        doc_panel.settings().set("syntax", "Packages/CoreCommandsViewer/resources/DocPanel.sublime-syntax")
         self.window.run_command("show_panel", {
             "panel": "output.DocPanel"
         })
