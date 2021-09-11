@@ -42,7 +42,7 @@
     },
     "open_dir_in_sublime_text": {
         "command_type": "window",
-        "doc_string": 1090,
+        "doc_string": null,
         "args": [
             {
                 "name": "dir",
@@ -50,7 +50,7 @@
                 "type": "string"
             }
         ],
-        "added": null,
+        "added": 1090,
         "type": "core"
     },
     "open_preferences": {

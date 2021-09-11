@@ -14,16 +14,9 @@ kind_mapping = {
 class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
 
     def run(self):
-        metadata_folder = os.path.join(os.path.dirname(__file__), "st_commands_metadata")
-        json_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
-        final_dict = {}
-        for file_name in json_file_names:
-            with open(os.path.join(metadata_folder, file_name), "r") as file:
-                data = json.loads(file.read())
-                if data is not None:
-                    final_dict.update(data)
+        commands_data = self.get_command_data(application = "sm")
         items = []
-        for key, value in final_dict.items():
+        for key, value in commands_data.items():
             if not value.get("location"):
                 annotation_string = "{}".format(value.get("type"))
             else:
@@ -39,13 +32,25 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(
             items=items,
             on_select=self.on_select,
-            on_highlight=lambda id: self.on_highlight(id, items, final_dict),
+            on_highlight=lambda id: self.on_highlight(id, items, commands_data),
             placeholder="Browse through available core & default commands ...",
             flags=sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT
         )
 
     def on_select(self, id):
         pass
+
+    @staticmethod
+    def get_command_data(application = "st"):
+        metadata_folder = os.path.join(os.path.dirname(__file__), f"{application}_commands_metadata")
+        json_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
+        final_dict = {}
+        for file_name in json_file_names:
+            with open(os.path.join(metadata_folder, file_name), "r") as file:
+                data = json.loads(file.read())
+                if data is not None:
+                    final_dict.update(data)
+        return final_dict
 
     def on_highlight(self, id, items, final_dict):
         if id >= 0:
