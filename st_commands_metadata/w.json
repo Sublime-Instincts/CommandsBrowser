@@ -19,7 +19,7 @@
     },
     "wrap_lines": {
         "command_type": "text",
-        "doc_string": "Hard-wrap all lines at the ruler.",
+        "doc_string": "Hard wrap all lines at the ruler.",
         "args": [
             {
                 "name": "width",

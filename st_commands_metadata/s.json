@@ -237,7 +237,7 @@
             },
             {
                 "name": "reverse",
-                "doc_string": null,
+                "doc_string": "Whether to search the buffer for a given find text in a backwards manner.",
                 "type": "boolean"
             },
             {

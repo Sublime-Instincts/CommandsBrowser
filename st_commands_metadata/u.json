@@ -11,23 +11,23 @@
     },
     "update_check": {
         "command_type": "application",
-        "doc_string": "Look for updates of Sublime Text.",
+        "doc_string": "Opens the update dialog box of Sublime Text.",
         "type": "core"
     },
     "upgrade_license": {
         "command_type": "application",
-        "doc_string": "Upgrade license of Sublime Text.",
+        "doc_string": "Navigates to https://www.sublimehq.com/store/upgrade, where you can upgrade an expired license.",
         "type": "core"
     },
     "unfold": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Unfolds all folded regions at the given caret location(s).",
         "type": "default",
         "location": "Default/fold.py"
     },
     "unfold_all": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Unfolds all folded regions in the given buffer.",
         "type": "default",
         "location": "Default/fold.py"
     },
