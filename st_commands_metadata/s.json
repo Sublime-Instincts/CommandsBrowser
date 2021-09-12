@@ -1,7 +1,7 @@
 {
     "save": {
         "command_type": "text",
-        "doc_string": "Save the active document.",
+        "doc_string": "Saves the active document.",
         "args": [
             {
                 "name": "async",
@@ -33,12 +33,12 @@
     },
     "save_project_and_workspace_as": {
         "command_type": "window",
-        "doc_string": "Save active project and workspace as ....",
+        "doc_string": "Opens the OS dialog window to save the active project.",
         "type": "core"
     },
     "save_workspace_as": {
         "command_type": "window",
-        "doc_string": "Save active workspace as ....",
+        "doc_string": "Opens the OS dialog window to save the active workspace.",
         "type": "core"
     },
     "scroll_lines": {
@@ -47,7 +47,7 @@
         "args": [
             {
                 "name": "amount",
-                "doc_string": null,
+                "doc_string": "The specified amount by which the view has to be scrolled.",
                 "type": "float"
             }
         ],
@@ -76,24 +76,37 @@
         "type": "core"
     },
     "select_by_index": {
-        "args": {
-            "index": null
-        },
         "command_type": "window",
-        "doc_string": "Focus one view in the active group by its index."
+        "doc_string": "Focus a view in the active group based on its index.",
+        "args": [
+            {
+                "name": "index",
+                "doc_string": "The index of the view to focus. The first view will have an index of 0 and so on.",
+                "type": "int"
+            }
+        ],
+        "type": "core"
     },
     "select_lines": {
-        "args": {
-            "forward": true
-        },
         "command_type": "text",
-        "doc_string": "Select the current or next line, if the full current line is selected."
+        "doc_string": "Select the current or next line, if the full current line is selected.",
+        "args": [
+            {
+                "name": "forward",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "type": "core"
     },
     "set_build_system": {
         "command_type": "window",
-        "doc_string": "Set selected build system."
+        "doc_string": "Set selected build system.",
+        "type": "core"
     },
     "set_layout": {
+        "command_type": "window",
+        "doc_string": "Sets the layout of the current window based on the structure specified in the args.",
         "args": [
             {
                 "cols": [
@@ -118,8 +131,7 @@
                 ]
             }
         ],
-        "command_type": "window",
-        "doc_string": "Set the layout of the window."
+        "type": "core"
     },
     "set_file_type": {
         "command_type": "text",
@@ -127,7 +139,7 @@
         "args": [
             {
                 "name": "syntax",
-                "doc_string": "The syntax to be set for the view. Can either be a package relative path like Packages/Foo/Bar.sublime-syntax or 'scope:' prefixed syntax names.",
+                "doc_string": "The syntax to be set for the view. Can either be a package relative path like 'Packages/Foo/Bar.sublime-syntax' or 'scope:' prefixed syntax names.",
                 "type": "string"
             }
         ],
@@ -139,7 +151,7 @@
         "args": [
             {
                 "name": "type",
-                "doc_string": "The platform for . Valid values are 'windows', 'unix' & 'cr'.",
+                "doc_string": "The platform type. Valid values are 'windows', 'unix' & 'cr'.",
                 "type": "string"
             }
         ],
@@ -294,7 +306,8 @@
     },
     "single_selection": {
         "command_type": "text",
-        "doc_string": "Switch to only the first selection."
+        "doc_string": "Switch to only the first selection.",
+        "type": "core"
     },
     "slurp_find_string": {
         "command_type": "window",
@@ -497,29 +510,63 @@
     },
     "swap_case": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Convert uppercase characters to lowercase and lowercase characters to uppercase.",
         "type": "default",
         "location": "Default/transform.py"
     },
     "select_color_scheme": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Sets the color scheme. If the arguments are not provided, opens a ListInputHandler for the user to choose.",
+        "args": [
+            {
+                "name": "name",
+                "doc_string": "The package specific path of the color scheme. If the value is 'auto', then a light and a dark variant needs to be specified.",
+                "type": "string"
+            },
+            {
+                "name": "light",
+                "doc_string": "The package specific path of the color scheme that would be applied for OS light mode.",
+                "type": "string"
+            },
+            {
+                "name": "dark",
+                "doc_string": "The package specific path of the color scheme that would be applied for OS dark mode.",
+                "type": "string"
+            }
+        ],
         "type": "default",
         "location": "Default/ui.py"
     },
     "select_theme": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Sets the theme. If the arguments are not provided, opens a ListInputHandler for the user to choose.",
+        "args": [
+            {
+                "name": "name",
+                "doc_string": "The package specific path of the theme. If the value is 'auto', then a light and a dark variant needs to be specified.",
+                "type": "string"
+            },
+            {
+                "name": "light",
+                "doc_string": "The package specific path of the theme that would be applied for OS light mode.",
+                "type": "string"
+            },
+            {
+                "name": "dark",
+                "doc_string": "The package specific path of the theme that would be applied for OS dark mode.",
+                "type": "string"
+            }
+        ],
         "type": "default",
         "location": "Default/ui.py"
     },
     "set_max_columns": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Readjusts the current layout to have atmost the specified columns.",
         "args": [
             {
                 "name": "columns",
-                "doc_string": null,
+                "doc_string": "The number of columns to restrict the layout to.",
                 "type": "int"
             }
         ],

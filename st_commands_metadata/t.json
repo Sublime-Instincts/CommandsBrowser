@@ -23,7 +23,7 @@
     },
     "toggle_case_sensitive": {
         "command_type": "find",
-        "doc_string": "Toggles the <b>Case sensitive</b> flag in the Find/Replace/Incremental Find/Find in Files panel."
+        "doc_string": "Toggles the Case sensitive flag in the Find/Replace/Incremental Find/Find in Files panel."
     },
     "toggle_distraction_free": {
         "command_type": "window",

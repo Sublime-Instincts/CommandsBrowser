@@ -1,7 +1,7 @@
 {
     "cancel_build": {
         "command_type": "window",
-        "doc_string": "Cancel the current build.",
+        "doc_string": "Cancels the currently running build.",
         "type": "core"
     },
     "clear_bookmarks": {
@@ -18,7 +18,7 @@
     },
     "clear_fields": {
         "command_type": "text",
-        "doc_string": "Clears the fields of the current snippet.",
+        "doc_string": "Clears the fields of the current active snippet.",
         "type": "core"
     },
     "clear_location": {

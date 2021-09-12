@@ -14,7 +14,7 @@ kind_mapping = {
 class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
 
     def run(self, application):
-        commands_data = self.get_command_data(application = application)
+        commands_data = self.get_commands_data(application = application)
         items = []
         for key, value in commands_data.items():
             if not value.get("location"):
@@ -41,7 +41,7 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
         pass
 
     @staticmethod
-    def get_command_data(application = "st"):
+    def get_commands_data(application = "st"):
         metadata_folder = os.path.join(os.path.dirname(__file__), f"{application}_commands_metadata")
         json_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
         final_dict = {}
@@ -67,8 +67,9 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
         final_doc_string = ""
         if docs is not None:
             for doc in docs:
+                doc_string = doc["doc_string"] if doc["doc_string"] is not None else "No available description."
                 initial_string = f"""
-                {doc["name"]} ({doc["type"]}){"":^10} - {doc["doc_string"]}
+                {doc["name"]} ({doc["type"]}){"":^10} - {doc_string}
                 """
                 final_doc_string += initial_string.strip() + "\n"
         else:
