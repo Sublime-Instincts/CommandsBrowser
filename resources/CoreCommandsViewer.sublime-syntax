@@ -21,14 +21,3 @@ contexts:
       pop: 1
     - match: \b(string|int|object|boolean)\b
       scope: storage.type.doc_panel
-
-  single_quoted_string:
-    - match: \'
-      scope: punctuation.definition.string.begin.doc_panel
-      push: single_quoted_string_body
-
-  single_quoted_string_body:
-    - meta_scope: meta.string.doc_panel string.quoted.single.doc_panel
-    - match: \'
-      scope: punctuation.definition.string.end.doc_panel
-      pop: 1

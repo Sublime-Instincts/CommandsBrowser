@@ -223,7 +223,7 @@
     },
     "show_panel": {
         "command_type": "window",
-        "doc_string": "Show the panel from the argument.",
+        "doc_string": "Shows the panel from the argument.",
         "args": [
             {
                 "name": "panel",
@@ -469,11 +469,11 @@
     },
     "sort_selection": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Sorts the selection(s) in the current buffer.",
         "args": [
             {
                 "name": "case_sensitive",
-                "doc_string": null,
+                "doc_string": "Whether to do a case sensitive sort.",
                 "type": "boolean"
             },
             {
@@ -483,7 +483,7 @@
             },
             {
                 "name": "remove_duplicates",
-                "doc_string": null,
+                "doc_string": "Whether to remove any duplicates while sorting.",
                 "type": "boolean"
             }
         ],

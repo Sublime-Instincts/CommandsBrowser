@@ -30,7 +30,7 @@
         "args": [
             {
                 "name": "syntax",
-                "doc_string": null,
+                "doc_string": "The syntax to be set for the newly opened tab. Should be a package relative path like 'Packages/Foo/Bar.sublime-syntax'. Currently, 'scope:' prefixed syntax names won't work.",
                 "type": "string"
             }
         ],
@@ -64,18 +64,18 @@
     },
     "new_os_tab": {
         "command_type": "window",
-        "doc_string": "Create a new empty window in the os tab.",
+        "doc_string": "Creates a new empty window in the os tab.",
         "added": 4050,
         "type": "core"
     },
     "new_window": {
         "command_type": "application",
-        "doc_string": "Open a new ST window.",
+        "doc_string": "Opens a new ST window.",
         "type": "core"
     },
     "new_window_for_project": {
         "command_type": "window",
-        "doc_string": "Clone project into a new workspace.",
+        "doc_string": "Clones the project into a new workspace.",
         "type": "core"
     },
     "next_bookmark": {
@@ -110,20 +110,21 @@
         "type": "core"
     },
     "next_view": {
+        "command_type": "window",
+        "doc_string": "Sets the focus to the next view by index.",
+        "type": "core",
         "args": [
             {
                 "name": "extend",
-                "doc_string": null,
+                "doc_string": "Whether to add the next view to the current group's multi selected tabs.",
                 "type": "boolean"
             }
-        ],
-        "command_type": "window",
-        "doc_string": "Set the focus to the next view by index.",
-        "type": "core"
+        ]
     },
     "next_view_in_stack": {
         "command_type": "window",
-        "doc_string": "Set the focus to the next view in the stack of recent edited view."
+        "doc_string": "Set the focus to the next view in the stack of recent edited view.",
+        "type": "core"
     },
     "new_pane": {
         "command_type": "window",
