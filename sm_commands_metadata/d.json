@@ -90,5 +90,37 @@
         ],
         "added": 1104,
         "type": "core"
+    },
+    "delete_tag_on_remote": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "prompt",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
+        "added": 2040,
+        "type": "core"
+    },
+    "delete_file": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 1104,
+        "type": "core"
+    },
+    "discard_hunk": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
     }
 }

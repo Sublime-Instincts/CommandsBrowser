@@ -1,11 +1,11 @@
 {
     "blame": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Performs a git blame on the provided file.",
         "args": [
             {
                 "name": "path",
-                "doc_string": null,
+                "doc_string": "The path to the file which you wan't to blame.",
                 "type": "string"
             }
         ],

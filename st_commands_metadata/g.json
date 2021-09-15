@@ -42,7 +42,7 @@
     },
     "goto_line": {
         "command_type": "text",
-        "doc_string": "Navigates to the specified line, additionally scrolling the viewport such that the given line is in the middle of the available viewport.",
+        "doc_string": "Navigates to the specified line, additionally scrolling the viewport such that the given line is in the middle of the visible viewport.",
         "args": [
             {
                 "name": "line",

@@ -20,6 +20,11 @@
                 "name": "mode",
                 "doc_string": null,
                 "type": "string"
+            },
+            {
+                "name": "options",
+                "doc_string": null,
+                "type": "List<string>"
             }
         ],
         "added": 1055,
@@ -54,6 +59,11 @@
         "args": [
             {
                 "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "prefix",
                 "doc_string": null,
                 "type": "string"
             }
@@ -112,6 +122,48 @@
         "type": "core"
     },
     "close_window": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "clear_stashes": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2043,
+        "type": "core"
+    },
+    "cherrypick_hunk": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2051,
+        "type": "core"
+    },
+    "checkout_local_branch": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2042,
+        "type": "core"
+    },
+    "close_preferences": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1098,
+        "type": "core"
+    },
+    "collapse_merge": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": null,
+        "type": "core"
+    },
+    "clone": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1104,
+        "type": "core"
+    },
+    "cancel_edit_commit_message": {
         "command_type": "window",
         "doc_string": null,
         "added": 1055,

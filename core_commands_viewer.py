@@ -4,12 +4,14 @@ import string
 import sublime
 import sublime_plugin
 
+
 kind_mapping = {
     "window": (sublime.KIND_ID_FUNCTION, "W", "Window Command"),
     "text": (sublime.KIND_ID_NAMESPACE, "T", "Text Command"),
     "application": (sublime.KIND_ID_TYPE, "A", "Application Command"),
     "find": (sublime.KIND_ID_MARKUP, "F", "Find Command")
 }
+
 
 class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
 
@@ -29,16 +31,19 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
                 kind=kind_mapping[value.get("command_type")]
             )
             items.append(item)
+
         self.window.show_quick_panel(
             items=items,
             on_select=self.on_select,
             on_highlight=lambda id: self.on_highlight(id, items, commands_data),
-            placeholder="Browse through available core & default commands ...",
+            placeholder=f"Browse through {len(items)} available core & default commands ...",
             flags=sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT
         )
 
+
     def on_select(self, id):
         pass
+
 
     @staticmethod
     def get_commands_data(application = "st"):
@@ -52,6 +57,7 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
                     final_dict.update(data)
         return final_dict
 
+
     def on_highlight(self, id, items, final_dict):
         if id >= 0:
             item = items[id].trigger
@@ -59,6 +65,7 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
                 if key == item:
                     docs = value.get("args")
             self.window.run_command("command_doc_panel", { "docs": docs })
+
 
 class CommandDocPanelCommand(sublime_plugin.WindowCommand):
 
