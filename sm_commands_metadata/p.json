@@ -14,6 +14,13 @@
     "push": {
         "command_type": "window",
         "doc_string": null,
+        "args": [
+            {
+                "name": "prompt",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
         "added": 1055,
         "type": "core"
     },
@@ -63,8 +70,14 @@
     },
     "prev_file_tab": {
         "command_type": "window",
-        "doc_string": "Navigates to the previous repository tab.",
+        "doc_string": "Navigates to the previous file tab.",
         "added": 2001,
+        "type": "core"
+    },
+    "prev_conflict": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
         "type": "core"
     }
 }

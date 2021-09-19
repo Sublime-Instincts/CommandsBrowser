@@ -55,7 +55,7 @@
     },
     "next_file_tab": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the next file tab.",
         "added": 2001,
         "type": "core"
     },
@@ -69,6 +69,24 @@
         "command_type": "window",
         "doc_string": "Opens a new window for cloning a new repository, opening an existing repository or creating a new repository.",
         "added": 1055,
+        "type": "core"
+    },
+    "new_tab": {
+        "command_type": "window",
+        "doc_string": "Creates a new repository tab.",
+        "added": 2000,
+        "type": "core"
+    },
+    "next_conflict": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "navigate_to_stash": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2033,
         "type": "core"
     }
 }

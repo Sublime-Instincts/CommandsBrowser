@@ -23,5 +23,23 @@
         "doc_string": null,
         "added": 1085,
         "type": "core"
+    },
+    "focus_left": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "focus_middle": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "focus_right": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
     }
 }

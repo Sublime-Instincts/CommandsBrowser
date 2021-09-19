@@ -18,6 +18,24 @@
         "added": 1065,
         "type": "core"
     },
+    "adjust_slider": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "forward",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "jump_to_end",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 2024,
+        "type": "core"
+    },
     "add_submodule": {
         "command_type": "window",
         "doc_string": null,

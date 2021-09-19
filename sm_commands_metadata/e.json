@@ -27,25 +27,25 @@
     "exit_file_view": {
         "command_type": "window",
         "doc_string": null,
-        "added": null,
+        "added": 2000,
         "type": "core"
     },
     "exit_blame": {
         "command_type": "window",
         "doc_string": null,
-        "added": null,
+        "added": 1055,
         "type": "core"
     },
     "exit_tree_mode": {
         "command_type": "window",
         "doc_string": null,
-        "added": null,
+        "added": 1055,
         "type": "core"
     },
     "expand_merge": {
         "command_type": "window",
         "doc_string": null,
-        "added": null,
+        "added": 1200,
         "type": "core"
     }
 }

@@ -161,5 +161,23 @@
         ],
         "added": 2001,
         "type": "core"
+    },
+    "show_commit_message_history": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2057,
+        "type": "core"
+    },
+    "stage_hunk": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "save_commit_message": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
     }
 }

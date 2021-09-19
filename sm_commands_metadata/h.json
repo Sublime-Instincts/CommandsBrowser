@@ -24,5 +24,37 @@
         ],
         "added": 1100,
         "type": "core"
+    },
+    "hide_all_commit_refs": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 2043,
+        "type": "core"
+    },
+    "hide_all_refs_except_refs_at_commit": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 2043,
+        "type": "core"
+    },
+    "hide_command_status": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": null,
+        "type": "core"
     }
 }

@@ -59,5 +59,54 @@
         "doc_string": "Toggles the diff to show the entire file.",
         "added": null,
         "type": "core"
+    },
+    "toggle_ref_filter": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2040,
+        "type": "core"
+    },
+    "toggle_files_filter": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2051,
+        "type": "core"
+    },
+    "toggle_merged_vs_base": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "toggle_image_diff_style": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2024,
+        "type": "core"
+    },
+    "toggle_collapsed": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1055,
+        "type": "core"
+    },
+    "toggle_selected": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 1099,
+        "type": "core"
+    },
+    "toggle_focus_ref": {
+        "command_type": "window",
+        "doc_string": null,
+        "arg": [
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": 2057,
+        "type": "core"
     }
 }

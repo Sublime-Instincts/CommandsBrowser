@@ -55,7 +55,7 @@
     },
     "open_preferences": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Opens the preferences window.",
         "added": 1098,
         "type": "core"
     },

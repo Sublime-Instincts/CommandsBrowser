@@ -147,14 +147,14 @@
     },
     "close_preferences": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Closes the preferences window.",
         "added": 1098,
         "type": "core"
     },
     "collapse_merge": {
         "command_type": "window",
         "doc_string": null,
-        "added": null,
+        "added": 1200,
         "type": "core"
     },
     "clone": {
