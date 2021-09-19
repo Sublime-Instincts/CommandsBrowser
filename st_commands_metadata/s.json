@@ -293,7 +293,7 @@
             {
                 "name": "where",
                 "doc_string": "The text to be put in the 'Where' field of Find in Files panel. Only makes sense when the 'panel' equals 'find_in_files'.",
-                "type": "boolean"
+                "type": "string"
             }
         ],
         "type": "core"

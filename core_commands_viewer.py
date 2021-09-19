@@ -37,17 +37,21 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
             items.append(item)
 
         self.window.show_quick_panel(
-            items=items,
-            on_select=self.on_select,
-            on_highlight=lambda id: self.on_highlight(id, items, commands_data),
-            placeholder=f"Browse through {len(items)} available core & default commands ...",
-            flags=sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT
+            items = items,
+            on_select = lambda id: self.on_select(id, items, commands_data),
+            on_highlight = lambda id: self.on_highlight(id, items, commands_data),
+            placeholder = f"Browse through {len(items)} available core & default commands ...",
+            flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT
         )
 
 
-    def on_select(self, id):
-        pass
-
+    def on_select(self, id, items, final_dict):
+        if id < 0:
+            return
+        if settings.get("ccv.auto_open_panel_on_navigate"):
+            return
+        docs = self.get_docs(id, items, final_dict)
+        self.window.run_command("command_doc_panel", { "docs": docs })
 
     @staticmethod
     def get_commands_data(application = "st"):
@@ -65,13 +69,18 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
     def on_highlight(self, id, items, final_dict):
         if id < 0:
             return
+        docs = self.get_docs(id, items, final_dict)
+        if not settings.get("ccv.auto_open_panel_on_navigate"):
+            return
+        self.window.run_command("command_doc_panel", { "docs": docs })
+
+    @staticmethod
+    def get_docs(id, items, final_dict):
         item = items[id].trigger
         for key, value in final_dict.items():
             if key == item:
                 docs = value.get("args")
-        if not settings.get("ccv.auto_open_panel_on_navigate"):
-            return
-        self.window.run_command("command_doc_panel", { "docs": docs })
+        return docs
 
 
 class CommandDocPanelCommand(sublime_plugin.WindowCommand):
