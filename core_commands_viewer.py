@@ -4,6 +4,10 @@ import string
 import sublime
 import sublime_plugin
 
+def plugin_loaded():
+    global settings
+    settings = sublime.load_settings("CoreCommandsViewer.sublime-settings")
+
 
 kind_mapping = {
     "window": (sublime.KIND_ID_FUNCTION, "W", "Window Command"),
@@ -59,12 +63,15 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
 
 
     def on_highlight(self, id, items, final_dict):
-        if id >= 0:
-            item = items[id].trigger
-            for key, value in final_dict.items():
-                if key == item:
-                    docs = value.get("args")
-            self.window.run_command("command_doc_panel", { "docs": docs })
+        if id < 0:
+            return
+        item = items[id].trigger
+        for key, value in final_dict.items():
+            if key == item:
+                docs = value.get("args")
+        if not settings.get("ccv.auto_open_panel_on_navigate"):
+            return
+        self.window.run_command("command_doc_panel", { "docs": docs })
 
 
 class CommandDocPanelCommand(sublime_plugin.WindowCommand):

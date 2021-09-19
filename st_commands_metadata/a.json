@@ -51,7 +51,7 @@
             },
             {
                 "name": "disable_tab_translation",
-                "doc_string": "Whether to translate tabs to spaces.",
+                "doc_string": "Whether to disable translating tabs to spaces.",
                 "type": "boolean"
             }
         ],
