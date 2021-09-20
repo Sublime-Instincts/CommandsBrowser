@@ -123,6 +123,11 @@
         "type": "default",
         "location": "Default/settings.py"
     },
+    "overwrite": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "core"
+    },
     "open_symbol_definition": {
         "command_type": "window",
         "doc_string": "Opens the symbol defined in a file. Used internally by the auto_complete_goto_definition command.",

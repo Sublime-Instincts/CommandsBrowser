@@ -6,7 +6,7 @@ import sublime_plugin
 
 def plugin_loaded():
     global settings
-    settings = sublime.load_settings("CoreCommandsViewer.sublime-settings")
+    settings = sublime.load_settings("CoreCommandsBrowser.sublime-settings")
 
 
 kind_mapping = {
@@ -17,7 +17,7 @@ kind_mapping = {
 }
 
 
-class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
+class CoreCommandsBrowserCommand(sublime_plugin.WindowCommand):
 
     def run(self, application):
         commands_data = self.get_commands_data(application = application)
@@ -48,7 +48,7 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
     def on_select(self, id, items, final_dict):
         if id < 0:
             return
-        if settings.get("ccv.auto_open_panel_on_navigate"):
+        if settings.get("ccb.auto_open_panel_on_navigate"):
             return
         docs = self.get_docs(id, items, final_dict)
         self.window.run_command("command_doc_panel", { "docs": docs })
@@ -70,7 +70,7 @@ class CoreCommandsViewerCommand(sublime_plugin.WindowCommand):
         if id < 0:
             return
         docs = self.get_docs(id, items, final_dict)
-        if not settings.get("ccv.auto_open_panel_on_navigate"):
+        if not settings.get("ccb.auto_open_panel_on_navigate"):
             return
         self.window.run_command("command_doc_panel", { "docs": docs })
 
@@ -98,7 +98,7 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
         else:
             final_doc_string = "No args exist for this command."
         doc_panel.run_command("insert", { "characters": final_doc_string })
-        doc_panel.settings().set("syntax", "Packages/CoreCommandsViewer/resources/CoreCommandsViewer.sublime-syntax")
+        doc_panel.settings().set("syntax", "Packages/CoreCommandsBrowser/resources/CoreCommandsBrowser.sublime-syntax")
         self.window.run_command("show_panel", {
-            "panel": "output.DocPanel"
+            "panel": "output.DocPanel",
         })

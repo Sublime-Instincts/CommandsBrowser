@@ -10,7 +10,7 @@
             },
             {
                 "name": "sub_words",
-                "doc_string": null,
+                "doc_string": "Whether to delete subwords.",
                 "type": "boolean"
             }
         ],
@@ -62,7 +62,7 @@
         "args": [
             {
                 "name": "show_message",
-                "doc_string": null,
+                "doc_string": "Whether to show a message in the status bar about the guessed indentation settings.",
                 "type": "boolean"
             }
         ],
@@ -71,7 +71,8 @@
     },
     "duplicate_line": {
         "command_type": "text",
-        "doc_string": "Create a copy of each caret's line."
+        "doc_string": "Create a copy of each caret's line.",
+        "type": "core"
     },
     "decrease_font_size": {
         "command_type": "application",

@@ -52,13 +52,13 @@
             },
             {
                 "name": "group",
-                "doc_string": null,
-                "type": null
+                "doc_string": "The group number to ",
+                "type": "int"
             },
             {
                 "name": "index",
                 "doc_string": null,
-                "type": null
+                "type": "int"
             }
         ],
         "type": "core"
@@ -69,12 +69,21 @@
         "type": "core"
     },
     "close_by_index": {
-        "args": {
-            "group": -1,
-            "index": -1
-        },
         "command_type": "window",
-        "doc_string": "Close a view of a group by index. A value of -1 means active group/view."
+        "doc_string": "Close a view of a group by index. A value of -1 means active group/view.",
+        "args": [
+            {
+                "name": "group",
+                "doc_string": null,
+                "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": null,
+                "type": "int"
+            }
+        ],
+        "type": "core"
     },
     "close_deleted_files": {
         "command_type": "window",
@@ -143,7 +152,8 @@
     "close_transient": {
         "command_type": "window",
         "doc_string": "Close all transient sheets and views.",
-        "added": 4050
+        "added": 4050,
+        "type": "core"
     },
     "close_unmodified": {
         "command_type": "window",
@@ -186,7 +196,7 @@
         "args": [
             {
                 "name": "version",
-                "doc_string": "The version of the python interpreter. Valid values are \"3.3\" & \"3.8\".",
+                "doc_string": "The version of the python interpreter. Valid values are '3.3' or '3.8'.",
                 "type": "string"
             }
         ],
@@ -236,7 +246,7 @@
     },
     "cancel_find": {
         "command_type": "find",
-        "doc_string": "Cancels the Find in Files panel, closing it.",
+        "doc_string": "Cancels the Find panel, closing it.",
         "added": 4075,
         "type": "core"
     },
