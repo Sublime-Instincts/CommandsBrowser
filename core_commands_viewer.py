@@ -2,6 +2,7 @@ import os
 import json
 import string
 import sublime
+import inspect
 import sublime_plugin
 
 def plugin_loaded():
@@ -77,10 +78,7 @@ class CoreCommandsBrowserCommand(sublime_plugin.WindowCommand):
     @staticmethod
     def get_docs(id, items, final_dict):
         item = items[id].trigger
-        for key, value in final_dict.items():
-            if key == item:
-                docs = value.get("args")
-        return docs
+        return (item, final_dict[item])
 
 
 class CommandDocPanelCommand(sublime_plugin.WindowCommand):
@@ -88,15 +86,25 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
     def run(self, docs):
         doc_panel = self.window.create_output_panel("DocPanel")
         final_doc_string = ""
-        if docs is not None:
-            for doc in docs:
+        description_string = f"""
+        Name of the command: {docs[0]}
+
+        Description: {docs[1]["doc_string"]}
+        """
+
+        final_doc_string += inspect.cleandoc(description_string.strip()) + "\n" * 2
+        final_doc_string += "Arguments:" + "\n" * 2
+        
+        if docs[1].get("args") is not None:
+            for doc in docs[1]["args"]:
                 doc_string = doc["doc_string"] if doc["doc_string"] is not None else "No available description."
                 initial_string = f"""
                 {doc["name"]} ({doc["type"]}){"":^10} - {doc_string}
                 """
                 final_doc_string += initial_string.strip() + "\n"
         else:
-            final_doc_string = "No args exist for this command."
+            final_doc_string += "No args exist for this command."
+
         doc_panel.run_command("insert", { "characters": final_doc_string })
         doc_panel.settings().set("syntax", "Packages/CoreCommandsBrowser/resources/CoreCommandsBrowser.sublime-syntax")
         self.window.run_command("show_panel", {
