@@ -29,6 +29,9 @@ class CoreCommandsBrowserCommand(sublime_plugin.WindowCommand):
             else:
                 annotation_string = "{} ({})".format(value.get("type"), value.get("location"))
 
+            if application == "sm":
+                annotation_string = "{} ({})".format(value.get("type"), value.get("added"))
+
             item = sublime.QuickPanelItem(
                 trigger=key,
                 annotation=annotation_string,
@@ -94,12 +97,18 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
 
         final_doc_string += inspect.cleandoc(description_string.strip()) + "\n" * 2
         final_doc_string += "Arguments:" + "\n" * 2
-        
+
+        # Find the longest argument name.
+
         if docs[1].get("args") is not None:
+            max_arg_length = max([len(doc["name"]) for doc in docs[1]["args"]])
+            max_length = max([(len(doc["name"]) + len(doc["type"]) + 4) for doc in docs[1]["args"]])
             for doc in docs[1]["args"]:
+                length_1 = max_arg_length - len(doc["name"])
+                length_2 = max_length - (len(doc["name"]) + len(doc["type"]) + length_1 + 4)
                 doc_string = doc["doc_string"] if doc["doc_string"] is not None else "No available description."
                 initial_string = f"""
-                {doc["name"]} ({doc["type"]}){"":^10} - {doc_string}
+                {doc["name"]}{"":^{length_1}} ({doc["type"]}){"":^{length_2}} - {doc_string}
                 """
                 final_doc_string += initial_string.strip() + "\n"
         else:

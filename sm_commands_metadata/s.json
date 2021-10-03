@@ -5,7 +5,7 @@
         "args": [
             {
                 "name": "command",
-                "doc_string": "The name of the command.",
+                "doc_string": "The name of the command to be executed in the palette.",
                 "type": "string"
             },
             {
@@ -49,11 +49,11 @@
     },
     "search": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Opens the search mode.",
         "args": [
             {
                 "name": "query",
-                "doc_string": null,
+                "doc_string": "The query strig to be placed in the search input field.",
                 "type": "string"
             }
         ],
@@ -164,7 +164,7 @@
     },
     "show_commit_message_history": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Shows the commit message history dropdown.",
         "added": 2057,
         "type": "core"
     },

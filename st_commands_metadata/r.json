@@ -32,6 +32,8 @@
         "type": "core"
     },
     "remove_folder": {
+        "command_type": "window",
+        "doc_string": "Remove dirs from sidebar.",
         "args": [
             {
                 "name": "dirs",
@@ -39,12 +41,11 @@
                 "type": "List<string>"
             }
         ],
-        "command_type": "window",
-        "doc_string": "Remove dirs from sidebar."
+        "type": "core"
     },
     "remove_license": {
         "command_type": "application",
-        "doc_string": "Removes the license.",
+        "doc_string": "Removes the license. This will cause Sublime Text to go into an unregistered state.",
         "type": "core"
     },
     "reopen": {
@@ -61,19 +62,23 @@
     },
     "reopen_last_file": {
         "command_type": "window",
-        "doc_string": "Reopen the most recently closed file."
+        "doc_string": "Reopen the most recently closed file.",
+        "type": "core"
     },
     "replace_all": {
         "command_type": "find",
-        "doc_string": "Replace all tokens in the view, which match the pattern in the Find Input Field."
+        "doc_string": "Replace all tokens in the view, which match the pattern in the Find Input Field.",
+        "type": "core"
     },
     "replace_completion_with_auto_complete": {
         "command_type": "text",
-        "doc_string": "Replace the most recently inserted completion with the next result provided by the auto completion engine."
+        "doc_string": "Replace the most recently inserted completion with the next result provided by the auto completion engine.",
+        "type": "core"
     },
     "replace_next": {
         "command_type": "find",
-        "doc_string": "Replace the next token in the view, which matches the pattern in the Find Input Field."
+        "doc_string": "Replace the next token in the view, which matches the pattern in the Find Input Field.",
+        "type": "core"
     },
     "resize_window": {
         "command_type": "window",

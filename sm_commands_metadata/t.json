@@ -7,13 +7,7 @@
     },
     "toggle_side_bar": {
         "command_type": "window",
-        "doc_string": null,
-        "added": 1055,
-        "type": "core"
-    },
-    "toggle_full_screen": {
-        "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Toggles the left most sidebar.",
         "added": 1055,
         "type": "core"
     },
@@ -25,7 +19,7 @@
     },
     "toggle_console": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Toggles the console.",
         "added": 1202,
         "type": "core"
     },
@@ -43,7 +37,7 @@
     },
     "toggle_preference": {
         "command_type": "window",
-        "doc_string": "Toggles the given setting, true if it is false & vice versa.",
+        "doc_string": "Toggles the given setting in the preferences, true becomes false & vice versa.",
         "args": [
             {
                 "name": "setting",
@@ -62,13 +56,13 @@
     },
     "toggle_ref_filter": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Toggles the focus of the search filter in the Location tab. If the Location tab is not in focus, it will first bring it to focus.",
         "added": 2040,
         "type": "core"
     },
     "toggle_files_filter": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Toggles the focus of the search filter in the Files tab. If the Files tab is not in focus, it will first bring it to focus.",
         "added": 2051,
         "type": "core"
     },
@@ -86,7 +80,7 @@
     },
     "toggle_collapsed": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Toggles the collapse of the diff hunks.",
         "added": 1055,
         "type": "core"
     },

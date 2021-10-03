@@ -110,7 +110,7 @@
     },
     "auto_complete_prev": {
         "command_type": "text",
-        "doc_string": "Goes to the previous entry in the AC panel.",
+        "doc_string": "Goes to the previous entry in the AC panel, when the AC panel is visible.",
         "type": "core"
     },
     "auto_indent_tag": {

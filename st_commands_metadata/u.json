@@ -54,5 +54,20 @@
         "doc_string": "Converts the given selection(s) to upper case.",
         "type": "default",
         "location": "Default/transform.py"
+    },
+    "unselect_to_right": {
+        "command_type": "window",
+        "doc_string": null,
+        "type": "core",
+    },
+    "unselect_to_left": {
+        "command_type": "window",
+        "doc_string": null,
+        "type": "core",
+    },
+    "unselect_others": {
+        "command_type": "window",
+        "doc_string": null,
+        "type": "core",
     }
 }

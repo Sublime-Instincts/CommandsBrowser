@@ -8,6 +8,24 @@ contexts:
   main:
     - include: arg_type_brackets
     - include: single_quoted_string
+    - include: keys
+
+  keys:
+    - match: \b(Name of the command)\b(\:)
+      captures:
+        1: markup.bold.doc_panel
+        2: punctuation.separator.doc_panel
+      push: command_name
+    - match: \b(Description|Arguments)\b(\:)
+      captures:
+        1: markup.bold.doc_panel
+        2: punctuation.separator.doc_panel
+
+  command_name:
+    - match: \w+
+      scope: markup.inserted.doc_panel
+    - match: $
+      pop: 1
 
   arg_type_brackets:
     - match: '\('
