@@ -126,6 +126,11 @@
         "doc_string": "Set the focus to the next view in the stack of recent edited view.",
         "type": "core"
     },
+    "noop": {
+        "command_type": "window",
+        "doc_string": null,
+        "type": "core"
+    },
     "new_pane": {
         "command_type": "window",
         "doc_string": null,

@@ -572,5 +572,29 @@
         ],
         "type": "default",
         "location": "Default/pane.py"
+    },
+    "set_encoding": {
+        "command_type": "text",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "encoding",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
+    "select_to_left": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "core",
+        "added": 4097
+    },
+    "select_to_right": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "core",
+        "added": 4097
     }
 }

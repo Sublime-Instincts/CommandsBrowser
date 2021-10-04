@@ -57,17 +57,20 @@
     },
     "unselect_to_right": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Deselects all of the multi selected tabs to the right of the currently focussed tab.",
         "type": "core",
+        "added": 4097
     },
     "unselect_to_left": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Deselects all of the multi selected tabs to the left of the currently focussed tab.",
         "type": "core",
+        "added": 4097
     },
     "unselect_others": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Deselects all of the multi selected tabs.",
         "type": "core",
+        "added": 4097
     }
 }

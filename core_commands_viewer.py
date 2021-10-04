@@ -87,7 +87,7 @@ class CoreCommandsBrowserCommand(sublime_plugin.WindowCommand):
 class CommandDocPanelCommand(sublime_plugin.WindowCommand):
 
     def run(self, docs):
-        doc_panel = self.window.create_output_panel("DocPanel")
+        doc_panel = self.window.create_output_panel("CoreCommandsBrowser")
         final_doc_string = ""
         description_string = f"""
         Name of the command: {docs[0]}
@@ -116,6 +116,7 @@ class CommandDocPanelCommand(sublime_plugin.WindowCommand):
 
         doc_panel.run_command("insert", { "characters": final_doc_string })
         doc_panel.settings().set("syntax", "Packages/CoreCommandsBrowser/resources/CoreCommandsBrowser.sublime-syntax")
+        doc_panel.settings().set("context_menu", "CoreCommandsBrowser.sublime-menu")
         self.window.run_command("show_panel", {
-            "panel": "output.DocPanel",
+            "panel": "output.CoreCommandsBrowser",
         })

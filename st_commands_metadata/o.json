@@ -128,6 +128,19 @@
         "doc_string": null,
         "type": "core"
     },
+    "open_folder": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "dirs",
+                "doc_string": null,
+                "type": "List<string>"
+            }
+        ],
+        "type": "default",
+        "location": "Default/side_bar.py"
+    },
     "open_symbol_definition": {
         "command_type": "window",
         "doc_string": "Opens the symbol defined in a file. Used internally by the auto_complete_goto_definition command.",

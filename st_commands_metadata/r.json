@@ -197,5 +197,11 @@
         "doc_string": "Uses the Rot13 algorithm to encode the given selection(s).",
         "type": "default",
         "location": "Default/transform.py"
+    },
+    "reset_font_size": {
+        "command_type": "application",
+        "doc_string": null,
+        "type": "default",
+        "location": "Default/font.py"
     }
 }

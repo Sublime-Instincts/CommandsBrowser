@@ -287,5 +287,31 @@
         "args": null,
         "added": 4103,
         "type": "core"
+    },
+    "clear_missing_recent_projects_and_workspaces": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": null,
+        "type": "core"
+    },
+    "cancel": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": null,
+        "type": "core"
+    },
+    "customize_theme": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": null,
+        "type": "default",
+        "location": "Default/ui.py"
+    },
+    "customize_color_scheme": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": null,
+        "type": "default",
+        "location": "Default/ui.py"
     }
 }

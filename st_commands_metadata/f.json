@@ -125,6 +125,18 @@
         "doc_string": "Fold(s) the html/xml tag attributes.",
         "type": "core"
     },
+    "focus_to_left": {
+        "command_type": "window",
+        "doc_string": null,
+        "type": "core",
+        "added": 4097
+    },
+    "focus_to_right": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "core",
+        "added": 4097
+    },
     "find_in_folder": {
         "command_type": "window",
         "doc_string": "Populates the Where field of Find in Files panel with the given directorie(s).",

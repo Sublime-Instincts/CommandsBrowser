@@ -1,0 +1,12 @@
+[
+    {
+        "caption": "Copy Documentation",
+        "command": "chain",
+        "args": {
+            "commands": [
+                { "command": "select_all", },
+                { "command": "copy", },
+            ]
+        },
+    }
+]

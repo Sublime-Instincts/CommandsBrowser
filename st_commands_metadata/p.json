@@ -9,6 +9,12 @@
         "doc_string": "Paste the text on the clipboard at the text selection location(s), replacing the selected text, and making the base indentation level match that of the target location(s).",
         "type": "core"
     },
+    "paste_from_history": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "default",
+        "location": "Default/paste_from_history.py"
+    },
     "prev_bookmark": {
         "command_type": "text",
         "doc_string": "Navigate to the previous bookmark in the document.",
@@ -199,6 +205,12 @@
     "paste_selection_clipboard": {
         "command_type": "text",
         "doc_string": null,
-        "core": null
+        "type": "core"
+    },
+    "primary_j_changed": {
+        "command_type": "window",
+        "doc_string": null,
+        "type": "default",
+        "location": "Default/keymap.py"
     }
 }

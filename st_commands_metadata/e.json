@@ -135,6 +135,12 @@
         "added": 4050,
         "type": "core"
     },
+    "encode_html_entities": {
+        "command_type": "text",
+        "doc_string": null,
+        "type": "HTML",
+        "location": "HTML/encode_html_entities.py"
+    },
     "expand_tabs": {
         "command_type": "text",
         "doc_string": null,
