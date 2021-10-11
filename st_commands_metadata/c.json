@@ -283,34 +283,52 @@
     },
     "chain": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Runs a given sequence of command(s)",
         "args": null,
         "added": 4103,
         "type": "core"
     },
     "clear_missing_recent_projects_and_workspaces": {
         "command_type": "window",
-        "doc_string": null,
-        "args": null,
+        "doc_string": "Clears any deleted projects or workspaces from the session.",
         "type": "core"
     },
     "cancel": {
         "command_type": "window",
         "doc_string": null,
-        "args": null,
+        "type": "core"
+    },
+    "correct_spelling": {
+        "command_type": "text",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "begin",
+                "doc_string": null,
+                "type": "int"
+            },
+            {
+                "name": "end",
+                "doc_string": null,
+                "type": "int"
+            },
+            {
+                "name": "correction",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
         "type": "core"
     },
     "customize_theme": {
         "command_type": "window",
-        "doc_string": null,
-        "args": null,
+        "doc_string": "Opens a new side by side window layout, with the current theme (default version) on the left & the user version on the right side. To make theme customization easier.",
         "type": "default",
         "location": "Default/ui.py"
     },
     "customize_color_scheme": {
         "command_type": "window",
-        "doc_string": null,
-        "args": null,
+        "doc_string": "Opens a new side by side window layout, with the current color scheme (default version) on the left & the user version on the right side. To make color scheme customization easier.",
         "type": "default",
         "location": "Default/ui.py"
     }

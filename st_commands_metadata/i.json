@@ -10,6 +10,18 @@
         "doc_string": "Increase the indentation level of the text selection(s).",
         "type": "core"
     },
+    "ignore_word": {
+        "command_type": "text",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "word",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
     "insert": {
         "command_type": "text",
         "doc_string": "Insert the specified text into the document at the text caret location(s).",

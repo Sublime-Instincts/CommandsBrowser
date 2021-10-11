@@ -4,6 +4,18 @@
         "doc_string": "Opens an OS dialog box to prompt for a folder to the 'Where' field in the Find in Files panel.",
         "type": "core"
     },
+    "add_word": {
+        "command_type": "text",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "word",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "type": "core"
+    },
     "add_where_snippet": {
         "command_type": "find",
         "doc_string": "Adds a snippet to the 'Where' field in the Find in Files panel.",

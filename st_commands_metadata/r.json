@@ -200,7 +200,7 @@
     },
     "reset_font_size": {
         "command_type": "application",
-        "doc_string": null,
+        "doc_string": "Resets the font size to the default value.",
         "type": "default",
         "location": "Default/font.py"
     }
