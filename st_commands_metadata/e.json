@@ -127,6 +127,13 @@
     "expand_selection_to_paragraph": {
         "command_type": "text",
         "doc_string": "Expands the current text caret selection(s) to the paragraph(s).",
+        "args": [
+            {
+                "name": "markup_aware",
+                "doc_string": null,
+                "type": "boolean"
+            }
+        ],
         "type": "core"
     },
     "expand_snippet": {

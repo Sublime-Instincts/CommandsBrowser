@@ -12,11 +12,11 @@
     },
     "ignore_word": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Adds the given word to the ignored_words setting.",
         "args": [
             {
                 "name": "word",
-                "doc_string": null,
+                "doc_string": "The word to be ignored.",
                 "type": "string"
             }
         ],

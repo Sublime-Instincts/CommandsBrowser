@@ -128,7 +128,7 @@
     },
     "noop": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "A non existent command. Use this if you want to unbind any particular key binding & release it to the OS (ST 4117+).",
         "type": "core"
     },
     "new_pane": {
