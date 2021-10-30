@@ -283,8 +283,14 @@
     },
     "chain": {
         "command_type": "window",
-        "doc_string": "Runs a given sequence of command(s)",
-        "args": null,
+        "doc_string": "Runs a given sequence of command(s) along with any argument(s).",
+        "args": [
+            {
+                "name": "commands",
+                "doc_string": null,
+                "type": "List<List<str, >>|"
+            }
+        ],
         "added": 4103,
         "type": "core"
     },

@@ -101,7 +101,14 @@
     },
     "set_build_system": {
         "command_type": "window",
-        "doc_string": "Set selected build system.",
+        "doc_string": "Sets the given build system.",
+        "args": [
+            {
+                "name": "file",
+                "doc_string": "Accepts a Packages/ relative path to a sublime build file to set as the current build system. An empty string will set it to the Automatic option.",
+                "type": "string"
+            }
+        ],
         "type": "core"
     },
     "set_layout": {
