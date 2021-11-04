@@ -1,0 +1,6 @@
+[
+    {
+        "caption": "Core Commands Browser: View Sublime Text commands",
+        "command": "commands_browser",
+    }
+]
