@@ -34,6 +34,11 @@ cmd_types = {
 def legacy():
     return sys.version_info < (3, 8, 0)
 
+def num_plugin_commands():
+    return (
+        len(application_command_classes + window_command_classes + text_command_classes)
+    )
+
 
 def generate_plugin_commands_list_items(cmd_dict = None):
     """

@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import string
 import sublime
@@ -10,6 +11,8 @@ _kind_mapping = {
     "find": (sublime.KIND_ID_MARKUP, "F", "Find Command")
 }
 
+def num_core_commands(application):
+    return len(get_core_commands_data(application))
 
 def get_core_commands_data(application = "st"):
     """

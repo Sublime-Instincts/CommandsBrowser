@@ -1,7 +1,8 @@
 import sublime
 import sublime_plugin
 from .utils import (
-    generate_core_commands_list_items, generate_plugin_commands_list_items
+    generate_core_commands_list_items, generate_plugin_commands_list_items,
+    num_plugin_commands, num_core_commands
 )
 
 _commands_options = {
@@ -47,8 +48,11 @@ class CommandsBrowserInputHandler(sublime_plugin.ListInputHandler):
 
     def placeholder(self):
         if _commands_options[self.commands_option] == 1:
-            return "Browse through x available plugin commands ..."
-        return "Browse through x available core commands ..."
+            return f"Browse through {num_plugin_commands()} available plugin commands ..."
+        if _commands_options[self.commands_option] == 2:
+            return f"Browse through {num_core_commands('st')} available plugin commands ..."
+        if _commands_options[self.commands_option] == 3:
+            return f"Browse through {num_core_commands('sm')} available plugin commands ..."
 
 
 class CommandsBrowserCommand(sublime_plugin.WindowCommand):
