@@ -1,6 +1,6 @@
 [
     {
-        "caption": "Core Commands Browser: View Sublime Text commands",
+        "caption": "Commands Browser: Browse all available commands.",
         "command": "commands_browser",
     }
 ]

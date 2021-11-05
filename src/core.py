@@ -2,7 +2,8 @@ import sublime
 import sublime_plugin
 from .utils import (
     generate_core_commands_list_items, generate_plugin_commands_list_items,
-    num_plugin_commands, num_core_commands
+    num_plugin_commands, num_core_commands, core_commands_doc_panel,
+    navigate_to_plugin_file
 )
 
 _commands_options = {
@@ -15,7 +16,7 @@ _commands_options = {
 class CommandsOptionsInputHandler(sublime_plugin.ListInputHandler):
 
     def list_items(self):
-        return _commands_options.keys()
+        return list(_commands_options.items())
 
     def next_input(self, args):
         if args is not None:
@@ -39,26 +40,30 @@ class CommandsBrowserInputHandler(sublime_plugin.ListInputHandler):
         self.commands_option = commands_option
 
     def list_items(self):
-        if _commands_options[self.commands_option] == 1:
-            return generate_plugin_commands_list_items()
-        elif _commands_options[self.commands_option] == 2:
+        if self.commands_option == 1:
+            return generate_plugin_commands_list_items()[0]
+        elif self.commands_option == 2:
             return generate_core_commands_list_items("st")
-        elif _commands_options[self.commands_option] == 3:
+        elif self.commands_option == 3:
             return generate_core_commands_list_items("sm")
 
     def placeholder(self):
-        if _commands_options[self.commands_option] == 1:
+        if self.commands_option == 1:
             return f"Browse through {num_plugin_commands()} available plugin commands ..."
-        if _commands_options[self.commands_option] == 2:
-            return f"Browse through {num_core_commands('st')} available plugin commands ..."
-        if _commands_options[self.commands_option] == 3:
-            return f"Browse through {num_core_commands('sm')} available plugin commands ..."
+        if self.commands_option == 2:
+            return f"Browse through {num_core_commands('st')} available core commands ..."
+        if self.commands_option == 3:
+            return f"Browse through {num_core_commands('sm')} available core commands ..."
 
 
 class CommandsBrowserCommand(sublime_plugin.WindowCommand):
 
     def run(self, commands_options, commands_browser):
-        pass
+        if commands_options != 1:
+            core_commands_doc_panel(self.window, commands_browser)
+            return
+        view = self.window.active_view()
+        navigate_to_plugin_file(view, commands_browser)
 
     def input(self, args):
         if args is not None:
