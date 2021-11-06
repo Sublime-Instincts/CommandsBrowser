@@ -7,33 +7,37 @@ from sublime_plugin import (
     application_command_classes, window_command_classes, text_command_classes
 )
 
-
-KIND_APPLICATION = (sublime.KIND_ID_TYPE, "A", "Application Command")
-KIND_WINDOW = (sublime.KIND_ID_FUNCTION, "W", "Window Command")
-KIND_TEXT = (sublime.KIND_ID_NAMESPACE, "T", "Text Command")
+from .miscellaneous_utils import command_kind_type
 
 
 cmd_types = {
     "app": {
         "name": "ApplicationCommand",
         "commands": application_command_classes,
-        "kind": KIND_APPLICATION
+        "kind": command_kind_type("application")
     },
     "wnd": {
         "name": "WindowCommand",
         "commands": window_command_classes,
-        "kind": KIND_WINDOW
+        "kind": command_kind_type("window")
     },
     "txt": {
         "name": "TextCommand",
         "commands": text_command_classes,
-        "kind": KIND_TEXT
+        "kind": command_kind_type("text")
     }
 }
 
-def navigate_to_plugin_file(view, command):
-    """
 
+def navigate_to_plugin_file(view, command):
+    """ Navigates to the plugin file that defined the chosen command.
+
+    Args:
+        view (sublime.View): The active view.
+        command (str): The name of the command picked by the user.
+
+    Returns:
+        None
     """
     cmd_dict = generate_plugin_commands_list_items()[1]
     cmd = cmd_dict[command]
@@ -49,7 +53,14 @@ def navigate_to_plugin_file(view, command):
 
 
 def legacy():
-    """
+    """ If the plugin host happens to be Python 3.3.6 (The old legacy host), then
+    this function returns true.
+
+    Args:
+        None
+
+    Returns:
+        (bool): Whether the plugin host happens to be the legacy one.
     """
     return sys.version_info < (3, 8, 0)
 
@@ -110,6 +121,14 @@ def get_commands(cmd_type, commands, cmd_dict_out):
     The output dictionary gains keys for each package, where the values are
     dictionaries which contain keys that describe the commands of each of
     the supported typed.
+
+    Args:
+        cmd_type ():
+        commands ():
+        cmd_dict_out (Dict):
+
+    Returns:
+        None
     """
     for command in commands:
         decoded = decode_cmd(command, cmd_type)
@@ -118,9 +137,15 @@ def get_commands(cmd_type, commands, cmd_dict_out):
 
 def decode_cmd(command, cmd_type):
     """
-    Given a class that implements a command of the provided type, return
-    back a dictionary that contains the properties of the command for later
-    display.
+    Given a class that implements a command of the provided type, return back a
+    dictionary that contains the properties of the command for later display.
+
+    Args:
+        command ():
+        cmd_type ():
+
+    Returns
+        (Dict): The plugin command metadat information as a dictionary.
     """
     return {
         "type": cmd_type,
@@ -137,6 +162,12 @@ def get_args(cmd_class):
     Return a string that represents the arguments to the run method of the
     Sublime command class provided, edited to remove the internal python
     arguments that are not needed to invoke the command from Sublime.
+
+    Args:
+        cmd_class (str):
+
+    Return:
+        args (str): Representing
     """
     args = str(inspect.signature(cmd_class.run))
     return re.compile(r"^\(self(?:, )?(?:edit, |edit)?(.*)\)$").sub(r"{ \1 }", args)
@@ -144,9 +175,15 @@ def get_args(cmd_class):
 
 def get_name(cmd_class):
     """
-    Return the internal Sublime command name as Sublime would infer it from
-    the name of the implementing class. This is taken from the name()
-    method of the underlying Command class in sublime_plugin.py.
+    Return the internal Sublime command name as Sublime would infer it from the
+    name of the implementing class. This is taken from the name() method of the
+    underlying Command class in sublime_plugin.py.
+
+    Args:
+        cmd_class (str):
+
+    Returns:
+        name (str):
     """
     clsname = cmd_class.__name__
     name = clsname[0].lower()

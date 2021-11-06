@@ -4,17 +4,31 @@ import string
 import inspect
 import sublime
 
+from .miscellaneous_utils import command_kind_type
 
 _kind_mapping = {
-    "window": (sublime.KIND_ID_FUNCTION, "W", "Window Command"),
-    "text": (sublime.KIND_ID_NAMESPACE, "T", "Text Command"),
-    "application": (sublime.KIND_ID_TYPE, "A", "Application Command"),
-    "find": (sublime.KIND_ID_MARKUP, "F", "Find Command")
+    "window": command_kind_type("window"),
+    "text": command_kind_type("text"),
+    "application": command_kind_type("application"),
+    "find": command_kind_type("find")
 }
 
 
 def core_commands_doc_panel(window, docs):
-    """
+    """ For core commands, since they are impemented in ST core, they can't be
+    navigated to, unlike plugin based commands that have an associated python file.
+    The JSON files have enough information to store the docs however, so we simply
+    present that informaion in a panel.
+
+    Args:
+        window (sublime.Window): The window object for which the panel has to be
+        created.
+
+        docs (List): This is a list of 2 items. The first one is the command name
+        and the second one is the command metadata.
+
+    Returns:
+        None
     """
     doc_panel = window.create_output_panel("CommandsBrowser")
     final_doc_string = ""

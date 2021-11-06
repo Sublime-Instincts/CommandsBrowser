@@ -2,5 +2,26 @@
     {
         "caption": "Commands Browser: Browse all available commands.",
         "command": "commands_browser",
+    },
+    {
+        "caption": "Commands Browser: Browse plugin/package commands.",
+        "command": "commands_browser",
+        "args": {
+            "commands_option": "1"
+        },
+    },
+    {
+        "caption": "Commands Browser: Browse core ST (Sublime Text) commands.",
+        "command": "commands_browser",
+        "args": {
+            "commands_option": "2"
+        },
+    },
+    {
+        "caption": "Commands Browser: Browse core SM (Sublime Merge) commands.",
+        "command": "commands_browser",
+        "args": {
+            "commands_option": "3"
+        },
     }
 ]
