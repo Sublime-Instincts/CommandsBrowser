@@ -137,14 +137,7 @@
     },
     "prompt_select_workspace": {
         "command_type": "window",
-        "doc_string": "Quick Switch Project.",
-        "args": [
-            {
-                "name": "initial_directory",
-                "doc_string": "An absolute folder path on disk, where the native dialog will initially open.",
-                "type": "string"
-            }
-        ],
+        "doc_string": "Opens the Quick Switch Project window.",
         "type": "core"
     },
     "prompt_switch_project_or_workspace": {
