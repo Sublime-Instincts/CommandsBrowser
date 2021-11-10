@@ -58,12 +58,13 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
         window.show_quick_panel(
             items = items,
             on_select = lambda idx: self.on_select(idx, items, cmd_dict),
-            placeholder = f"Browse through {len(items)} available plugin/package commands ..."
+            placeholder = f"Browse through {len(items)} available plugin/package commands ...",
+            flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT
         )
 
 
     def on_select(self, idx, items, cmd_dict):
-        if idx == -1:
+        if idx < 0:
             return
 
         cmd = cmd_dict[items[idx].trigger]
