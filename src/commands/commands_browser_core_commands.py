@@ -1,7 +1,9 @@
 import sublime
 import sublime_plugin
 
-from ..utils.core_commands_utils import get_core_commands_data, _kind_mapping
+from ..utils.core_commands_utils import (
+    get_core_commands_data, _kind_mapping, num_core_commands
+)
 
 
 class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
@@ -31,7 +33,7 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
             items = items,
             on_select = lambda id: self.on_select(id, items),
             flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT,
-            placeholder = "Browse through available commands"
+            placeholder = f"Browse through {num_core_commands(application)} available {application.upper()} commands ..."
         )
 
 

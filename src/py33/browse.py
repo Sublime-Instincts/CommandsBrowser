@@ -1,4 +1,5 @@
 import re
+import sys
 import inspect
 import sublime
 import sublime_plugin
@@ -32,12 +33,19 @@ cmd_types = {
 }
 
 
-class BrowseCommands33Command(sublime_plugin.WindowCommand):
+class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
     """
     """
 
 
     arg_re = re.compile(r"^\(self(?:, )?(?:edit, |edit)?(.*)\)$")
+
+    def name(self):
+        return "commands_browser_plugin_commands_33" if self.legacy() else "commands_browser_plugin_commands"
+
+
+    def legacy(self):
+        return sys.version_info < (3, 8, 0)
 
 
     def run(self, cmd_dict=None):
@@ -45,7 +53,9 @@ class BrowseCommands33Command(sublime_plugin.WindowCommand):
         for cmd_type, cmd_info in cmd_types.items():
             self.get_commands(cmd_type, cmd_info["commands"], cmd_dict)
 
-        print("Hello, World")
+        if self.legacy():
+            return sublime.run_command("commands_browser_plugin_commands", {"cmd_dict": cmd_dict})
+
 
     def get_commands(self, cmd_type, commands, cmd_dict_out):
         """
