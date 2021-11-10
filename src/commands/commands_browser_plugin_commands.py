@@ -36,7 +36,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
     def run(self, cmd_dict=None):
         cmd_dict = cmd_dict or {}
-        for cmd_type, cmd_info in cmd_types.items():
+        for cmd_type, cmd_info in _cmd_types.items():
             get_commands(cmd_type, cmd_info["commands"], cmd_dict)
 
         if legacy():
@@ -49,7 +49,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
                     trigger = details["name"],
                     details = "<i>%s</i>" % details["args"],
                     annotation = "%s.%s" % (details["pkg"] , details["mod"]),
-                    kind = cmd_types[details["type"]]["kind"]
+                    kind = _cmd_types[details["type"]]["kind"]
                 )
             )
 
@@ -79,10 +79,13 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
 
 
-class CommandJumpListener(sublime_plugin.ViewEventListener):
+class CommandsBrowserCommandJumpListener(sublime_plugin.ViewEventListener):
+
+
     @classmethod
     def is_applicable(cls, settings):
         return settings.has("_jump_to_class")
+
 
     def on_load(self):
         symbol = self.view.settings().get("_jump_to_class")

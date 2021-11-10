@@ -4,7 +4,7 @@ from shutil import copyfile
 from .src.settings import load_commands_browser_settings
 from .src import (
     CommandsBrowserCoreCommandsCommand,
-    CommandsBrowserPluginCommandsCommand
+    CommandsBrowserPluginCommandsCommand, CommandsBrowserCommandJumpListener
 )
 
 

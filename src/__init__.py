@@ -1,9 +1,11 @@
 from .commands import (
     CommandsBrowserCoreCommandsCommand,
-    CommandsBrowserPluginCommandsCommand
+    CommandsBrowserPluginCommandsCommand,
+    CommandsBrowserCommandJumpListener
 )
 
 
 __all__ = (
-    "CommandsBrowserCoreCommandsCommand", "CommandsBrowserPluginCommandsCommand"
+    "CommandsBrowserCoreCommandsCommand", "CommandsBrowserPluginCommandsCommand",
+    "CommandsBrowserCommandJumpListener"
 )
