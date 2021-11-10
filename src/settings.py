@@ -13,7 +13,8 @@ def load_commands_browser_settings():
 
     commands_browser_settings.obj = sublime.load_settings("CommandsBrowser.sublime-settings")
     commands_browser_settings.default = {
-        "ccb.auto_open_panel_on_navigate": False
+        "cb.auto_open_doc_panel_on_navigate": False,
+        "cb.auto_open_plugin_file_on_navigate": False
     }
 
 

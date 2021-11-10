@@ -1,5 +1,11 @@
 {
+    // When set to true, automatically opens the core commands documentation panel
+    // as you navigate through them. This can be helpful when you quickly want to
+    // glance the documentation for multiple commands at once and not have to close
+    // & reopen the panel everytime.
     //
+    // The default value for this setting is false.
     "cb.auto_open_doc_panel_on_navigate": false,
+
     "cb.auto_open_plugin_file_on_navigate": false
 }

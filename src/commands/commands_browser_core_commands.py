@@ -5,6 +5,8 @@ from ..utils.core_commands_utils import (
     get_core_commands_data, _kind_mapping, num_core_commands, core_commands_doc_panel
 )
 
+from ..settings import commands_browser_settings
+
 
 class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
 
@@ -32,6 +34,7 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
         self.window.show_quick_panel(
             items = items,
             on_select = lambda idx: self.on_select(idx, commands_data.items()),
+            on_highlight = lambda idx: self.on_highlight(idx, commands_data.items()),
             flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT,
             placeholder = f"Browse through {num_core_commands(application)} available {application.upper()} commands ..."
         )
@@ -41,3 +44,10 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
         if idx < 0:
             return
         core_commands_doc_panel(self.window, list(commands_data)[idx])
+
+
+    def on_highlight(self, idx, commands_data):
+        if idx < 0:
+            return
+        if commands_browser_settings("cb.auto_open_doc_panel_on_navigate"):
+            core_commands_doc_panel(self.window, list(commands_data)[idx])
