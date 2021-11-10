@@ -2,7 +2,7 @@ import sublime
 import sublime_plugin
 
 from ..utils.core_commands_utils import (
-    get_core_commands_data, _kind_mapping, num_core_commands
+    get_core_commands_data, _kind_mapping, num_core_commands, core_commands_doc_panel
 )
 
 
@@ -31,12 +31,13 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
 
         self.window.show_quick_panel(
             items = items,
-            on_select = lambda id: self.on_select(id, items),
+            on_select = lambda idx: self.on_select(idx, commands_data.items()),
             flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT,
             placeholder = f"Browse through {num_core_commands(application)} available {application.upper()} commands ..."
         )
 
 
-    def on_select(self, id, items):
-        if id >= 0:
-            pass
+    def on_select(self, idx, commands_data):
+        if idx < 0:
+            return
+        core_commands_doc_panel(self.window, list(commands_data)[idx])

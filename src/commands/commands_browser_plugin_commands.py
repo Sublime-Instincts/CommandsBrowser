@@ -4,33 +4,9 @@ import inspect
 import sublime
 import sublime_plugin
 
-from sublime_plugin import (
-    application_command_classes, window_command_classes, text_command_classes
-)
-
-from ..utils.miscellaneous_utils import command_kind_type
 from ..utils.plugin_command_utils import (
-    get_commands, legacy
+    get_commands, legacy, _cmd_types
 )
-
-
-cmd_types = {
-    "app": {
-        "name": "ApplicationCommand",
-        "commands": application_command_classes,
-        "kind": command_kind_type("application")
-    },
-    "wnd": {
-        "name": "WindowCommand",
-        "commands": window_command_classes,
-        "kind": command_kind_type("window")
-    },
-    "txt": {
-        "name": "TextCommand",
-        "commands": text_command_classes,
-        "kind": command_kind_type("text")
-    }
-}
 
 
 def _navigate_to(view, symbol):

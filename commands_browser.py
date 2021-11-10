@@ -1,8 +1,11 @@
 import os
 import sublime
-from .src import CommandsBrowserCoreCommandsCommand, CommandsBrowserPluginCommandsCommand
 from shutil import copyfile
 from .src.settings import load_commands_browser_settings
+from .src import (
+    CommandsBrowserCoreCommandsCommand,
+    CommandsBrowserPluginCommandsCommand
+)
 
 
 def plugin_loaded():

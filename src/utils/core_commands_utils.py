@@ -32,12 +32,11 @@ def core_commands_doc_panel(window, docs):
     """
     doc_panel = window.create_output_panel("CommandsBrowser")
     final_doc_string = ""
-    description_string = """
-    Name of the command: {}
+    description_string = f"""
+    Name of the command: {docs[0]}
 
-    Description: {}
-    """.format(docs[0], docs[1]["doc_string"])
-
+    Description: {docs[1]["doc_string"]}
+    """
     final_doc_string += inspect.cleandoc(description_string.strip()) + "\n" * 2
     final_doc_string += "Arguments:" + "\n" * 2
 
