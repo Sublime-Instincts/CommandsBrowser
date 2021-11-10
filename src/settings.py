@@ -34,8 +34,6 @@ def commands_browser_set_setting(key, value):
         sublime.save_settings("CommandsBrowser.sublime-settings")
         return
 
-    # If the user doesn't specify any value to be set for that particular key,
-    # we just obtain the default value of that setting and save it.
     default = commands_browser_settings.default.get(key, None)
     commands_browser_settings.obj.set(key, default)
     sublime.save_settings("CommandsBrowser.sublime-settings")

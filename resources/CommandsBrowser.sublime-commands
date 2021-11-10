@@ -1,27 +1,20 @@
 [
     {
-        "caption": "Commands Browser: Browse all available commands.",
-        "command": "commands_browser",
-    },
-    {
-        "caption": "Commands Browser: Browse plugin/package commands.",
-        "command": "commands_browser",
+        "caption": "CommandsBrowser: Browse available ST core commands.",
+        "command": "commands_browser_core_commands",
         "args": {
-            "commands_option": "1"
+            "application": "st"
         },
     },
     {
-        "caption": "Commands Browser: Browse core ST (Sublime Text) commands.",
-        "command": "commands_browser",
+        "caption": "CommandsBrowser: Browse available SM core commands.",
+        "command": "commands_browser_core_commands",
         "args": {
-            "commands_option": "2"
+            "application": "sm"
         },
     },
     {
-        "caption": "Commands Browser: Browse core SM (Sublime Merge) commands.",
-        "command": "commands_browser",
-        "args": {
-            "commands_option": "3"
-        },
-    }
+        "caption": "CommandsBrowser: Browse available Plugin/Package commands.",
+        "command": "commands_browser_plugin_commands_33",
+    },
 ]

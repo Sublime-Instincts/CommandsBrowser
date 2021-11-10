@@ -1,6 +1,9 @@
-from .core import CommandsBrowserCommand
+from .commands import (
+    CommandsBrowserCoreCommandsCommand,
+    CommandsBrowserPluginCommandsCommand
+)
 
 
 __all__ = (
-    "CommandsBrowserCommand",
+    "CommandsBrowserCoreCommandsCommand", "CommandsBrowserPluginCommandsCommand"
 )

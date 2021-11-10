@@ -32,11 +32,11 @@ def core_commands_doc_panel(window, docs):
     """
     doc_panel = window.create_output_panel("CommandsBrowser")
     final_doc_string = ""
-    description_string = f"""
-    Name of the command: {docs[0]}
+    description_string = """
+    Name of the command: {}
 
-    Description: {docs[1]["doc_string"]}
-    """
+    Description: {}
+    """.format(docs[0], docs[1]["doc_string"])
 
     final_doc_string += inspect.cleandoc(description_string.strip()) + "\n" * 2
     final_doc_string += "Arguments:" + "\n" * 2
@@ -98,39 +98,3 @@ def get_core_commands_data(application = "st"):
             if data is not None:
                 final_dict.update(data)
     return final_dict
-
-
-def generate_core_commands_list_items(application):
-    """ Given the application type, generates a list of items representing
-    command data that can be returned from a CommandInputHandler.list_items
-    method.
-
-    Args:
-        application (str): The application for which the commands need to be
-        retrived. Valid values are 'st' (Sublime Text) or 'sm' (Sublime Merge).
-
-    Returns:
-        items (List[sublime.ListInputItem]): The items list representing the
-        command information.
-    """
-    commands_data = get_core_commands_data(application = application)
-    items = []
-    for key, value in commands_data.items():
-        if not value.get("location"):
-            annotation_string = "{}".format(value.get("type"))
-        else:
-            annotation_string = "{} ({})".format(value.get("type"), value.get("location"))
-
-        if application == "sm":
-            annotation_string = "{} ({})".format(value.get("type"), value.get("added"))
-
-        item = sublime.ListInputItem(
-            text = key,
-            value = (key, commands_data[key]),
-            annotation = annotation_string,
-            details = value.get("doc_string") if value.get("doc_string") else "No description available",
-            kind = _kind_mapping[value.get("command_type")]
-        )
-
-        items.append(item)
-    return items
