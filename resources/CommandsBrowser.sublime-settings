@@ -6,6 +6,4 @@
     //
     // The default value for this setting is false.
     "cb.auto_open_doc_panel_on_navigate": false,
-
-    "cb.auto_open_plugin_file_on_navigate": false
 }
