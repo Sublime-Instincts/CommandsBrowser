@@ -32,8 +32,8 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
             items.append(
                 sublime.QuickPanelItem(
                     trigger = details["name"],
-                    details = "<i>%s</i>" % details["args"],
-                    annotation = "%s.%s" % (details["pkg"] , details["mod"]),
+                    details = f"<i>{details['args']}</i>",
+                    annotation = f"{details['pkg']}.{details['mod']} ({details['host']})",
                     kind = _cmd_types[details["type"]]["kind"]
                 )
             )
