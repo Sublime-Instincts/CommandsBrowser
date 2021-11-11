@@ -19,7 +19,13 @@ def load_commands_browser_settings():
 
 
 def commands_browser_settings(key):
-    """
+    """ Returns the value of the key for a given setting.
+
+    Args:
+        key (str): The target key, whose value is required.
+
+    Returns:
+        value (Any): The value of said key.
     """
 
     default = commands_browser_settings.default.get(key, None)
@@ -27,7 +33,14 @@ def commands_browser_settings(key):
 
 
 def commands_browser_set_setting(key, value):
-    """
+    """ Set's the value of the given key in question and saves the settings.
+
+    Args:
+        key (str): The target key.
+        value (Any): The target value.
+
+    Returns:
+        None
     """
 
     if value is not None:

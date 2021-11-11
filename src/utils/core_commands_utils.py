@@ -6,6 +6,7 @@ import sublime
 
 from .miscellaneous_utils import command_kind_type
 
+
 _kind_mapping = {
     "window": command_kind_type("window"),
     "text": command_kind_type("text"),
@@ -85,7 +86,7 @@ def get_core_commands_data(application = "st"):
         retrived. Valid values are 'st' (Sublime Text) or 'sm' (Sublime Merge).
 
     Returns:
-        final_dict (Dict):
+        final_dict (Dict): The final dictionary of commands and their docs.
     """
     package_path = os.path.join(sublime.packages_path(), "CommandsBrowser")
     metadata_folder = os.path.join(package_path, f"{application}_commands_metadata")

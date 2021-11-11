@@ -13,29 +13,19 @@ from ..settings import commands_browser_settings
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
-    """
-    Open a quick panel with a list of all commands known to the Sublime plugin
-    host for the user to choose from. Picking a command opens the plugin file
-    containing the command and navigates to the location where the command is
-    defined.
-
-    This command is exposed to both plugin hosts (by way of being in two
-    packages) with the Python 3.3 plugin host triggering the command from the
-    Python 3.8 host, so that we can gather all available commands.
-    """
 
 
     def name(self):
         return "commands_browser_plugin_commands_33" if legacy() else "commands_browser_plugin_commands"
 
 
-    def run(self, cmd_dict=None):
+    def run(self, cmd_dict = None):
         cmd_dict = cmd_dict or {}
         for cmd_type, cmd_info in _cmd_types.items():
             get_commands(cmd_type, cmd_info["commands"], cmd_dict)
 
         if legacy():
-            return sublime.run_command('commands_browser_plugin_commands', {"cmd_dict": cmd_dict})
+            return sublime.run_command('commands_browser_plugin_commands', { "cmd_dict": cmd_dict })
 
         items = []
         for command, details in cmd_dict.items():
@@ -50,6 +40,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
         items.sort(key=lambda o: o.trigger)
         window = sublime.active_window()
+
         window.show_quick_panel(
             items = items,
             on_select = lambda idx: self.on_select(idx, items, cmd_dict),
