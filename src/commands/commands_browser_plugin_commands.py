@@ -1,20 +1,15 @@
 import re
+import os
 import sys
 import inspect
 import sublime
 import sublime_plugin
 
 from ..utils.plugin_command_utils import (
-    get_commands, legacy, _cmd_types
+    get_commands, legacy, _cmd_types, navigate_to
 )
 
-
-def _navigate_to(view, symbol):
-    """
-    Navigate to the symbol in the given view.
-    """
-    view.window().run_command("goto_definition", {"symbol": symbol})
-
+from ..settings import commands_browser_settings
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
@@ -76,7 +71,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
         if view.is_loading():
             view.settings().set("_jump_to_class", cmd["class"])
         else:
-            _navigate_to(view, cmd["class"])
+            navigate_to(view, cmd["class"])
 
 
 
@@ -92,4 +87,4 @@ class CommandsBrowserCommandJumpListener(sublime_plugin.ViewEventListener):
         symbol = self.view.settings().get("_jump_to_class")
         self.view.settings().erase("_jump_to_class")
 
-        sublime.set_timeout(lambda: _navigate_to(self.view, symbol), 0)
+        sublime.set_timeout(lambda: navigate_to(self.view, symbol), 0)

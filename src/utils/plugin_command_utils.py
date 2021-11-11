@@ -32,6 +32,13 @@ def legacy():
     return sys.version_info < (3, 8, 0)
 
 
+def navigate_to(view, symbol):
+    """
+    Navigate to the symbol in the given view.
+    """
+    view.window().run_command("goto_definition", {"symbol": symbol})
+
+
 def get_commands(cmd_type, commands, cmd_dict_out):
     """
     Given a list of commands of a particular type, decode each command in
