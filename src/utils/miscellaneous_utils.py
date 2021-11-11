@@ -1,5 +1,5 @@
 import sublime
-
+import textwrap
 
 def command_kind_type(command_type):
     """ Based on the command_type, returns a tuple that can the be used to have
@@ -24,3 +24,9 @@ def command_kind_type(command_type):
 
     if command_type == "find":
         return (sublime.KIND_ID_MARKUP, "F", "Find Command")
+
+
+def log(message):
+    """
+    """
+    print(f"[CommandsBrowser]: {textwrap.dedent(message)}")

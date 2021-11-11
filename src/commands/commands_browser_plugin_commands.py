@@ -10,6 +10,7 @@ from ..utils.plugin_command_utils import (
 )
 
 from ..settings import commands_browser_settings
+from ..utils.miscellaneous_utils import log
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
@@ -28,7 +29,18 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
             return sublime.run_command('commands_browser_plugin_commands', { "cmd_dict": cmd_dict })
 
         items = []
-        for command, details in cmd_dict.items():
+        host = commands_browser_settings("cb.filter_plugin_commands_on_host")
+
+        if (type(host) != str) or (host not in ["all", "3.3", "3.8"]):
+            log(f"""'{host}' is an invalid value for the setting
+                'cb.filter_plugin_commands_on_host'. Falling back to default value of 'all'.""")
+
+        for _, details in cmd_dict.items():
+
+            if host != "all":
+                if details["host"] != host:
+                    continue
+
             items.append(
                 sublime.QuickPanelItem(
                     trigger = details["name"],
@@ -39,6 +51,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
             )
 
         items.sort(key=lambda o: o.trigger)
+
         window = sublime.active_window()
 
         window.show_quick_panel(

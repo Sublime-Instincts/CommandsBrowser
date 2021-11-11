@@ -6,4 +6,15 @@
     //
     // The default value for this setting is false.
     "cb.auto_open_doc_panel_on_navigate": false,
+
+    // ST4 has 2 plugin hosts. 3.3 (Python 3.3.6) & 3.8 (Python 3.8.8). This
+    // setting allows a user to filter the plugin commands based on the host.
+    //
+    // Valid values are "all", "3.3" and "3.8"
+    // "all" - Show plugin commands from both hosts.
+    // "3.3" - Show plugin commands from the 3.3 host only.
+    // "3.8" - Show plugin commands from the 3.8 host only.
+    //
+    // The default value for this setting is false.
+    "cb.filter_plugin_commands_on_host": "all"
 }
