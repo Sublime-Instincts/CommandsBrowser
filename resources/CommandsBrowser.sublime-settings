@@ -15,6 +15,6 @@
     // "3.3" - Show plugin commands from the 3.3 host only.
     // "3.8" - Show plugin commands from the 3.8 host only.
     //
-    // The default value for this setting is false.
+    // The default value for this setting is "all".
     "cb.filter_plugin_commands_on_host": "all"
 }

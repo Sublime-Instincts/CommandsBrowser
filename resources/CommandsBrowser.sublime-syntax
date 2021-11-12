@@ -4,11 +4,13 @@ file_extensions:
   - doc_panel
 hidden: true
 scope: text.doc_panel
+version: 2
+
 contexts:
   main:
-    - include: arg_type_brackets
-    - include: single_quoted_string
     - include: keys
+    - include: arg_options
+    - include: arg_type_brackets
 
   keys:
     - match: \b(Name of the command)\b(\:)
@@ -39,3 +41,7 @@ contexts:
       pop: 1
     - match: \b(string|int|object|boolean)\b
       scope: storage.type.doc_panel
+
+  arg_options:
+    - match: \'(\w+)\'
+      scope: markup.bold.doc_panel

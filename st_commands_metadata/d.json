@@ -1,7 +1,7 @@
 {
     "delete_word": {
         "command_type": "text",
-        "doc_string": "Delete the (sub-)word in front of or after each caret.",
+        "doc_string": "Deletes the (sub-)word in front of or after each caret.",
         "args": [
             {
                 "name": "forward",
@@ -18,12 +18,12 @@
     },
     "delete_file": {
         "command_type": "window",
-        "doc_string": "Deletes the given file(s) by moving the file(s) to the system trash bin.",
+        "doc_string": "Deletes the given file(s) by moving the file(s) to the system trash/recycle bin.",
         "args": [
             {
                 "name": "files",
                 "doc_string": "The absolute path(s) to the given file(s) on disk.",
-                "type": "List<string>"
+                "type": "List[str]"
             },
             {
                 "name": "prompt",
@@ -40,7 +40,7 @@
             {
                 "name": "dirs",
                 "doc_string": "The absolute path(s) to the given folder(s) on disk.",
-                "type": "List<string>"
+                "type": "List[str]"
             },
             {
                 "name": "prompt",
@@ -58,7 +58,7 @@
     },
     "detect_indentation": {
         "command_type": "text",
-        "doc_string": "Guess indentation settings from the text content.",
+        "doc_string": "Guess the indentation settings for the active view from the text content.",
         "args": [
             {
                 "name": "show_message",
@@ -86,7 +86,7 @@
         "args": [
             {
                 "name": "by",
-                "doc_string": "The mode of selection. Valid values are words, columns and lines.",
+                "doc_string": "The mode of selection. Valid values are 'words', 'columns' and 'lines'.",
                 "type": "string."
             },
             {
@@ -101,7 +101,7 @@
             },
             {
                 "name": "subtractive",
-                "doc_string": "Whether to remoove the existing selection(s) before adding the new selection.",
+                "doc_string": "Whether to remove the existing selection(s) before adding the new selection.",
                 "type": "boolean"
             }
         ],

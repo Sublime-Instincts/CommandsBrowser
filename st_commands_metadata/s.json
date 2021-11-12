@@ -1,7 +1,7 @@
 {
     "save": {
         "command_type": "text",
-        "doc_string": "Saves the active document.",
+        "doc_string": "Saves the active view/document.",
         "args": [
             {
                 "name": "async",
@@ -15,7 +15,7 @@
             },
             {
                 "name": "quiet",
-                "doc_string": null,
+                "doc_string": "Whether to suppress dialogs if the file save fails or requires elevated permissions on the host OS.",
                 "type": "boolean"
             }
         ],
@@ -28,7 +28,7 @@
     },
     "save_macro": {
         "command_type": "window",
-        "doc_string": "Save recorded macro to a file.",
+        "doc_string": "Save the recorded macro to a file.",
         "type": "core"
     },
     "save_project_and_workspace_as": {
@@ -101,11 +101,11 @@
     },
     "set_build_system": {
         "command_type": "window",
-        "doc_string": "Sets the given build system.",
+        "doc_string": "Sets the given build system based on the build file.",
         "args": [
             {
                 "name": "file",
-                "doc_string": "Accepts a Packages/ relative path to a sublime build file to set as the current build system. An empty string will set it to the Automatic option.",
+                "doc_string": "Accepts a 'Packages/' relative path to a sublime build file to set as the current build system. An empty string will set it to the Automatic option as seen in 'Tools -> Build System'.",
                 "type": "string"
             }
         ],
@@ -116,26 +116,19 @@
         "doc_string": "Sets the layout of the current window based on the structure specified in the args.",
         "args": [
             {
-                "cols": [
-                    0,
-                    1
-                ]
+                "name": "cols",
+                "doc_string": null,
+                "type": "List[float]"
             },
             {
-                "rows": [
-                    0,
-                    1
-                ]
+                "name": "rows",
+                "doc_string": null,
+                "type": "List[float]"
             },
             {
-                "cells": [
-                    [
-                        0,
-                        0,
-                        1,
-                        1
-                    ]
-                ]
+                "name": "cells",
+                "doc_string": null,
+                "type": "List[List[int]]"
             }
         ],
         "type": "core"
@@ -381,7 +374,7 @@
             {
                 "names": "paths",
                 "doc_string": null,
-                "type": "List<string>"
+                "type": "List[str]"
             }
         ],
         "added": 3181,
@@ -499,12 +492,12 @@
     },
     "switch_file": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "",
         "args": [
             {
                 "name": "extensions",
                 "doc_string": null,
-                "type": "List<string>"
+                "type": "List[str]"
             },
             {
                 "name": "side_by_side",
@@ -517,7 +510,7 @@
     },
     "swap_case": {
         "command_type": "text",
-        "doc_string": "Convert uppercase characters to lowercase and lowercase characters to uppercase.",
+        "doc_string": "Convert uppercase characters to lowercase and vice versa.",
         "type": "default",
         "location": "Default/transform.py"
     },
@@ -569,7 +562,7 @@
     },
     "set_max_columns": {
         "command_type": "window",
-        "doc_string": "Readjusts the current layout to have atmost the specified columns.",
+        "doc_string": "Readjusts the current layout to have atmost, the specified columns.",
         "args": [
             {
                 "name": "columns",
@@ -582,25 +575,25 @@
     },
     "set_encoding": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Sets the encoding of the currently open view/document.",
         "args": [
             {
                 "name": "encoding",
-                "doc_string": null,
+                "doc_string": "The encoding to be set.",
                 "type": "string"
             }
         ],
         "type": "core"
     },
     "select_to_left": {
-        "command_type": "text",
-        "doc_string": null,
+        "command_type": "window",
+        "doc_string": "Adds the sheet to the left of the active one to the active groups multiselected sheets.",
         "type": "core",
         "added": 4097
     },
     "select_to_right": {
-        "command_type": "text",
-        "doc_string": null,
+        "command_type": "window",
+        "doc_string": "Adds the sheet to the right of the active one to the active groups multiselected sheets.",
         "type": "core",
         "added": 4097
     }
