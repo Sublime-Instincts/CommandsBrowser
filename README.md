@@ -62,6 +62,27 @@ Examples:
 
 The default value for this setting is `["window", "application", "text"]`.
 
+###### `cb.filter_core_commands_on_type` (`List[str]`)
+
+This setting allows a user to filter the core commands based on the type of the command.
+
+Examples:
+1. `["text", "window", "application", "find"]` - Shows all command types.
+2. `["window", "find"]`                        - Filters to show only window & find commands.
+3. `["application", "text"]`                   - Filters to show only application & text commands.
+
+The default value for this setting is `["text", "window", "application", "find"]`.
+
+### Key bindings.
+
+This package just ships with one key binding to make it easier to open the core commands documentation panel. The key binding is <kbd>ctrl + shift + c, ctrl + shift + d</kbd>
+
+### Discussions
+
+[Discussions](https://github.com/Sublime-Instincts/CommandsBrowser/discussions) are enabled for this repo so that constructive discussions can be had on how to effectively use commands (especiallt core) to improve your ST/SM workflows. Any questions on core commands can be done in the respective channels i.e. [Sublime Text](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-text-commands) and [Sublime Merge](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-merge-commands).
+
+Since plugin based commands are specific to plugin/package, t's best to ask them in the specific repo for that plugin/package. Of course, your free to ask relevant questions to get help.
+
 ## Contributing
 
 See the [Contribution Guidelines](CONTRIBUTING.md) to understand how to contribute to this project !
