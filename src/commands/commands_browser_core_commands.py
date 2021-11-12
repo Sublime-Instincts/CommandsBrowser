@@ -2,7 +2,7 @@ import sublime
 import sublime_plugin
 
 from ..utils.core_commands_utils import (
-    get_core_commands_data, _kind_mapping, num_core_commands, core_commands_doc_panel
+    get_core_commands_data, _kind_mapping, core_commands_doc_panel
 )
 
 from ..settings import commands_browser_settings
