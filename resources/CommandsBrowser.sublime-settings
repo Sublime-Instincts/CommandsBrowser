@@ -22,10 +22,21 @@
     // of the command.
     //
     // Examples:
-    // ["window", "application", "text"] - Shows all command types.
+    // ["text", "window", "application"] - Shows all command types.
     // ["window"]                        - Filters to show only window commands.
     // ["application", "text"]           - Filters to show only application & text
     //                                     commands.
     // The default value for this setting is ["text", "window", "application"].
-    "cb.filter_plugin_commands_on_type": ["text", "window", "application"]
+    "cb.filter_plugin_commands_on_type": ["text", "window", "application"],
+
+    // This setting allows a user to filter the core commands based on the type
+    // of the command.
+    //
+    // Examples:
+    // ["text", "window", "application", "find"] - Shows all command types.
+    // ["window", "find"]                        - Filters to show only window & find commands.
+    // ["application", "text"]                   - Filters to show only application &
+    //                                             text commands.
+    // The default value for this setting is ["text", "window", "application", "find"].
+    "cb.filter_core_commands_on_type": ["text", "window", "application", "find"]
 }

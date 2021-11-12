@@ -6,7 +6,7 @@ from ..utils.plugin_command_utils import (
 )
 
 from ..settings import commands_browser_settings
-from ..utils.miscellaneous_utils import log
+from ..utils.miscellaneous_utils import log, filter_command_types
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
@@ -26,23 +26,13 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
         items = []
         host = commands_browser_settings("cb.filter_plugin_commands_on_host")
-        cmd_type_filter_list = commands_browser_settings("cb.filter_plugin_commands_on_type")
 
         if (type(host) != str) or (host not in ["all", "3.3", "3.8"]):
             log(f"""'{host}' is an invalid value for the setting
                 'cb.filter_plugin_commands_on_host'. Falling back to default value.""")
             host = "all"
 
-        if (type(cmd_type_filter_list) != list) or (len(cmd_type_filter_list) == 0):
-            log(f"""'{host}' is an invalid value for the setting
-                'cb.filter_plugin_commands_on_type'. Falling back to default value.""")
-            cmd_type_filter_list = ["text", "window", "application"]
-
-        cmd_type_list = ["text", "window", "application"]
-        cmd_type_filter_list = [i for i in cmd_type_filter_list if i in cmd_type_list]
-
-        if not len(cmd_type_filter_list):
-            cmd_type_filter_list = ["text", "window", "application"]
+        cmd_type_filter_list = filter_command_types("filter_plugin_commands_on_type")
 
         for _, details in cmd_dict.items():
 
@@ -69,7 +59,6 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
         items.sort(key=lambda o: o.trigger)
 
         window = sublime.active_window()
-
         window.show_quick_panel(
             items = items,
             on_select = lambda idx: self.on_select(idx, items, cmd_dict),

@@ -46,7 +46,7 @@
                 "type": "boolean"
             }
         ],
-        "type": "text",
+        "type": "core",
         "location": "Default/indentation.py"
     },
     "upper_case": {
