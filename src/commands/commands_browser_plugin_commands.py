@@ -1,7 +1,3 @@
-import re
-import os
-import sys
-import inspect
 import sublime
 import sublime_plugin
 
@@ -57,6 +53,10 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
                     kind = _cmd_types[details["type"]]["kind"]
                 )
             )
+
+        if not len(items):
+            sublime.status_message("No commands available for preview.")
+            return
 
         items.sort(key=lambda o: o.trigger)
 
