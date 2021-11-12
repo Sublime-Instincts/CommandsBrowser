@@ -37,7 +37,7 @@
     },
     "toggle_preference": {
         "command_type": "window",
-        "doc_string": "Toggles the given setting in the preferences, true becomes false & vice versa.",
+        "doc_string": "Toggles the given boolean setting in the preferences.",
         "args": [
             {
                 "name": "setting",

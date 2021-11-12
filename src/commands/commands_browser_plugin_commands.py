@@ -33,9 +33,15 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
                 'cb.filter_plugin_commands_on_host'. Falling back to default value.""")
             host = "all"
 
-        if (type(cmd_type_filter_list) != list):
+        if (type(cmd_type_filter_list) != list) or (len(cmd_type_filter_list) == 0):
             log(f"""'{host}' is an invalid value for the setting
                 'cb.filter_plugin_commands_on_type'. Falling back to default value.""")
+            cmd_type_filter_list = ["text", "window", "application"]
+
+        cmd_type_list = ["text", "window", "application"]
+        cmd_type_filter_list = [i for i in cmd_type_filter_list if i in cmd_type_list]
+
+        if not len(cmd_type_filter_list):
             cmd_type_filter_list = ["text", "window", "application"]
 
         for _, details in cmd_dict.items():
