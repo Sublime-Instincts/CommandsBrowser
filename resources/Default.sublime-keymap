@@ -1,0 +1,9 @@
+[
+    {
+        "keys": ["ctrl+shift+c", "ctrl+shift+d"],
+        "command": "show_panel",
+        "args": {
+            "panel": "output.CommandsBrowser",
+        },
+    }
+]
