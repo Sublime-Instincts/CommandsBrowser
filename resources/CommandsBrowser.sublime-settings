@@ -26,6 +26,6 @@
     // ["window"]                        - Filters to show only window commands.
     // ["application", "text"]           - Filters to show only application & text
     //                                     commands.
-    // The default value for this setting is ["window", "application", "text"].
-    "cb.filter_plugin_commands_on_type": ["window", "application", "text"]
+    // The default value for this setting is ["text", "window", "application"].
+    "cb.filter_plugin_commands_on_type": ["text", "window", "application"]
 }

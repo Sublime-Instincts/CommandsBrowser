@@ -15,7 +15,7 @@ def load_commands_browser_settings():
     commands_browser_settings.default = {
         "cb.auto_open_doc_panel_on_navigate": False,
         "cb.filter_plugin_commands_on_host": "all",
-        "cb.filter_plugin_commands_on_type": ["window", "application", "text"]
+        "cb.filter_plugin_commands_on_type": ["text", "window", "application"]
     }
 
 
