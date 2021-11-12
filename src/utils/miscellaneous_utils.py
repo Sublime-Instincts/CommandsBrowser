@@ -27,6 +27,12 @@ def command_kind_type(command_type):
 
 
 def log(message):
-    """
+    """ A simple logger that will log the given message to the console.
+
+    Args:
+        message (str): The message to log.
+
+    Returns:
+        None
     """
     print(f"[CommandsBrowser]: {textwrap.dedent(message)}")

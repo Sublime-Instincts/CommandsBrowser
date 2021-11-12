@@ -30,16 +30,24 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
         items = []
         host = commands_browser_settings("cb.filter_plugin_commands_on_host")
+        cmd_type_filter_list = commands_browser_settings("cb.filter_plugin_commands_on_type")
 
         if (type(host) != str) or (host not in ["all", "3.3", "3.8"]):
             log(f"""'{host}' is an invalid value for the setting
-                'cb.filter_plugin_commands_on_host'. Falling back to default value of 'all'.""")
+                'cb.filter_plugin_commands_on_host'. Falling back to default value.""")
+
+        if (type(cmd_type_filter_list) != list):
+            log(f"""'{host}' is an invalid value for the setting
+                'cb.filter_plugin_commands_on_type'. Falling back to default value.""")
 
         for _, details in cmd_dict.items():
 
             if host != "all":
                 if details["host"] != host:
                     continue
+
+            if details["type"] not in cmd_type_filter_list:
+                continue
 
             items.append(
                 sublime.QuickPanelItem(

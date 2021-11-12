@@ -10,17 +10,17 @@ from sublime_plugin import (
 
 
 _cmd_types = {
-    "app": {
+    "application": {
         "name": "ApplicationCommand",
         "commands": application_command_classes,
         "kind": command_kind_type("application")
     },
-    "wnd": {
+    "window": {
         "name": "WindowCommand",
         "commands": window_command_classes,
         "kind": command_kind_type("window")
     },
-    "txt": {
+    "text": {
         "name": "TextCommand",
         "commands": text_command_classes,
         "kind": command_kind_type("text")

@@ -15,17 +15,17 @@ KIND_TEXT = (sublime.KIND_ID_SNIPPET, "T", "Text Command")
 
 
 cmd_types = {
-    "app": {
+    "application": {
         "name": "ApplicationCommand",
         "commands": application_command_classes,
         "kind": KIND_APPLICATION
     },
-    "wnd": {
+    "window": {
         "name": "WindowCommand",
         "commands": window_command_classes,
         "kind": KIND_WINDOW
     },
-    "txt": {
+    "text": {
         "name": "TextCommand",
         "commands": text_command_classes,
         "kind": KIND_TEXT

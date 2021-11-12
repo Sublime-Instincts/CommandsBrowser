@@ -16,5 +16,16 @@
     // "3.8" - Show plugin commands from the 3.8 host only.
     //
     // The default value for this setting is "all".
-    "cb.filter_plugin_commands_on_host": "all"
+    "cb.filter_plugin_commands_on_host": "all",
+
+    // This setting allows a user to filter the plugin commands based on the type
+    // of the command.
+    //
+    // Examples:
+    // ["window", "application", "text"] - Shows all command types.
+    // ["window"]                        - Filters to show only window commands.
+    // ["application", "text"]           - Filters to show only application & text
+    //                                     commands.
+    // The default value for this setting is ["window", "application", "text"].
+    "cb.filter_plugin_commands_on_type": ["window", "application", "text"]
 }
