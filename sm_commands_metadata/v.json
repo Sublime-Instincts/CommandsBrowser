@@ -1,7 +1,7 @@
 {
     "view_tree": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Changes ",
         "added": 1055,
         "type": "core"
     }

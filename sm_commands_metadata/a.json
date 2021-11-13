@@ -20,17 +20,17 @@
     },
     "adjust_slider": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Adjusts the slider for the 'Onion skin' style image diff.",
         "args": [
             {
                 "name": "forward",
-                "doc_string": null,
+                "doc_string": "Whether to move the slider in the forward direction.",
                 "type": "boolean"
             },
             {
                 "name": "jump_to_end",
-                "doc_string": null,
-                "type": "string"
+                "doc_string": "Whether to jump to the end of the slider without stepping through the slider in an incremental/decremental manner.",
+                "type": "boolean"
             }
         ],
         "added": 2024,

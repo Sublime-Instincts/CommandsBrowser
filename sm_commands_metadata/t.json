@@ -1,7 +1,7 @@
 {
     "toggle_search": {
         "command_type": "window",
-        "doc_string": "Toggles the search commit dialog box.",
+        "doc_string": "Toggles the search commit input dialog box.",
         "added": 1055,
         "type": "core"
     },
@@ -56,13 +56,13 @@
     },
     "toggle_ref_filter": {
         "command_type": "window",
-        "doc_string": "Toggles the focus of the search filter in the Location tab. If the Location tab is not in focus, it will first bring it to focus.",
+        "doc_string": "Toggles the focus of the search filter in the 'Location' tab. If the 'Location' tab is not in focus, it will first bring it to focus.",
         "added": 2040,
         "type": "core"
     },
     "toggle_files_filter": {
         "command_type": "window",
-        "doc_string": "Toggles the focus of the search filter in the Files tab. If the Files tab is not in focus, it will first bring it to focus.",
+        "doc_string": "Toggles the focus of the search filter in the 'Files' tab. If the 'Files' tab is not in focus, it will first bring it to focus.",
         "added": 2051,
         "type": "core"
     },
@@ -74,7 +74,7 @@
     },
     "toggle_image_diff_style": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Toggles between the 'Side by side' and 'Onion skin' for image diffs.",
         "added": 2024,
         "type": "core"
     },

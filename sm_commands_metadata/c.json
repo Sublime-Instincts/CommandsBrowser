@@ -117,14 +117,8 @@
     },
     "close_tab": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Closes the active repository tab.",
         "added": 2000,
-        "type": "core"
-    },
-    "close_window": {
-        "command_type": "window",
-        "doc_string": null,
-        "added": 1055,
         "type": "core"
     },
     "clear_stashes": {
