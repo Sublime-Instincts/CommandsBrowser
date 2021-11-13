@@ -2,7 +2,7 @@ import sublime
 import sublime_plugin
 
 from ..utils.core_commands_utils import (
-    get_core_commands_data, _kind_mapping, core_commands_doc_panel
+    get_core_commands_data, kind_mapping, core_commands_doc_panel
 )
 
 from ..settings import commands_browser_settings
@@ -35,7 +35,7 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
                 trigger = key,
                 annotation = annotation_string,
                 details = value.get("doc_string") if value.get("doc_string") else "No description available",
-                kind = _kind_mapping[value.get("command_type")]
+                kind = kind_mapping[value.get("command_type")]
             )
 
             items.append(item)

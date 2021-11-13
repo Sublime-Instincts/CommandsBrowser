@@ -43,5 +43,5 @@ contexts:
       scope: storage.type.doc_panel
 
   arg_options:
-    - match: \'([\w\s]*)\'
+    - match: \'([\w\s\:]*)\'
       scope: markup.bold.doc_panel

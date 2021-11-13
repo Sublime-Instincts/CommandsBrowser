@@ -79,7 +79,7 @@ This package just ships with one key binding to make it easier to open the core 
 
 ### Discussions
 
-[Discussions](https://github.com/Sublime-Instincts/CommandsBrowser/discussions) are enabled for this repo so that constructive discussions can be had on how to effectively use commands (especiallt core) to improve your ST/SM workflows. Any questions on core commands can be done in the respective channels i.e. [Sublime Text](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-text-commands) and [Sublime Merge](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-merge-commands).
+[Discussions](https://github.com/Sublime-Instincts/CommandsBrowser/discussions) are enabled for this repo so that constructive discussions can be had on how to effectively use commands (especially core) to improve your ST/SM workflows. Any questions on core commands can be done in the respective channels i.e. [Sublime Text](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-text-commands) and [Sublime Merge](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-merge-commands).
 
 Since plugin based commands are specific to plugin/package, it's best to ask them in the specific repository for that plugin/package. Of course, your free to ask relevant questions to get help.
 
@@ -96,8 +96,9 @@ He has an amazing [YouTube channel](https://www.youtube.com/c/OdatNurd) that you
 
 2. [PackageDev](https://github.com/SublimeText/PackageDev), from where I got the intial list of [core commands metadata](https://github.com/SublimeText/PackageDev/blob/master/plugins/command_completions/builtin_commands_meta_data.yaml) to work on. `PackageDev` has a YAML file for storing the data, which did not suit my tastes for 2 reasons
 
-  (a) Python doesn't have a default module for working with YAML files, which is why `PackageDev` uses `pyyaml` as a dependency. At the time of writing this, Package Control doesn't allow dependencies within the 3.8 plugin host, so you are stuck on 3.3 (which I did not want to be).
-  (b) I did not want to add an unnecessary dependency to what may be a simple package like this one.
+(a) Python doesn't have a default module for working with YAML files, which is why `PackageDev` uses `pyyaml` as a dependency. At the time of writing this, Package Control doesn't allow dependencies within the 3.8 plugin host, so you are stuck on 3.3 (which I did not want to be).
+
+(b) I did not want to add an unnecessary dependency to what may be a simple package like this one.
 
 ## License
 The MIT License (MIT)
