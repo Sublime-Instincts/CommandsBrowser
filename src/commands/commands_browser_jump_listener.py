@@ -1,6 +1,8 @@
 import sublime
 import sublime_plugin
 
+from ..utils.plugin_command_utils import navigate_to
+
 
 class CommandsBrowserCommandJumpListener(sublime_plugin.ViewEventListener):
 
