@@ -57,6 +57,7 @@ def core_commands_doc_panel(window, docs):
 
     doc_panel.run_command("insert", { "characters": final_doc_string })
     doc_panel.settings().set("syntax", "Packages/CommandsBrowser/resources/CommandsBrowser.sublime-syntax")
+    doc_panel.set_read_only(True)
     window.run_command("show_panel", {
         "panel": "output.CommandsBrowser",
     })

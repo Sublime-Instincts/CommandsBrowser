@@ -31,10 +31,9 @@ This will show you all of the core commands that are present in Sublime Merge. S
 3. `CommandsBrowser: Browse available plugin/package commands.`
 This will show you all of the plugin/package commands that are present in Sublime Text. Selecting one would open the corresponding plugin file & navigate to that location where the command class is implemented.
 
-**Note:** Since the core command list is not exposed by ST like plugin commands are, the only way to keep track of it would be to manually maintain a list of commands and show it. So, the list is probably incomplete. As far as I know, it should be fairly close to a complete list (It's probably the most comprehensive list available).
+**Note:** Since the core command list is not exposed by ST like plugin commands are, the only way to keep track of it would be to manually maintain a list of commands and show it. So, the list is probably incomplete. As far as I know, it should be fairly close to a complete list (It's probably the most comprehensive public list available).
 
-This package should be upto date with commands as of
-![](https://img.shields.io/badge/ST-Build%204122-orange?style=for-the-badge&logo=sublime-text) ![](https://img.shields.io/badge/SM-Build%202062-blue?style=for-the-badge&logo=sublime-merge)
+This package should be upto date with commands as of **ST Build 4122** & **SM Build 2062**
 
 ### Settings
 
