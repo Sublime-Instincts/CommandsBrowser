@@ -32,13 +32,13 @@
     },
     "exit_blame": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Exits the blame view.",
         "added": 1055,
         "type": "core"
     },
     "exit_tree_mode": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Exits the 'Tree' mode in 'Files' tab and switches to the 'Changes' mode.",
         "added": 1055,
         "type": "core"
     },
