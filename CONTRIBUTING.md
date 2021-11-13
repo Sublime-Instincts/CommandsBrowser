@@ -1,4 +1,6 @@
-Contributions in any form is most welcome ! Some of the areas that could use improvements are
+## Contributing to the project
+
+Contributions in any form is most welcome. Some of the areas that could use improvements are
 
 1. Improve existing commands documentation (command descriptions, arguments descriptions etc.)
 2. Add documentation to existing commands that don't have one.
@@ -8,7 +10,7 @@ Contributions in any form is most welcome ! Some of the areas that could use imp
 Here are the general steps to setup a work environment and to get started
 
 1. Fork the repository and `git clone` your fork to the `Packages/` directory.
-2. Refer to the `.editorconfig` file and setup the specific settings. I usually just create a [Project]() for each package and set up project specific settings for them
+2. Refer to the `.editorconfig` file (If you are not sure what's editorconfig file used for, you can read it over [here](https://editorconfig.org/#overview)) and setup the specific settings. I usually just create a [Project](https://www.sublimetext.com/docs/projects.html) for each package and set up project specific settings for them
 
 ```json
 {
