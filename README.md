@@ -1,4 +1,5 @@
 # CommandsBrowser
+
 ![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)    ![LICENSE](https://img.shields.io/badge/ST-Build%204121+-orange?style=for-the-badge&logo=sublime-text) ![Tag](https://img.shields.io/github/v/tag/Sublime-Instincts/CoreCommandsViewer?style=for-the-badge&logo=github&sort=semver) ![Downloads](https://img.shields.io/packagecontrol/dt/CommandsBrowser?style=for-the-badge)
 
 A Sublime Text package that allows a user to view all the available core/plugin commands for Sublime Text and Sublime Merge, along with their documentation/source.
@@ -37,12 +38,12 @@ This package should be upto date with commands as of
 
 ### Settings
 
-###### `cb.auto_open_doc_panel_on_navigate` (`Boolean`)
+##### `cb.auto_open_doc_panel_on_navigate` (`Boolean`)
 When set to `true`, automatically opens the core commands documentation panel as you navigate through them. This can be helpful when you quickly want to glance the documentation for multiple commands at once and not have to close & reopen the panel every time.
 
 The default value for this setting is `false`.
 
-###### `cb.filter_plugin_commands_on_host` (`String`)
+##### `cb.filter_plugin_commands_on_host` (`String`)
 Sublime Text 4 has 2 plugin hosts. 3.3 (Python 3.3.6) & 3.8 (Python 3.8.8). This setting allows a user to filter the plugin commands based on the host.
 
 Valid values are `"all"`, `"3.3"` and `"3.8"`
@@ -52,7 +53,7 @@ Valid values are `"all"`, `"3.3"` and `"3.8"`
 
 The default value for this setting is `"all"`.
 
-###### `cb.filter_plugin_commands_on_type` (`List[str]`)
+##### `cb.filter_plugin_commands_on_type` (`List[str]`)
 This setting allows a user to filter the plugin commands based on the type of the command.
 
 Examples:
@@ -62,7 +63,7 @@ Examples:
 
 The default value for this setting is `["window", "application", "text"]`.
 
-###### `cb.filter_core_commands_on_type` (`List[str]`)
+##### `cb.filter_core_commands_on_type` (`List[str]`)
 
 This setting allows a user to filter the core commands based on the type of the command.
 
