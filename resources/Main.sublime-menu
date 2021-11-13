@@ -1,0 +1,29 @@
+[
+    {
+        "id": "preferences",
+        "children": [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children": [
+                    {
+                        "caption": "CommandsBrowser",
+                        "children": [
+                            {
+                                "caption": "Settings",
+                                "command": "edit_settings",
+                                "args": { "base_file": "${packages}/CommandsBrowser/resources/CommandsBrowser.sublime-settings" },
+                            },
+                            {
+                                "caption": "Key Bindings",
+                                "command": "edit_settings",
+                                "args": { "base_file": "${packages}/CommandsBrowser/resources/Default.sublime-keymap" },
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

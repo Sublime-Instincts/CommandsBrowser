@@ -1,4 +1,7 @@
 [
+    // This keybinding makes it easy to reopen the core commands doc panel if
+    // it's closed or if you just want to refer to the documentation of the last
+    // core command you checked. Note that the panel must exist for the key binding to work.
     {
         "keys": ["ctrl+shift+c", "ctrl+shift+d"],
         "command": "show_panel",
