@@ -38,7 +38,7 @@
     },
     "close": {
         "command_type": "window",
-        "doc_string": "Close the active view.",
+        "doc_string": "Closes the active view.",
         "type": "core"
     },
     "clone_file": {
@@ -74,12 +74,12 @@
         "args": [
             {
                 "name": "group",
-                "doc_string": null,
+                "doc_string": "The index of the target group.",
                 "type": "int"
             },
             {
                 "name": "index",
-                "doc_string": null,
+                "doc_string": "The index within the target group.",
                 "type": "int"
             }
         ],
@@ -91,7 +91,7 @@
         "args": [
             {
                 "name": "group",
-                "doc_string": null,
+                "doc_string": "The index of the target group.",
                 "type": "int"
             }
         ],
@@ -153,7 +153,7 @@
     },
     "close_to_right_by_index": {
         "command_type": "window",
-        "doc_string": "Close all views of a group right of the one identified by index. A value of -1 means active group/view.",
+        "doc_string": "Closes all views of a group right of the one identified by index. A value of -1 means active group/view.",
         "args": [
             {
                 "name": "group",
@@ -171,13 +171,13 @@
     },
     "close_transient": {
         "command_type": "window",
-        "doc_string": "Close all transient sheets and views.",
+        "doc_string": "Closes all transient sheets and views.",
         "added": 4050,
         "type": "core"
     },
     "close_unmodified": {
         "command_type": "window",
-        "doc_string": "Close all unmodified views of a group. A value of -1 means active group.",
+        "doc_string": "Closes all unmodified views of a group. A value of -1 means active group.",
         "args": [
             {
                 "name": "group",
@@ -195,7 +195,7 @@
     },
     "close_unmodified_to_right_by_index": {
         "command_type": "window",
-        "doc_string": "Close all unmodified views of a group right of the one identified by index. A value of -1 means active group/view.",
+        "doc_string": "Closes all unmodified views of a group right of the one identified by index. A value of -1 means active group/view.",
         "args": [
             {
                 "name": "group",
@@ -213,12 +213,12 @@
     },
     "close_window": {
         "command_type": "window",
-        "doc_string": "Close the active window.",
+        "doc_string": "Closes the active window.",
         "type": "core"
     },
     "close_workspace": {
         "command_type": "window",
-        "doc_string": "Close the active workspace.",
+        "doc_string": "Closes the active workspace.",
         "type": "core"
     },
     "commit_completion": {
@@ -228,7 +228,7 @@
     },
     "console_python_version": {
         "command_type": "window",
-        "doc_string": "Switch the python interpreter version in console input.",
+        "doc_string": "Switches the python interpreter version in console input.",
         "args": [
             {
                 "name": "version",
@@ -241,7 +241,7 @@
     },
     "context_menu": {
         "command_type": "window",
-        "doc_string": "Shows the context menu.",
+        "doc_string": "Shows the context menu for the current view.",
         "type": "core"
     },
     "copy": {

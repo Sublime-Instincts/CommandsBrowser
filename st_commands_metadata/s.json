@@ -336,28 +336,40 @@
     },
     "sublime_merge_blame_file": {
         "command_type": "window",
-        "doc_string": "Git blame selected files with Sublime Merge.",
-        "args": {
-            "files": []
-        },
+        "doc_string": "Git blame selected file(s) with Sublime Merge.",
+        "args": [
+            {
+                "name": "files",
+                "doc_string": null,
+                "type": "List[string]"
+            }
+        ],
         "added": 3181,
         "type": "core"
     },
     "sublime_merge_file_history": {
         "command_type": "window",
-        "doc_string": "Show the history of the selected file in Sublime Merge",
-        "args": {
-            "files": []
-        },
+        "doc_string": "Show the history of the selected file(s) in Sublime Merge.",
+        "args": [
+            {
+                "name": "files",
+                "doc_string": null,
+                "type": "List[string]"
+            }
+        ],
         "added": 3181,
         "type": "core"
     },
     "sublime_merge_folder_history": {
         "command_type": "window",
-        "doc_string": "Show the history of the selected folder in Sublime Merge",
-        "args": {
-            "paths": []
-        },
+        "doc_string": "Show the history of the selected folder(s) in Sublime Merge.",
+        "args": [
+            {
+                "name": "paths",
+                "doc_string": null,
+                "type": "List[string]"
+            }
+        ],
         "added": 3181,
         "type": "core"
     },
@@ -497,7 +509,7 @@
             {
                 "name": "extensions",
                 "doc_string": null,
-                "type": "List[str]"
+                "type": "List[string]"
             },
             {
                 "name": "side_by_side",

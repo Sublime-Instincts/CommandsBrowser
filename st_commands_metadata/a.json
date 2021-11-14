@@ -138,7 +138,7 @@
             {
                 "name": "selection",
                 "doc_string": "The selection to be added to the jump history. Can be an integer, a list of 2 integers or a list of list of 2 integers.",
-                "type": "int|List<int>|List<List<int>>"
+                "type": "int | List[int] | List[List[int]]"
             }
         ],
         "added": 4082,

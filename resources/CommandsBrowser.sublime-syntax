@@ -6,11 +6,20 @@ hidden: true
 scope: text.doc_panel
 version: 2
 
+variables:
+  simple_arg_types: |-
+    (?x:
+      string|int|object|boolean
+    )
+
 contexts:
+  else_pop:
+    - match: (?=\S)
+      pop: 1
+
   main:
     - include: keys
     - include: arg_options
-    - include: arg_type_brackets
 
   keys:
     - match: \b(Name of the command)\b(\:)
@@ -18,10 +27,15 @@ contexts:
         1: markup.bold.doc_panel
         2: punctuation.separator.doc_panel
       push: command_name
-    - match: \b(Description|Arguments)\b(\:)
+    - match: \b(Description)\b(\:)
       captures:
         1: markup.bold.doc_panel
         2: punctuation.separator.doc_panel
+    - match: \b(Arguments)\b(\:)
+      captures:
+        1: markup.bold.doc_panel
+        2: punctuation.separator.doc_panel
+      push: arg_type_brackets
 
   command_name:
     - match: \w+
@@ -30,17 +44,42 @@ contexts:
       pop: 1
 
   arg_type_brackets:
-    - match: '\('
+    - match: \(
       scope: punctuation.section.parens.begin.doc_panel
       push: arg_type_brackets_body
 
   arg_type_brackets_body:
     - meta_scope: meta.parens.doc_panel
-    - match: '\)'
+    - match: \)
       scope: punctuation.section.parens.end.doc_panel
       pop: 1
-    - match: \b(string|int|object|boolean)\b
+    - include: simple_arg_types
+    - include: compound_arg_type
+    - match: \n
+      pop: 1
+
+  simple_arg_types:
+    - match: '{{simple_arg_types}}'
       scope: storage.type.doc_panel
+
+  compound_arg_type:
+    - match: \b(List|Dict)\b
+      scope: storage.class.doc_panel
+      push: compound_arg_type_start
+
+  compound_arg_type_start:
+    - match: \[
+      scope: punctuation.definition.generic.begin.doc_panel
+      set: compound_arg_type_body
+
+  compound_arg_type_body:
+    - match: \]
+      scope: punctuation.definition.generic.begin.doc_panel
+      pop: 1
+    - include: simple_arg_types
+    - include: compound_arg_type
+    - match: \,
+      scope: punctuation.separator.comma.doc_panel
 
   arg_options:
     - match: \'([\w\s\:\.\-\$\{\}\/]*)\'
