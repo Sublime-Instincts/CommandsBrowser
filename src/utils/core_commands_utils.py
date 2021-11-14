@@ -70,19 +70,6 @@ def core_commands_doc_panel(window, docs):
     })
 
 
-def num_core_commands(application):
-    """ Given the application type, returns the number of commands.
-
-    Args:
-        application (str): The application for which the number of commands needs
-        to be calculated. Valid values are 'st' (Sublime Text) or 'sm' (Sublime Merge).
-
-    Returns:
-        length (int): The number of commands for that application.
-    """
-    return len(get_core_commands_data(application))
-
-
 def get_core_commands_data(application = "st"):
     """ Given the application type, generates a list of items representing
     command data that can be returned from a CommandInputHandler.list_items

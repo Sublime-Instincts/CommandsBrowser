@@ -58,27 +58,12 @@ def filter_command_types(setting_name):
     if (type(cmd_type_filter_list) != list) or (len(cmd_type_filter_list) == 0):
         log(f"""'{cmd_type_filter_list}' is an invalid value for the setting
             'cb.{setting_name}'. Falling back to default value.""")
-        cmd_type_filter_list = default_cmd_type_list(setting_name)
+        cmd_type_filter_list = commands_browser_settings.default.get(f"cb.{setting_name}")
 
-    cmd_type_list = default_cmd_type_list(setting_name)
+    cmd_type_list = commands_browser_settings.default.get(f"cb.{setting_name}")
     cmd_type_filter_list = [i for i in cmd_type_filter_list if i in cmd_type_list]
 
     if not len(cmd_type_filter_list):
-        cmd_type_filter_list = default_cmd_type_list(setting_name)
+        cmd_type_filter_list = commands_browser_settings.default.get(f"cb.{setting_name}")
 
     return cmd_type_filter_list
-
-
-def default_cmd_type_list(setting_name):
-    """ Returns the default value for the command filter type settings.
-
-    Args:
-        setting_name (str): The name of the setting.
-
-    Returns:
-        (List[str]): The default value for the
-    """
-    if setting_name == "filter_plugin_commands_on_type":
-        return ["text", "window", "application"]
-    else:
-        return ["text", "window", "application", "find"]
