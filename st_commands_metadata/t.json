@@ -24,7 +24,7 @@
     },
     "toggle_case_sensitive": {
         "command_type": "find",
-        "doc_string": "Toggles the Case sensitive flag in the Find/Replace/Incremental Find/Find in Files panel.",
+        "doc_string": "Toggles the 'Case sensitive' flag in the Find/Replace/Incremental Find/Find in Files panel.",
         "type": "core"
     },
     "toggle_distraction_free": {
@@ -39,11 +39,11 @@
     },
     "toggle_inline_diff": {
         "command_type": "text",
-        "doc_string": "Toggles whether the inline diff of the modifications under the cursor is displayed.",
+        "doc_string": "Toggles whether the inline diff of the modifications under the cursor location(s) is displayed.",
         "args": [
             {
                 "name": "prefer_hide",
-                "doc_string": "Whether to hide the other visible diffs, while showing the one(s) under the cursor(s).",
+                "doc_string": "Whether to hide the other visible diffs, while showing the ones under the cursor location(s).",
                 "type": "boolean"
             }
         ],
@@ -67,7 +67,7 @@
     },
     "toggle_preserve_case": {
         "command_type": "find",
-        "doc_string": "Toggles the Preserve case flag in the Replace panel.",
+        "doc_string": "Toggles the 'Preserve case' flag in the Replace panel.",
         "type": "core"
     },
     "toggle_record_macro": {
@@ -77,12 +77,12 @@
     },
     "toggle_regex": {
         "command_type": "find",
-        "doc_string": "Toggles the Regular expression flag in the Find/Replace/Incremental Find/Find in Files panel.",
+        "doc_string": "Toggles the 'Regular expression' flag in the Find/Replace/Incremental Find/Find in Files panel.",
         "type": "core"
     },
     "toggle_save_all_on_build": {
         "command_type": "window",
-        "doc_string": "Enable/Disable saving all open files before running a build command.",
+        "doc_string": "Enables/Disables saving all open files before running a build command.",
         "type": "core"
     },
     "toggle_setting": {
@@ -119,43 +119,43 @@
     },
     "toggle_whole_word": {
         "command_type": "find",
-        "doc_string": "Toggles the Whole word flag in the Find/Replace/Incremental Find/Find in Files panel.",
+        "doc_string": "Toggles the 'Whole word' flag in the Find/Replace/Incremental Find/Find in Files panel.",
         "type": "core"
     },
     "toggle_wrap": {
         "command_type": "find",
-        "doc_string": "Toggles the wrap flag in Find/Replace/Incremental Find panel.",
+        "doc_string": "Toggles the 'Wrap' flag in Find/Replace/Incremental Find panel.",
         "type": "core"
     },
     "trim_trailing_white_space": {
         "command_type": "text",
-        "doc_string": "Delete trailing whitespace from all lines.",
+        "doc_string": "Deletes trailing whitespace from all lines.",
         "added": 4050,
         "type": "core"
     },
     "toggle_in_selection": {
         "command_type": "find",
-        "doc_string": "Toggles the In selection flag in the Find/Replace/Incremental Find panel.",
+        "doc_string": "Toggles the 'In selection' flag in the Find/Replace/Incremental Find panel.",
         "type": "core"
     },
     "toggle_highlight": {
         "command_type": "find",
-        "doc_string": "Toggles the Highlight matches flag in the Find/Replace/Incremental Find panel.",
+        "doc_string": "Toggles the 'Highlight matches' flag in the Find/Replace/Incremental Find panel.",
         "type": "core"
     },
     "toggle_show_context": {
         "command_type": "find",
-        "doc_string": "Toggles the Show Context flag in the Find in Files panel.",
+        "doc_string": "Toggles the 'Show Context' flag in the Find in Files panel.",
         "type": "core"
     },
     "toggle_use_buffer": {
         "command_type": "find",
-        "doc_string": "Toggles the Use Buffer flag in the Find in Files panel.",
+        "doc_string": "Toggles the 'Use Buffer' flag in the Find in Files panel.",
         "type": "core"
     },
     "toggle_use_gitignore": {
         "command_type": "find",
-        "doc_string": "Toggles the Use gitignore flag in the Find in Files panel.",
+        "doc_string": "Toggles the 'Use gitignore' flag in the Find in Files panel.",
         "added": 4072,
         "type": "core"
     },
@@ -180,7 +180,7 @@
     },
     "title_case": {
         "command_type": "text",
-        "doc_string": "Converts the selection(s) to title case.",
+        "doc_string": "Converts the selection at caret location(s) to title case.",
         "type": "default",
         "location": "Default/transform.py"
     },

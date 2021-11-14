@@ -1,17 +1,17 @@
 {
     "redo": {
         "command_type": "text",
-        "doc_string": "Redo the last undo.",
+        "doc_string": "Redos the last undo.",
         "type": "core"
     },
     "redo_or_repeat": {
         "command_type": "text",
-        "doc_string": "Redo the last undo or repeat the last action if there is no undo to revert.",
+        "doc_string": "Redos the last undo or repeats the last action if there is no undo to revert.",
         "type": "core"
     },
     "refresh_folder_list": {
         "command_type": "window",
-        "doc_string": "Refresh the folder list in the sidebar from the filesystem.",
+        "doc_string": "Refreshs the folder list in the sidebar from the filesystem.",
         "type": "core"
     },
     "reindent": {
@@ -33,12 +33,12 @@
     },
     "remove_folder": {
         "command_type": "window",
-        "doc_string": "Remove dirs from sidebar.",
+        "doc_string": "Removes the given directorie(s) from the sidebar.",
         "args": [
             {
                 "name": "dirs",
-                "doc_string": null,
-                "type": "List<string>"
+                "doc_string": "The list of directorie(s) to be removed.",
+                "type": "List[string]"
             }
         ],
         "type": "core"
@@ -50,7 +50,7 @@
     },
     "reopen": {
         "command_type": "text",
-        "doc_string": "Reopen the file with a given encoding.",
+        "doc_string": "Reopens the file with a given encoding.",
         "args": [
             {
                 "name": "encoding",
@@ -62,27 +62,27 @@
     },
     "reopen_last_file": {
         "command_type": "window",
-        "doc_string": "Reopen the most recently closed file.",
+        "doc_string": "Reopens the most recently closed file.",
         "type": "core"
     },
     "replace_all": {
         "command_type": "find",
-        "doc_string": "Replace all tokens in the view, which match the pattern in the Find Input Field.",
+        "doc_string": "Replaces all tokens in the view, which matches the pattern in the Find input field.",
         "type": "core"
     },
     "replace_completion_with_auto_complete": {
         "command_type": "text",
-        "doc_string": "Replace the most recently inserted completion with the next result provided by the auto completion engine.",
+        "doc_string": "Replaces the most recently inserted completion with the next result provided by the auto completion engine.",
         "type": "core"
     },
     "replace_next": {
         "command_type": "find",
-        "doc_string": "Replace the next token in the view, which matches the pattern in the Find Input Field.",
+        "doc_string": "Replaces the next token in the view, which matches the pattern in the Find input field.",
         "type": "core"
     },
     "resize_window": {
         "command_type": "window",
-        "doc_string": "Resize the window's external bounds to the width and height specified.",
+        "doc_string": "Resizes the window's external bounds to the specified width and height.",
         "args": [
             {
                 "name": "width",
@@ -99,12 +99,12 @@
     },
     "reveal_link_source": {
         "command_type": "window",
-        "doc_string": "Resolve a symlink to expand the folder it represents.",
+        "doc_string": "Resolves a symlink to expand the folder it represents.",
         "args": [
             {
                 "name": "dirs",
-                "doc_string": null,
-                "type": "List<string>"
+                "doc_string": "The list of symlink directorie(s) to be resolved.",
+                "type": "List[string]"
             }
         ],
         "type": "core"
@@ -116,23 +116,23 @@
     },
     "revert": {
         "command_type": "text",
-        "doc_string": "Reload the file.",
+        "doc_string": "Reloads the file.",
         "type": "core"
     },
     "revert_hunk": {
         "command_type": "text",
-        "doc_string": "Revert a diff hunk.",
+        "doc_string": "Reverts a diff hunk.",
         "added": 4053,
         "type": "core"
     },
     "revert_modification": {
         "command_type": "text",
-        "doc_string": "Revert a single modification.",
+        "doc_string": "Reverts a single modification.",
         "type": "core"
     },
     "right_delete": {
         "command_type": "text",
-        "doc_string": "Delete the character to the right of the text selection caret(s).",
+        "doc_string": "Deletes the character to the right of the text selection caret(s).",
         "type": "core"
     },
     "run_macro": {
@@ -146,7 +146,7 @@
         "args": [
             {
                 "name": "file",
-                "doc_string": null,
+                "doc_string": "The 'Packages/' relative path to the '.sublime-macro' file.",
                 "type": "string"
             }
         ],
@@ -154,12 +154,12 @@
     },
     "rename_path": {
         "command_type": "window",
-        "doc_string": "Renames a given file on disk.",
+        "doc_string": "Renames the given file(s) on disk.",
         "args": [
             {
                 "name": "paths",
-                "doc_string": "A list of absolute file paths. Only the first element is considered.",
-                "type": "List<string>"
+                "doc_string": "A list of absolute file paths to be renamed.",
+                "type": "List[string]"
             }
         ],
         "type": "default",
@@ -167,7 +167,7 @@
     },
     "rename_file": {
         "command_type": "window",
-        "doc_string": "Renames the file on disk. Uses a TextInputHandler if the new name is not provided.",
+        "doc_string": "Renames the file on disk. Uses a TextInputHandler if the 'new_name' argument is not provided.",
         "args": [
             {
                 "name": "new_name",
@@ -181,11 +181,11 @@
     },
     "run_syntax_tests": {
         "command_type": "window",
-        "doc_string": "Runs all the syntax test(s) associated with a given .sublime-syntax or .tmLanguage file or a single syntax test file if the active view's file name starts with 'syntax_test'",
+        "doc_string": "Runs all the syntax test(s) associated with a given '.sublime-syntax' or '.tmLanguage' file or a single syntax test file if the active view's file name starts with 'syntax_test'",
         "args": [
             {
                 "name": "find_all",
-                "doc_string": "Whether to run the syntax test for all files that begin with 'syntax_test'. The default value is False, indicating the syntax test is run only for the active 'syntax_test' file.",
+                "doc_string": "Whether to run the syntax test for all files that begin with 'syntax_test'. The default value is 'False', indicating that the syntax test is run only for the active 'syntax_test' file.",
                 "type": "boolean"
             }
         ],
@@ -194,7 +194,7 @@
     },
     "rot13": {
         "command_type": "text",
-        "doc_string": "Uses the Rot13 algorithm to encode the given selection(s).",
+        "doc_string": "Uses the Rot13 algorithm to encode the given selection at caret location(s).",
         "type": "default",
         "location": "Default/transform.py"
     },

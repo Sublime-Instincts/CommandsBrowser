@@ -1,12 +1,12 @@
 {
     "add_directory": {
         "command_type": "find",
-        "doc_string": "Opens an OS dialog box to prompt for a folder to the 'Where' field in the Find in Files panel.",
+        "doc_string": "Opens an OS dialog box to prompt for a folder to the 'Where' field in the 'Find in Files' panel.",
         "type": "core"
     },
     "add_word": {
         "command_type": "text",
-        "doc_string": "Adds the given word to the added_words setting.",
+        "doc_string": "Adds the given word to the 'added_words' setting in the user preferences.",
         "args": [
             {
                 "name": "word",
@@ -18,11 +18,11 @@
     },
     "add_where_snippet": {
         "command_type": "find",
-        "doc_string": "Adds a snippet to the 'Where' field in the Find in Files panel.",
+        "doc_string": "Adds a snippet to the 'Where' field in the 'Find in Files' panel.",
         "args": [
             {
                 "name": "snippet",
-                "doc_string": "The string to be inserted into the 'Where' field in the Find in Files panel. Supports snippet like variables.",
+                "doc_string": "The string to be inserted into the 'Where' field in the 'Find in Files' panel. Supports snippet like variables.",
                 "type": "string"
             }
         ],
@@ -44,7 +44,7 @@
     },
     "append": {
         "command_type": "text",
-        "doc_string": "Append the given text string to the end of the buffer.",
+        "doc_string": "Appends the given text string to the end of the buffer.",
         "args": [
             {
                 "name": "characters",
@@ -85,7 +85,7 @@
     },
     "auto_complete": {
         "command_type": "text",
-        "doc_string": "Show the auto completion popup.",
+        "doc_string": "Shows the auto completion popup.",
         "args": [
             {
                 "name": "api_completions_only",

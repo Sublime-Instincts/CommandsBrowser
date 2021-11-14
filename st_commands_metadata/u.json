@@ -1,12 +1,12 @@
 {
     "undo": {
         "command_type": "text",
-        "doc_string": "Undo the last action.",
+        "doc_string": "Undos the last action.",
         "type": "core"
     },
     "unindent": {
         "command_type": "text",
-        "doc_string": "Unindents the selection by one level.",
+        "doc_string": "Unindents the selection at caret location(s) by one level.",
         "type": "core"
     },
     "update_check": {
@@ -21,13 +21,13 @@
     },
     "unfold": {
         "command_type": "text",
-        "doc_string": "Unfolds all folded regions at the given caret location(s).",
+        "doc_string": "Unfolds all folded region(s) at the given caret location(s).",
         "type": "default",
         "location": "Default/fold.py"
     },
     "unfold_all": {
         "command_type": "text",
-        "doc_string": "Unfolds all folded regions in the given buffer.",
+        "doc_string": "Unfolds all folded region(s) in the given buffer.",
         "type": "default",
         "location": "Default/fold.py"
     },
@@ -51,7 +51,7 @@
     },
     "upper_case": {
         "command_type": "text",
-        "doc_string": "Converts the given selection(s) to upper case.",
+        "doc_string": "Converts the given selection at caret location(s) to upper case.",
         "type": "default",
         "location": "Default/transform.py"
     },

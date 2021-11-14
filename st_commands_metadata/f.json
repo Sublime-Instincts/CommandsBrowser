@@ -13,17 +13,17 @@
     },
     "find_all_under": {
         "command_type": "text",
-        "doc_string": "Search and select all text matches, which are the same as the text selected text or the word under the caret.",
+        "doc_string": "Searches and selects all text matches, which are the same as the selected text or the word under the caret.",
         "type": "core"
     },
     "find_next": {
         "command_type": "text",
-        "doc_string": "Jump to the next occurrence of the text or pattern in the find buffer.",
+        "doc_string": "Jumps to the next occurrence of the text or pattern in the find buffer.",
         "type": "core"
     },
     "find_prev": {
         "command_type": "text",
-        "doc_string": "Jump to the previous occurrence of the text or pattern in the find buffer.",
+        "doc_string": "Jumps to the previous occurrence of the text or pattern in the find buffer.",
         "type": "core"
     },
     "find_under": {
@@ -139,12 +139,12 @@
     },
     "find_in_folder": {
         "command_type": "window",
-        "doc_string": "Populates the Where field of Find in Files panel with the given directorie(s).",
+        "doc_string": "Populates the 'Where' field of 'Find in Files' panel with the given directorie(s).",
         "args": [
             {
                 "name": "dirs",
-                "doc_string": "The list of absolute paths of the folders which should be searched.",
-                "type": "List<string>"
+                "doc_string": "The list of absolute paths to the folders which should be searched.",
+                "type": "List[string]"
             }
         ],
         "type": "default",
