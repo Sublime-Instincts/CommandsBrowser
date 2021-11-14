@@ -14,7 +14,14 @@
     },
     "file_history": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Shows the file history for the specified file using the 'file:' search query. If used from the command palette without the 'path' argument, then opens an InputHandler to allow the user to pick a file.",
+        "args": [
+            {
+                "name": "path",
+                "doc_string": "The name of the file for which you want to see the history.",
+                "type": "string"
+            }
+        ],
         "added": 1055,
         "type": "core"
     },

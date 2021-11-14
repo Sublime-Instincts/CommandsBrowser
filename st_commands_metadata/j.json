@@ -1,7 +1,7 @@
 {
     "join_lines": {
         "command_type": "text",
-        "doc_string": "Join the current line with the following line.",
+        "doc_string": "Joins the current line with the following line.",
         "type": "core"
     },
     "jump_back": {

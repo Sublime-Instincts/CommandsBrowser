@@ -5,7 +5,7 @@
         "args": [
             {
                 "name": "command",
-                "doc_string": "The name of the command to be executed in the palette.",
+                "doc_string": "The name of the command to be executed in the command palette.",
                 "type": "string"
             },
             {
@@ -37,13 +37,19 @@
     },
     "stage_all": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Stages all unstaged files (modified + untracked).",
         "added": 1055,
         "type": "core"
     },
     "stage_all_modified": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Stages only unstaged files that are modified.",
+        "added": 1113,
+        "type": "core"
+    },
+    "stage_all_tracked": {
+        "command_type": "window",
+        "doc_string": "Stages only unstaged files that are tracked.",
         "added": 1113,
         "type": "core"
     },
@@ -53,7 +59,7 @@
         "args": [
             {
                 "name": "query",
-                "doc_string": "The query strig to be placed in the search input field.",
+                "doc_string": "The query string to be placed in the search input field.",
                 "type": "string"
             }
         ],
@@ -101,11 +107,11 @@
     },
     "select_sidebar_tab": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Focuses a particular sidebar tab based on index.",
         "args": [
             {
                 "name": "tab",
-                "doc_string": null,
+                "doc_string": "The index of the tab.",
                 "type": "int"
             }
         ],
@@ -114,11 +120,11 @@
     },
     "stage_file": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Stages the given unstaged file. The focus needs to be on the file for the command to work.",
         "args": [
             {
                 "name": "path",
-                "doc_string": null,
+                "doc_string": "An absolute path or a repository relative path to the file to be staged.",
                 "type": "string"
             }
         ],
@@ -146,16 +152,21 @@
     },
     "set_preference": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Sets the given setting with the given value in the user preferences.",
         "args": [
             {
+                "name": "event",
+                "doc_string": "A xy coordinates object. This is something passed by the application and can be ignored.",
+                "type": "Dict[string, float]"
+            },
+            {
                 "name": "setting",
-                "doc_string": null,
+                "doc_string": "The setting name.",
                 "type": "string"
             },
             {
                 "name": "value",
-                "doc_string": null,
+                "doc_string": "The setting value.",
                 "type": "string"
             }
         ],
@@ -164,13 +175,13 @@
     },
     "show_commit_message_history": {
         "command_type": "window",
-        "doc_string": "Shows the commit message history dropdown.",
+        "doc_string": "Opens the commit message history dropdown.",
         "added": 2057,
         "type": "core"
     },
     "stage_hunk": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Stages a given unstaged hunk.",
         "added": 1055,
         "type": "core"
     },

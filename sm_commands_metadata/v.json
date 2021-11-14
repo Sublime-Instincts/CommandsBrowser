@@ -1,7 +1,7 @@
 {
     "view_tree": {
         "command_type": "window",
-        "doc_string": "Changes ",
+        "doc_string": "Switches to the 'tree' mode in the 'Files' tab for a specific commit.",
         "added": 1055,
         "type": "core"
     }

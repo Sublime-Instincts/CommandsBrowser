@@ -1,7 +1,7 @@
 {
     "blame": {
         "command_type": "window",
-        "doc_string": "Performs a git blame on the provided file.",
+        "doc_string": "Performs a git blame on the provided file. If used from the command palette without the 'path' argument, then opens an InputHandler to allow the user to pick a file.",
         "args": [
             {
                 "name": "path",

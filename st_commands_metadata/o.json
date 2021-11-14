@@ -24,17 +24,22 @@
     },
     "open_file": {
         "command_type": "window",
-        "doc_string": "Opens the specified file. Will dynamically open resource files from sublime-package archives as read-only if the specified override file does not exist.",
+        "doc_string": "Opens the specified file. Will dynamically open resource files from '.sublime-package' archives as read-only, if the specified override file does not exist.",
         "args": [
             {
                 "name": "file",
-                "doc_string": "Absolute path to the file to be opened. Also accepts snippet like variables like $packages which will be expanded.",
+                "doc_string": "Absolute path to the file to be opened. Also accepts snippet like variables like '$packages' which will be expanded.",
                 "type": "string"
             },
             {
                 "name": "contents",
-                "doc_string": "The contents to be put in the file if the file doesn't exist.",
+                "doc_string": "The contents to be put in the file, if the file doesn't exist.",
                 "type": "string"
+            },
+            {
+                "name": "add_to_selection",
+                "doc_string": "Whether to add the opened file as a part of the current group's multiselected sheet(s).",
+                "type": "boolean"
             }
         ],
         "type": "core"
@@ -47,7 +52,7 @@
     },
     "open_project_or_workspace": {
         "command_type": "window",
-        "doc_string": "Open the specified project or workspace file, in a new window by default.",
+        "doc_string": "Opens the specified project or workspace file, in a new window by default.",
         "args": [
             {
                 "name": "file",
@@ -111,7 +116,7 @@
             {
                 "name": "files",
                 "doc_string": "The list of absolute file paths. Only the first value is considered.",
-                "type": "List<string>"
+                "type": "List[string]"
             }
         ],
         "type": "default",
@@ -119,23 +124,30 @@
     },
     "open_file_settings": {
         "command_type": "window",
-        "doc_string": "Opens the syntax specific setting file based on the syntax of the active view. This is deprecated and only kept for backwards compatibility",
+        "doc_string": "Opens the syntax specific setting file based on the syntax of the active view. This is deprecated and only kept for backwards compatibility.",
         "type": "default",
         "location": "Default/settings.py"
     },
     "overwrite": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Overwrites the selection(s) at the caret(s) location(s) with the given characters.",
+        "args": [
+            {
+                "name": "characters",
+                "doc_string": "The characters that will overwrite the selection(s).",
+                "type": "string"
+            }
+        ],
         "type": "core"
     },
     "open_folder": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Opens the specified folder(s) in the OS file manager.",
         "args": [
             {
                 "name": "dirs",
-                "doc_string": null,
-                "type": "List<string>"
+                "doc_string": "The list of absolute path(s) to the directorie(s) to be opened.",
+                "type": "List[string]"
             }
         ],
         "type": "default",
@@ -152,17 +164,17 @@
             },
             {
                 "name": "new_tab",
-                "doc_string": "Whether to open the file (containing the symbol) in a new tab. The default value is False.",
+                "doc_string": "Whether to open the file (containing the symbol) in a new tab. The default value is 'False'.",
                 "type": "boolean"
             },
             {
                 "name": "hide_popup",
-                "doc_string": "Whether to hide the popup after navigating to the symbol. The default value is False.",
+                "doc_string": "Whether to hide the popup after navigating to the symbol. The default value is 'False'.",
                 "type": "boolean"
             },
             {
                 "name": "keep_auto_complete_open",
-                "doc_string": "Whether to preserve the state of the AC window when the view loses focus. The default value is False.",
+                "doc_string": "Whether to preserve the state of the AC window when the view loses focus. The default value is 'False'.",
                 "type": "boolean"
             },
             {

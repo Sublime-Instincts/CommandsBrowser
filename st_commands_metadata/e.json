@@ -41,7 +41,7 @@
             {
                 "name": "cmd",
                 "doc_string": "The executable to run, plus any arguments to pass to it. Shell constructs such as piping and redirection are not supported.",
-                "type": "List[str]"
+                "type": "List[string]"
             },
             {
                 "name": "shell_cmd",

@@ -5,7 +5,7 @@
         "args": [
             {
                 "name": "by",
-                "doc_string": "chars|pages|lines|characters|words|word_ends|subwords|subword_ends|stops",
+                "doc_string": "The unit name. Valid values are 'chars', 'pages', 'lines', 'characters', 'words', 'word_ends', 'subwords', 'subword_ends' and 'stops'.",
                 "type": "string"
             },
             {
@@ -37,7 +37,7 @@
         "args": [
             {
                 "name": "to",
-                "doc_string": "The relative location. Valid values are 'eol', 'bol', 'eof', 'bof', 'brackets'.",
+                "doc_string": "The relative location. Valid values are 'eol', 'bol', 'eof', 'bof' and 'brackets'.",
                 "type": "string"
             },
             {
@@ -54,7 +54,7 @@
         "args": [
             {
                 "name": "group",
-                "doc_string": "The index of the group, to where the active tab has to be moved.",
+                "doc_string": "The index of the target group.",
                 "type": "int"
             }
         ],

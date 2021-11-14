@@ -80,7 +80,7 @@
     },
     "toggle_collapsed": {
         "command_type": "window",
-        "doc_string": "Toggles the collapse of the diff hunks.",
+        "doc_string": "Toggles the collapse of individual diff views or everything if the focus is on the 'Working Directory'.",
         "added": 1055,
         "type": "core"
     },

@@ -18,7 +18,7 @@
     },
     "clear_fields": {
         "command_type": "text",
-        "doc_string": "Clears the fields of the current active snippet.",
+        "doc_string": "Clears the fields of the currently active snippet.",
         "type": "core"
     },
     "clear_location": {
@@ -43,21 +43,21 @@
     },
     "clone_file": {
         "command_type": "window",
-        "doc_string": "Create a new view into the file.",
+        "doc_string": "Creates a new view into the file.",
         "args": [
             {
                 "name": "add_to_selection",
-                "doc_string": null,
+                "doc_string": "Whether to add the opened cloned file as a part of the current group's multiselected sheet(s).",
                 "type": "boolean"
             },
             {
                 "name": "group",
-                "doc_string": "The group number to ",
+                "doc_string": "The group number to open the cloned file to.",
                 "type": "int"
             },
             {
                 "name": "index",
-                "doc_string": null,
+                "doc_string": "The index within the group to open the cloned file to.",
                 "type": "int"
             }
         ],
@@ -111,19 +111,31 @@
     "close_others_by_index": {
         "command_type": "window",
         "doc_string": "Close all views of a group but the one identified by group and index. A value of -1 means active group/view.",
-        "args": {
-            "group": -1,
-            "index": -1
-        },
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the target group.",
+                "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": "The index within the target group.",
+                "type": "int"
+            }
+        ],
         "added": 4050,
         "type": "core"
     },
     "close_selected": {
         "command_type": "window",
         "doc_string": "Close all selected views in a group. A value of -1 means active group.",
-        "args": {
-            "group": -1
-        },
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the target group.",
+                "type": "int"
+            }
+        ],
         "added": 4050,
         "type": "core"
     },
@@ -142,10 +154,18 @@
     "close_to_right_by_index": {
         "command_type": "window",
         "doc_string": "Close all views of a group right of the one identified by index. A value of -1 means active group/view.",
-        "args": {
-            "group": -1,
-            "index": -1
-        },
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the target group.",
+                "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": "The index within the target group.",
+                "type": "int"
+            }
+        ],
         "added": 4050,
         "type": "core"
     },
@@ -158,20 +178,36 @@
     "close_unmodified": {
         "command_type": "window",
         "doc_string": "Close all unmodified views of a group. A value of -1 means active group.",
-        "args": {
-            "group": -1,
-            "index": -1
-        },
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the target group.",
+                "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": "The index within the target group.",
+                "type": "int"
+            }
+        ],
         "added": 4050,
         "type": "core"
     },
     "close_unmodified_to_right_by_index": {
         "command_type": "window",
         "doc_string": "Close all unmodified views of a group right of the one identified by index. A value of -1 means active group/view.",
-        "args": {
-            "group": -1,
-            "index": -1
-        },
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the target group.",
+                "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": "The index within the target group.",
+                "type": "int"
+            }
+        ],
         "added": 4050,
         "type": "core"
     },
@@ -220,11 +256,11 @@
     },
     "convert_color_scheme": {
         "command_type": "window",
-        "doc_string": "Converts a color scheme from the older .tmTheme format to the newer .sublime-color-scheme format provided the active view is a .tmTheme file.",
+        "doc_string": "Converts a color scheme from the older '.tmTheme' format to the newer '.sublime-color-scheme' format provided the active view is a '.tmTheme' file.",
         "args": [
             {
                 "name": "use_variables",
-                "doc_string": "Indicates how the color values in the .tmTheme file has to be transformed. Valid values are 'hsl', 'yes', 'no'.",
+                "doc_string": "Indicates how the color values in the '.tmTheme' file has to be transformed. Valid values are 'hsl', 'yes', 'no'.",
                 "type": "string"
             }
         ],
@@ -252,11 +288,11 @@
     },
     "close_pane": {
         "command_type": "window",
-        "doc_string": "Closes a group, given by its index.",
+        "doc_string": "Closes a group, given by its index. A value of -1 indicates the active group.",
         "args": [
             {
                 "name": "group",
-                "doc_string": "The index of the group to close. It has a default value of -1 indicating the active group.",
+                "doc_string": "The index of the target group.",
                 "type": "int"
             }
         ],
@@ -283,12 +319,12 @@
     },
     "chain": {
         "command_type": "window",
-        "doc_string": "Runs a given sequence of command(s) along with any argument(s).",
+        "doc_string": "Runs a given set of command(s) sequentially, along with their argument(s) if any.",
         "args": [
             {
                 "name": "commands",
-                "doc_string": null,
-                "type": "List<List<str, >>|"
+                "doc_string": "The list of commands and their respective arguments.",
+                "type": "List[List[string, Dict[string, object]] | Dict[string, object]]"
             }
         ],
         "added": 4103,
@@ -306,21 +342,21 @@
     },
     "correct_spelling": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Corrects the incorrectly spelled word based on the incorrect word's region and the correction.",
         "args": [
             {
                 "name": "begin",
-                "doc_string": null,
+                "doc_string": "The integer that represents the beginning of the region that spans the incorrect word.",
                 "type": "int"
             },
             {
                 "name": "end",
-                "doc_string": null,
+                "doc_string": "The integer that represents the end of the region that spans the incorrect word.",
                 "type": "int"
             },
             {
                 "name": "correction",
-                "doc_string": null,
+                "doc_string": "The string to be placed as a correction for the incorrect word.",
                 "type": "string"
             }
         ],

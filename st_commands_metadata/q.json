@@ -6,7 +6,7 @@
     },
     "quick_panel": {
         "command_type": "window",
-        "doc_string": "Takes a list of objects with the following keys. caption, command & args. Selecting an option will execute that command with the given arguments.",
+        "doc_string": "Takes a list of objects with the given keys, caption, command & args. Selecting an option will execute that command with the given arguments.",
         "args": [
             {
                 "name": "items",

@@ -32,6 +32,8 @@ def core_commands_doc_panel(window, docs):
         None
     """
     doc_panel = window.create_output_panel("CommandsBrowser")
+    doc_panel.set_read_only(False)
+
     final_doc_string = ""
     description_string = f"""
     Name of the command: {docs[0]}
@@ -44,9 +46,13 @@ def core_commands_doc_panel(window, docs):
     if docs[1].get("args") is not None:
         max_arg_length = max([len(doc["name"]) for doc in docs[1]["args"]])
         max_length = max([(len(doc["name"]) + len(doc["type"]) + 4) for doc in docs[1]["args"]])
+
+        print(max_arg_length, max_length)
+
         for doc in docs[1]["args"]:
             length_1 = max_arg_length - len(doc["name"])
             length_2 = max_length - (len(doc["name"]) + len(doc["type"]) + length_1 + 4)
+
             doc_string = doc["doc_string"] if doc["doc_string"] is not None else "No available description."
             initial_string = f"""
             {doc["name"]}{"":^{length_1}} ({doc["type"]}){"":^{length_2}} - {doc_string}
@@ -57,6 +63,8 @@ def core_commands_doc_panel(window, docs):
 
     doc_panel.run_command("insert", { "characters": final_doc_string })
     doc_panel.settings().set("syntax", "Packages/CommandsBrowser/resources/CommandsBrowser.sublime-syntax")
+    doc_panel.set_read_only(True)
+
     window.run_command("show_panel", {
         "panel": "output.CommandsBrowser",
     })

@@ -38,7 +38,19 @@
     },
     "add_submodule": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Adds the given repository as a submodule to the current repository.",
+        "args": [
+            {
+                "name": "repository_path",
+                "doc_string": "The URL to the repository or an absolute/relative path.",
+                "type": "string"
+            },
+            {
+                "name": "submodule_name",
+                "doc_string": "The name of the submodule.",
+                "type": "string"
+            }
+        ],
         "added": 1072,
         "type": "core"
     }

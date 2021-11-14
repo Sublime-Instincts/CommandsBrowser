@@ -1,13 +1,13 @@
 {
     "unstage_all": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Unstages all staged files.",
         "added": 1055,
         "type": "core"
     },
     "unstage_hunk": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Unstages a given staged hunk.",
         "added": 1055,
         "type": "core"
     },
@@ -25,11 +25,11 @@
     },
     "unstage_file": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Unstages the given staged file. The focus needs to be on the file for the command to work.",
         "args": [
             {
                 "name": "path",
-                "doc_string": null,
+                "doc_string": "An absolute path or a repository relative path to the file to be unstaged.",
                 "type": "string"
             }
         ],

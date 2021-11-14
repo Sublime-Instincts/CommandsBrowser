@@ -321,12 +321,12 @@
     },
     "soft_redo": {
         "command_type": "text",
-        "doc_string": "Redo's the last move or action, which has been undone.",
+        "doc_string": "Redos the last move or action, which has been undone.",
         "type": "core"
     },
     "soft_undo": {
         "command_type": "text",
-        "doc_string": "Undo's the last move or action.",
+        "doc_string": "Undos the last move or action.",
         "type": "core"
     },
     "split_selection_into_lines": {
@@ -336,7 +336,7 @@
     },
     "sublime_merge_blame_file": {
         "command_type": "window",
-        "doc_string": "Git Blame selected files with Sublime Merge.",
+        "doc_string": "Git blame selected files with Sublime Merge.",
         "args": {
             "files": []
         },
@@ -374,7 +374,7 @@
             {
                 "names": "paths",
                 "doc_string": null,
-                "type": "List[str]"
+                "type": "List[string]"
             }
         ],
         "added": 3181,

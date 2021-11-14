@@ -1,58 +1,58 @@
 {
     "paste": {
         "command_type": "text",
-        "doc_string": "Paste the text on the clipboard at the text selection location(s), replacing the selected text.",
+        "doc_string": "Pastes the text on the clipboard at the text selection location(s), replacing the selected text.",
         "type": "core"
     },
     "paste_and_indent": {
         "command_type": "text",
-        "doc_string": "Paste the text on the clipboard at the text selection location(s), replacing the selected text, and making the base indentation level match that of the target location(s).",
+        "doc_string": "Pastes the text on the clipboard at the text selection location(s), replacing the selected text, and making the base indentation level match that of the target location(s).",
         "type": "core"
     },
     "paste_from_history": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Opens a custom context menu, showing a maximum of 15 strings copied to clipboard, from which any one can be selected to be pasted at caret location(s).",
         "type": "default",
         "location": "Default/paste_from_history.py"
     },
     "prev_bookmark": {
         "command_type": "text",
-        "doc_string": "Navigate to the previous bookmark in the document.",
+        "doc_string": "Navigates to the previous bookmark in the document.",
         "type": "core"
     },
     "prev_field": {
         "command_type": "text",
-        "doc_string": "Navigate to the previous field in the snippet.",
+        "doc_string": "Navigates to the previous field in the snippet.",
         "type": "core"
     },
     "prev_misspelling": {
         "command_type": "text",
-        "doc_string": "Navigate to the previous misspelling in the document.",
+        "doc_string": "Navigates to the previous misspelling in the document.",
         "type": "core"
     },
     "prev_modification": {
         "command_type": "text",
-        "doc_string": "Navigate to the previous modification in the document.",
+        "doc_string": "Navigates to the previous modification in the document.",
         "type": "core"
     },
     "prev_os_tab": {
         "command_type": "window",
-        "doc_string": "Set the focus to the previous window in the os tab.",
+        "doc_string": "Sets the focus to the previous window in the os tab.",
         "added": 4050,
         "type": "core"
     },
     "prev_result": {
         "command_type": "window",
-        "doc_string": "Jump to the previous build result.",
+        "doc_string": "Jumps to the previous build result.",
         "type": "core"
     },
     "prev_view": {
         "command_type": "window",
-        "doc_string": "Set the focus to the previous view by index.",
+        "doc_string": "Sets the focus to the previous view by index.",
         "args": [
             {
                 "name": "extend",
-                "doc_string": null,
+                "doc_string": "Whether to add the previous view to the current group's multiselected sheet(s).",
                 "type": "boolean"
             }
         ],
@@ -154,7 +154,7 @@
     },
     "purchase_license": {
         "command_type": "application",
-        "doc_string": "Navigates to the url https://www.sublimehq.com/store/text in the default browser.",
+        "doc_string": "Navigates to the url https://www.sublimehq.com/store/text in the default browser to allow a user to purchase a license..",
         "type": "core"
     },
     "profile_plugins": {
@@ -165,7 +165,7 @@
     },
     "profile_syntax_definition": {
         "command_type": "window",
-        "doc_string": "Runs the syntax performance test on the given view.",
+        "doc_string": "Runs the syntax performance tests on the given view.",
         "type": "default",
         "location": "Default/run_syntax_tests.py"
     },
@@ -197,12 +197,12 @@
     },
     "paste_selection_clipboard": {
         "command_type": "text",
-        "doc_string": null,
+        "doc_string": "Linux only.",
         "type": "core"
     },
     "primary_j_changed": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Shows a dialog stating about the change of keybindings for the join_lines command.",
         "type": "default",
         "location": "Default/keymap.py"
     }
