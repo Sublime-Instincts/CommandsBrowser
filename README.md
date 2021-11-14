@@ -35,11 +35,13 @@ This will show you all of the plugin/package commands that are present in Sublim
 
 1. Since the core command list is not exposed by ST like plugin commands are, the only way to keep track of it would be to manually maintain a list of commands and show it. So, the list is probably incomplete. As far as I know, it should be fairly close to a complete list (It's probably the most comprehensive public list available).
 
-2. The list of Sublime Merge commands are limited to what is specific to Sublime Merge (95% of which is git related). However, since Sublime Text & Sublime Merge share a good portion of a common codebase, there is a good possibility that a good number of ST commands work in SM as well. They are not listed in SM, because they are already listed in ST. So, together ST + SM command list should be a good overview of the total number of commands present in both applications together.
+2. The list of Sublime Merge commands are limited to what is specific to Sublime Merge (95% of which is git related). However, since Sublime Text & Sublime Merge share a common codebase, there is a decent possibility that a good number of ST commands work in SM as well. They are not listed in SM, because they are already listed in ST. So, together, ST + SM command list should be a good overview of the total number of commands present in both applications together.
 
 This package should be upto date with commands as of **ST Build 4122** & **SM Build 2062**
 
 ### Settings
+
+The package ships with necessary helper files for users of [LSP](https://packagecontrol.io/packages/LSP) + [LSP-json](https://packagecontrol.io/packages/LSP-json) to take full advantage of intelligent autocompletions for settings.
 
 ##### `cb.auto_open_doc_panel_on_navigate` (`Boolean`)
 When set to `true`, automatically opens the core commands documentation panel as you navigate through them. This can be helpful when you quickly want to glance the documentation for multiple commands at once and not have to close & reopen the panel every time.
@@ -86,6 +88,10 @@ This package just ships with one key binding to make it easier to open the core 
 [Discussions](https://github.com/Sublime-Instincts/CommandsBrowser/discussions) are enabled for this repo so that constructive discussions can be had on how to effectively use commands (especially core) to improve your ST/SM workflows. Any questions on core commands can be done in the respective channels i.e. [Sublime Text](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-text-commands) and [Sublime Merge](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-merge-commands).
 
 Since plugin based commands are specific to plugin/package, it's best to ask them in the specific repository for that plugin/package. Of course, your free to ask relevant questions to get help.
+
+### Issues & feature requests
+
+Please use the issues and feature requests template whenever filling an issue/feature request so as to stay as organised as possible.
 
 ## Contributing
 
