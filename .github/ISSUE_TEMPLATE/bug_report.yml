@@ -1,0 +1,51 @@
+---
+name: Bug Report
+description: File a bug report to address an issue in CommandsBrowser !
+
+body:
+  - type: textarea
+    attributes:
+      label: Description of the bug
+      description: |
+        A description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Please provide detailed steps on how the bug can be reproduced.
+      placeholder: |
+        1. First step.
+        2. Second step.
+        3. Third step.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected behavior
+      description: A description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Actual behavior
+      description: A description of what actually happened.
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: CommandsBrowser version
+      placeholder: "e.g. 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: settings
+    attributes:
+      label: CommandsBrowser settings.
+      description: Please copy and paste your User/CommandsBrowser.sublime-settings if you have custom settings defined.
+      render: json
