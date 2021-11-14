@@ -2,7 +2,7 @@ import sublime
 import sublime_plugin
 
 from ..utils.plugin_command_utils import (
-    get_commands, legacy, _cmd_types, navigate_to
+    get_commands, legacy, cmd_types, navigate_to
 )
 
 from ..settings import commands_browser_settings
@@ -10,7 +10,13 @@ from ..utils.miscellaneous_utils import log, filter_command_types
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
+    """ The command that powers the commands browser for viewing plugin/package
+    based commands.
 
+    Args:
+        cmd_dict (Dict): The command information in the form of a dict collected
+        from the 3.3 host.
+    """
 
     def name(self):
         return "commands_browser_plugin_commands_33" if legacy() else "commands_browser_plugin_commands"
@@ -18,7 +24,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
     def run(self, cmd_dict = None):
         cmd_dict = cmd_dict or {}
-        for cmd_type, cmd_info in _cmd_types.items():
+        for cmd_type, cmd_info in cmd_types.items():
             get_commands(cmd_type, cmd_info["commands"], cmd_dict)
 
         if legacy():
@@ -48,7 +54,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
                     trigger = details["name"],
                     details = f"<i>{details['args']}</i>",
                     annotation = f"{details['pkg']}.{details['mod']} ({details['host']})",
-                    kind = _cmd_types[details["type"]]["kind"]
+                    kind = cmd_types[details["type"]]["kind"]
                 )
             )
 
@@ -68,6 +74,18 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
 
     def on_select(self, idx, items, cmd_dict):
+        """ The callback that runs after picking a quick panel item. When the
+        user selects an item, we navigate to the plugin file that implements the
+        command, to the location of the class.
+
+        Args:
+            idx (int): The index of the selected command item.
+            items (List): The plugin commands list data.
+            cmd_dict (Dict): The plugin commands data.
+
+        Returns:
+            None
+        """
         if idx < 0:
             return
 

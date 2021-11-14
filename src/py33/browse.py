@@ -34,6 +34,15 @@ cmd_types = {
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
+    """ The command that powers the commands browser for viewing plugin/package
+    based commands. This is the main command that is run, which then triggers
+    the running of it's 3.8 counterpart with the command data collected from 3.3.
+    With this, all the plugin commands from 3.3 + 3.8 is collected.
+
+    Args:
+        cmd_dict (Dict): The command information in the form of a dict collected
+        from the 3.3 host.
+    """
 
 
     def name(self):

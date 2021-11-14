@@ -9,7 +9,7 @@ from sublime_plugin import (
 )
 
 
-_cmd_types = {
+cmd_types = {
     "application": {
         "name": "ApplicationCommand",
         "commands": application_command_classes,

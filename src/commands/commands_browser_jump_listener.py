@@ -5,7 +5,9 @@ from ..utils.plugin_command_utils import navigate_to
 
 
 class CommandsBrowserCommandJumpListener(sublime_plugin.ViewEventListener):
-
+    """ A listener that checks for a specific setting on the view and jumps
+    to the relevant command class.
+    """
 
     @classmethod
     def is_applicable(cls, settings):
