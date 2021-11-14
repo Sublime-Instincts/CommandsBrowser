@@ -31,11 +31,11 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
             return sublime.run_command('commands_browser_plugin_commands', { "cmd_dict": cmd_dict })
 
         items = []
-        host = commands_browser_settings("cb.filter_plugin_commands_on_host")
+        host = commands_browser_settings("filter_plugin_commands_on_host")
 
         if (type(host) != str) or (host not in ["all", "3.3", "3.8"]):
             log(f"""'{host}' is an invalid value for the setting
-                'cb.filter_plugin_commands_on_host'. Falling back to default value.""")
+                'filter_plugin_commands_on_host'. Falling back to default value.""")
             host = "all"
 
         cmd_type_filter_list = filter_command_types("filter_plugin_commands_on_type")

@@ -13,10 +13,10 @@ def load_commands_browser_settings():
 
     commands_browser_settings.obj = sublime.load_settings("CommandsBrowser.sublime-settings")
     commands_browser_settings.default = {
-        "cb.auto_open_doc_panel_on_navigate": False,
-        "cb.filter_plugin_commands_on_host": "all",
-        "cb.filter_plugin_commands_on_type": ["text", "window", "application"],
-        "cb.filter_core_commands_on_type": ["text", "window", "application", "find"]
+        "auto_open_doc_panel_on_navigate": False,
+        "filter_plugin_commands_on_host": "all",
+        "filter_plugin_commands_on_type": ["text", "window", "application"],
+        "filter_core_commands_on_type": ["text", "window", "application", "find"]
     }
 
 

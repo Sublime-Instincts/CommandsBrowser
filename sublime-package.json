@@ -5,12 +5,12 @@
                 "file_patterns": ["/CommandsBrowser.sublime-settings"],
                 "schema": {
                     "properties": {
-                        "cb.auto_open_doc_panel_on_navigate": {
+                        "auto_open_doc_panel_on_navigate": {
                             "type": "boolean",
                             "default": false,
                             "markdownDescription": "Whether to automatically open the core commands documentation panel as you navigate through the core command list in the quick panel."
                         },
-                        "cb.filter_plugin_commands_on_host": {
+                        "filter_plugin_commands_on_host": {
                             "type": "array",
                             "default": "all",
                             "enum": ["all", "3.3", "3.8"],
@@ -21,7 +21,7 @@
                                 "Include commands from 3.8 plugin host only.",
                             ]
                         },
-                        "cb.filter_plugin_commands_on_type": {
+                        "filter_plugin_commands_on_type": {
                             "type": "array",
                             "minItems": 0,
                             "maxItems": 3,
@@ -37,7 +37,7 @@
                             "markdownDescription": "This setting allows a user to filter plugin/package commands based on the command type.",
 
                         },
-                        "cb.filter_core_commands_on_type": {
+                        "filter_core_commands_on_type": {
                             "type": "array",
                             "minItems": 0,
                             "maxItems": 4,

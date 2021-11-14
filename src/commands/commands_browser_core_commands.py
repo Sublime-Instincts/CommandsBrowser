@@ -91,5 +91,5 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
         """
         if idx < 0:
             return
-        if commands_browser_settings("cb.auto_open_doc_panel_on_navigate"):
+        if commands_browser_settings("auto_open_doc_panel_on_navigate"):
             core_commands_doc_panel(self.window, list(commands_data)[idx])

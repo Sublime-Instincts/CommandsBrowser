@@ -53,17 +53,17 @@ def filter_command_types(setting_name):
         cmd_type_filter_list (List[str]): The sanitised command type list based
         on which, we will filter the commands
     """
-    cmd_type_filter_list = commands_browser_settings(f"cb.{setting_name}")
+    cmd_type_filter_list = commands_browser_settings(f"{setting_name}")
 
     if (type(cmd_type_filter_list) != list) or (len(cmd_type_filter_list) == 0):
         log(f"""'{cmd_type_filter_list}' is an invalid value for the setting
             'cb.{setting_name}'. Falling back to default value.""")
-        cmd_type_filter_list = commands_browser_settings.default.get(f"cb.{setting_name}")
+        cmd_type_filter_list = commands_browser_settings.default.get(f"{setting_name}")
 
-    cmd_type_list = commands_browser_settings.default.get(f"cb.{setting_name}")
+    cmd_type_list = commands_browser_settings.default.get(f"{setting_name}")
     cmd_type_filter_list = [i for i in cmd_type_filter_list if i in cmd_type_list]
 
     if not len(cmd_type_filter_list):
-        cmd_type_filter_list = commands_browser_settings.default.get(f"cb.{setting_name}")
+        cmd_type_filter_list = commands_browser_settings.default.get(f"{setting_name}")
 
     return cmd_type_filter_list

@@ -5,7 +5,7 @@
     // & reopen the panel everytime.
     //
     // The default value for this setting is false.
-    "cb.auto_open_doc_panel_on_navigate": false,
+    "auto_open_doc_panel_on_navigate": false,
 
     // ST4 has 2 plugin hosts. 3.3 (Python 3.3.6) & 3.8 (Python 3.8.8). This
     // setting allows a user to filter the plugin commands based on the host.
@@ -16,7 +16,7 @@
     // "3.8" - Show plugin commands from the 3.8 host only.
     //
     // The default value for this setting is "all".
-    "cb.filter_plugin_commands_on_host": "all",
+    "filter_plugin_commands_on_host": "all",
 
     // This setting allows a user to filter the plugin commands based on the type
     // of the command.
@@ -27,7 +27,7 @@
     // ["application", "text"]           - Filters to show only application & text
     //                                     commands.
     // The default value for this setting is ["text", "window", "application"].
-    "cb.filter_plugin_commands_on_type": ["text", "window", "application"],
+    "filter_plugin_commands_on_type": ["text", "window", "application"],
 
     // This setting allows a user to filter the core commands based on the type
     // of the command.
@@ -38,5 +38,5 @@
     // ["application", "text"]                   - Filters to show only application &
     //                                             text commands.
     // The default value for this setting is ["text", "window", "application", "find"].
-    "cb.filter_core_commands_on_type": ["text", "window", "application", "find"]
+    "filter_core_commands_on_type": ["text", "window", "application", "find"]
 }

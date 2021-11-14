@@ -43,12 +43,12 @@ This package should be upto date with commands as of **ST Build 4122** & **SM Bu
 
 The package ships with necessary helper files for users of [LSP](https://packagecontrol.io/packages/LSP) + [LSP-json](https://packagecontrol.io/packages/LSP-json) to take full advantage of intelligent autocompletions for settings.
 
-##### `cb.auto_open_doc_panel_on_navigate` (`Boolean`)
+##### `auto_open_doc_panel_on_navigate` (`Boolean`)
 When set to `true`, automatically opens the core commands documentation panel as you navigate through them. This can be helpful when you quickly want to glance the documentation for multiple commands at once and not have to close & reopen the panel every time.
 
 The default value for this setting is `false`.
 
-##### `cb.filter_plugin_commands_on_host` (`String`)
+##### `filter_plugin_commands_on_host` (`String`)
 Sublime Text 4 has 2 plugin hosts. 3.3 (Python 3.3.6) & 3.8 (Python 3.8.8). This setting allows a user to filter the plugin commands based on the host.
 
 Valid values are `"all"`, `"3.3"` and `"3.8"`
@@ -58,7 +58,7 @@ Valid values are `"all"`, `"3.3"` and `"3.8"`
 
 The default value for this setting is `"all"`.
 
-##### `cb.filter_plugin_commands_on_type` (`List[str]`)
+##### `filter_plugin_commands_on_type` (`List[str]`)
 This setting allows a user to filter the plugin commands based on the type of the command.
 
 Examples:
@@ -68,7 +68,7 @@ Examples:
 
 The default value for this setting is `["window", "application", "text"]`.
 
-##### `cb.filter_core_commands_on_type` (`List[str]`)
+##### `filter_core_commands_on_type` (`List[str]`)
 
 This setting allows a user to filter the core commands based on the type of the command.
 
