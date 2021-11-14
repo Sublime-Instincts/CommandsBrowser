@@ -23,7 +23,7 @@
             {
                 "name": "files",
                 "doc_string": "The absolute path(s) to the given file(s) on disk.",
-                "type": "List[str]"
+                "type": "List[string]"
             },
             {
                 "name": "prompt",

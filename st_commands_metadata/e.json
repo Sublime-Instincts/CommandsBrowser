@@ -45,7 +45,7 @@
             },
             {
                 "name": "shell_cmd",
-                "doc_string": "A shell command to execute. Unlike the cmd option, this does allow piping and redirection. Will use bash on Mac and Linux machine, and cmd.exe on Windows.",
+                "doc_string": "A shell command to execute. Unlike the 'cmd' option, this does allow piping and redirection. Will use bash on Mac and Linux machine and cmd.exe on Windows.",
                 "type": "string"
             },
             {
@@ -80,7 +80,7 @@
             },
             {
                 "name": "kill",
-                "doc_string": "Whether to kill the running process. The default value is False.",
+                "doc_string": "Whether to kill the running process. The default value is 'False'.",
                 "type": "boolean"
             },
             {
@@ -95,12 +95,12 @@
             },
             {
                 "name": "word_wrap",
-                "doc_string": "Whether to apply word wrap on the build output. The default value is True",
+                "doc_string": "Whether to apply word wrap on the build output. The default value is 'True'",
                 "type": "boolean"
             },
             {
                 "name": "syntax",
-                "doc_string": "The path to a syntax file to be applied on the build output. This will be in the form ${packages}/. The default value is Packages/Text/Plain text.tmLanguage.",
+                "doc_string": "The 'Packages/' relative path to a syntax file to be applied on the build output. The default value is 'Packages/Text/Plain text.tmLanguage'.",
                 "type": "string"
             }
         ],
@@ -118,7 +118,7 @@
         "args": [
             {
                 "name": "to",
-                "doc_string": "The entity to expand the caret selection(s) to. Valid values can be line, scope, brackets, indentation, tag, bol, hardbol, eol, hardeol, bof, eof, brackets and smart.",
+                "doc_string": "The entity to expand the caret selection(s) to. Valid values can be 'line', 'scope', 'brackets', 'indentation', 'tag', 'bol', 'hardbol', 'eol', 'hardeol', 'bof', 'eof', 'brackets' and 'smart'.",
                 "type": "string"
             }
         ],

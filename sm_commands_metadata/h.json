@@ -54,7 +54,7 @@
     "hide_command_status": {
         "command_type": "window",
         "doc_string": null,
-        "added": null,
+        "added": 1055,
         "type": "core"
     }
 }

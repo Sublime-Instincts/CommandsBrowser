@@ -102,7 +102,7 @@
                 "type": "string"
             }
         ],
-        "added": null,
+        "added": 1100,
         "type": "core"
     },
     "select_sidebar_tab": {
