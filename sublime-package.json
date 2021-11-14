@@ -7,7 +7,7 @@
                     "properties": {
                         "cb.auto_open_doc_panel_on_navigate": {
                             "type": "boolean",
-                            "default": "false",
+                            "default": false,
                             "markdownDescription": "Whether to automatically open the core commands documentation panel as you navigate through the core command list in the quick panel."
                         },
                         "cb.filter_plugin_commands_on_host": {
