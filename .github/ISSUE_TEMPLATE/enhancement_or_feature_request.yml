@@ -18,9 +18,3 @@ body:
         What other alternatives currently exist that you are employing.
     validations:
       required: true
-
-  - type: textarea
-    attributes:
-      label: Alternatives.
-      description: |
-        What other alternatives currently exist that you are employing.
