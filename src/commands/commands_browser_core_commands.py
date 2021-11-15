@@ -116,7 +116,7 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
 
     def on_highlight(self, idx, commands_data):
         """ The callback that runs everytime when navigating through quick panel
-        items. If the user has the setting 'cb.auto_open_doc_panel_on_navigate'
+        items. If the user has the setting 'auto_open_doc_panel_on_navigate'
         turned on in user package preferences, then we show the panel every time
         the user navigates.
 

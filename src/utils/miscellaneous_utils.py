@@ -57,7 +57,7 @@ def filter_command_types(setting_name):
 
     if (type(cmd_type_filter_list) != list) or (len(cmd_type_filter_list) == 0):
         log(f"""'{cmd_type_filter_list}' is an invalid value for the setting
-            'cb.{setting_name}'. Falling back to default value.""")
+            '{setting_name}'. Falling back to default value.""")
         cmd_type_filter_list = commands_browser_settings.default.get(f"{setting_name}")
 
     cmd_type_list = commands_browser_settings.default.get(f"{setting_name}")
