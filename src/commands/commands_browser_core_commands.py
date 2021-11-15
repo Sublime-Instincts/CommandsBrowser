@@ -131,7 +131,6 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
             return
 
         auto_open = commands_browser_settings("auto_open_doc_panel_on_navigate")
-        print(auto_open)
 
         if (type(auto_open) != bool):
             log(f"""'{auto_open}' is an invalid value for the setting

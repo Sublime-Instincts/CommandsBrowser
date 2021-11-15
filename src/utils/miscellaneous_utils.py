@@ -54,7 +54,6 @@ def filter_command_types(setting_name):
         on which, we will filter the commands
     """
     cmd_type_filter_list = commands_browser_settings(f"{setting_name}")
-    print(cmd_type_filter_list)
 
     if (type(cmd_type_filter_list) != list) or (len(cmd_type_filter_list) == 0):
         log(f"""'{cmd_type_filter_list}' is an invalid value for the setting
