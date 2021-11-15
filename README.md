@@ -79,9 +79,17 @@ Examples:
 
 The default value for this setting is `["text", "window", "application", "find"]`.
 
+##### `copy_command_signature_modifier_key` (`str`)
+
+This setting allows a user to configure the modifier key that is used to copy the command signature to clipboard, when the said modifier key is held while selecting a command.
+
+For a list of valid modifier key values, see https://www.sublimetext.com/docs/api_reference.html#type-event_dict
+
+The default value for this setting is `"ctrl"`.
+
 ### Key bindings.
 
-This package just ships with one key binding to make it easier to open the core commands documentation panel. The key binding is <kbd>ctrl + shift + c, ctrl + shift + d</kbd>
+This package just ships with one key binding to make it easier to open the core commands documentation panel (If it exists). The key binding for that is <kbd>ctrl + shift + c, ctrl + shift + d</kbd>
 
 ### Discussions
 
@@ -91,7 +99,7 @@ Since plugin based commands are specific to plugin/package, it's best to ask the
 
 ### Issues & feature requests
 
-Please use the issues and feature requests template whenever filling an issue/feature request so as to stay as organised as possible.
+Please use the issues and feature requests template, whenever filing an issue/feature request, so as to stay as organised as possible.
 
 ## Contributing
 
