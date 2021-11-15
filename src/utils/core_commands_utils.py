@@ -69,6 +69,8 @@ def core_commands_doc_panel(window, docs):
         "panel": "output.CommandsBrowser",
     })
 
+    doc_panel.run_command("scroll_to_bof")
+
 
 def get_core_commands_data(application = "st"):
     """ Given the application type, generates a list of items representing
