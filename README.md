@@ -1,6 +1,6 @@
 # CommandsBrowser
 
-![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)    ![LICENSE](https://img.shields.io/badge/ST-Build%204121+-orange?style=for-the-badge&logo=sublime-text) ![Tag](https://img.shields.io/github/v/tag/Sublime-Instincts/CoreCommandsViewer?style=for-the-badge&logo=github&sort=semver) ![Downloads](https://img.shields.io/packagecontrol/dt/CommandsBrowser?style=for-the-badge)
+![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)    ![LICENSE](https://img.shields.io/badge/ST-Build%204121+-orange?style=for-the-badge&logo=sublime-text) ![Tag](https://img.shields.io/github/v/tag/Sublime-Instincts/CommandsBrowser?style=for-the-badge&logo=github&sort=semver) ![Downloads](https://img.shields.io/packagecontrol/dt/CommandsBrowser?style=for-the-badge)
 
 A Sublime Text package that allows a user to view all the available core/plugin commands for Sublime Text and Sublime Merge, along with their documentation/source.
 
