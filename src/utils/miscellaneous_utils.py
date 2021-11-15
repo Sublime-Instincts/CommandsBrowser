@@ -1,5 +1,4 @@
 import sublime
-import textwrap
 
 from ..settings import commands_browser_settings
 
@@ -38,7 +37,8 @@ def log(message):
     Returns:
         None
     """
-    print(f"[CommandsBrowser]: {textwrap.dedent(message)}")
+    message = " ".join([msg.strip() for msg in message.split("\n")])
+    print(f"[CommandsBrowser]: {message}")
 
 
 def filter_command_types(setting_name):
