@@ -10,7 +10,7 @@ def load_commands_browser_settings():
     Returns:
         None
     """
-
+    print("[CommandsBrowser]: Settings intialized")
     commands_browser_settings.obj = sublime.load_settings("CommandsBrowser.sublime-settings")
     commands_browser_settings.default = {
         "auto_open_doc_panel_on_navigate": False,
@@ -30,8 +30,8 @@ def commands_browser_settings(key):
     Returns:
         value (Any): The value of said key.
     """
-
     default = commands_browser_settings.default.get(key, None)
+    print(f"[CommandsBrowser]: {key} - {default}")
     return commands_browser_settings.obj.get(key, default)
 
 
