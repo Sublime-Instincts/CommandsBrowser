@@ -31,7 +31,7 @@ def commands_browser_settings(key):
         value (Any): The value of said key.
     """
     default = commands_browser_settings.default.get(key, None)
-    print(f"[CommandsBrowser]: {key} - {default}")
+    print(f"[CommandsBrowser]: {key} - {commands_browser_settings.obj.get(key, default)}")
     return commands_browser_settings.obj.get(key, default)
 
 
