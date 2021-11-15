@@ -11,7 +11,7 @@
                             "markdownDescription": "Whether to automatically open the core commands documentation panel as you navigate through the core command list in the quick panel."
                         },
                         "filter_plugin_commands_on_host": {
-                            "type": "array",
+                            "type": "string",
                             "default": "all",
                             "enum": ["all", "3.3", "3.8"],
                             "markdownDescription": "This setting allows a user to filter plugin/package commands based on the plugin host from where the command originates.",
@@ -19,6 +19,20 @@
                                 "Include commands from both plugin hosts (Which means all plugin/package commands)",
                                 "Include commands from 3.3 plugin host only.",
                                 "Include commands from 3.8 plugin host only.",
+                            ]
+                        },
+                        "copy_command_signature_modifier_key": {
+                            "type": "string",
+                            "default": "ctrl",
+                            "enum": ["ctrl", "primary", "alt", "altgr", "shift", "super"],
+                            "markdownDescription": "This setting allows a user to configure the modifier key that can be held while selecting a core command, to copy the command signature to clipboard.",
+                            "markdownEnumDescriptions": [
+                                "Choose <kbd>ctrl</kbd> as the modifier key.",
+                                "Choose <kbd>primary</kbd> as the modifier key (Which is <kbd>ctrl</kbd> on Windows/Linux and <kbd>cmd</kbd> on MacOS).",
+                                "Choose <kbd>alt</kbd> as the modifier key.",
+                                "Choose <kbd>altgr</kbd> as the modifier key (Linux only).",
+                                "Choose <kbd>shift</kbd> as the modifier key.",
+                                "Choose <kbd>super</kbd> as the modifier key (Which is <kbd>Win</kbd> on Windows/Linux and  <kbd>cmd</kbd> on MacOS).",
                             ]
                         },
                         "filter_plugin_commands_on_type": {

@@ -38,5 +38,15 @@
     // ["application", "text"]                   - Filters to show only application &
     //                                             text commands.
     // The default value for this setting is ["text", "window", "application", "find"].
-    "filter_core_commands_on_type": ["text", "window", "application", "find"]
+    "filter_core_commands_on_type": ["text", "window", "application", "find"],
+
+    // This setting allows a user to configure the modifier key that is used to
+    // copy the command signature to clipboard, when the said modifier key is
+    // held while selecting a command.
+    //
+    // For a list of valid modifier key values, see
+    // https://www.sublimetext.com/docs/api_reference.html#type-event_dict
+    //
+    // The default value for this setting is "ctrl".
+    "copy_command_signature_modifier_key": "ctrl"
 }

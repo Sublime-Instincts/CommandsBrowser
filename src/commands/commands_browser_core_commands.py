@@ -6,7 +6,7 @@ from ..utils.core_commands_utils import (
 )
 
 from ..settings import commands_browser_settings
-from ..utils.miscellaneous_utils import filter_command_types
+from ..utils.miscellaneous_utils import filter_command_types, log
 
 
 class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
@@ -80,7 +80,15 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
         if not event:
             return
 
-        if "ctrl" in event["modifier_keys"]:
+        modifier_key = commands_browser_settings("copy_command_signature_modifier_key")
+        modifier_key_list = ["ctrl", "primary", "alt", "altgr", "shift", "super"]
+
+        if (type(modifier_key) != str) or (modifier_key not in modifier_key_list):
+            log(f"""'{modifier_key}' is an invalid value for the setting
+                'copy_command_signature_modifier_key'. Falling back to default value.""")
+            modifier_key = "ctrl"
+
+        if modifier_key in event["modifier_keys"]:
             command_data = list(commands_data)[idx]
             type = command_data[1]["command_type"]
 
