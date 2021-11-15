@@ -90,13 +90,13 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
 
         if modifier_key in event["modifier_keys"]:
             command_data = list(commands_data)[idx]
-            type = command_data[1]["command_type"]
+            command_type = command_data[1]["command_type"]
 
-            if type == "text":
+            if command_type == "text":
                 final_string = f"view.run_command("
-            if type == "application":
+            if command_type == "application":
                 final_string = f"sublime.run_command("
-            if type in ["window", "find"]:
+            if command_type in ["window", "find"]:
                 final_string = f"window.run_command("
 
             if not command_data[1].get("args"):
@@ -129,7 +129,15 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
         """
         if idx < 0:
             return
-        if commands_browser_settings("auto_open_doc_panel_on_navigate"):
+
+        auto_open = commands_browser_settings("auto_open_doc_panel_on_navigate")
+
+        if (type(auto_open) != bool):
+            log(f"""'{auto_open}' is an invalid value for the setting
+                'auto_open_doc_panel_on_navigate'. Falling back to default value.""")
+            auto_open = False
+
+        if auto_open:
             core_commands_doc_panel(self.window, list(commands_data)[idx])
 
 
