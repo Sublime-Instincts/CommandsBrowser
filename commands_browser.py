@@ -21,19 +21,16 @@ def plugin_loaded():
     """
     load_commands_browser_settings()
 
+    browse_33_resource = [a for a in sublime.find_resources("*.py") if a.startswith("Packages/CommandsBrowser/src/py33")][0]
+
     commands_browser_33_path = os.path.join(sublime.packages_path(), "CommandsBrowser33")
-    file_to_copy_path = os.path.join(sublime.packages_path(), "CommandsBrowser", "src/py33/browse.py")
     dest_file_path = os.path.join(commands_browser_33_path, "browse.py")
+
     if not os.path.exists(commands_browser_33_path):
         os.makedirs(commands_browser_33_path)
     if not os.path.exists(dest_file_path):
-        with open(dest_file_path, "w"):
-            pass
-
-    try:
-        shutil.copyfile(file_to_copy_path, dest_file_path)
-    except Exception as e:
-        print(f"[CommandsBrowser]: Failed to add CommandsBrowser33 with exception {e}")
+        with open(dest_file_path, "w") as f:
+            f.write(sublime.load_resource(browse_33_resource))
 
 
 def plugin_unloaded():

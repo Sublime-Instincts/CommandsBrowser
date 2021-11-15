@@ -82,13 +82,11 @@ def get_core_commands_data(application = "st"):
     Returns:
         final_dict (Dict): The final dictionary of commands and their docs.
     """
-    package_path = os.path.join(sublime.packages_path(), "CommandsBrowser")
-    metadata_folder = os.path.join(package_path, f"{application}_commands_metadata")
-    json_file_names = [name + ".json" for name in list(string.ascii_lowercase)]
+
+    json_file_names = [a for a in sublime.find_resources("*.json") if a.startswith(f"Packages/CommandsBrowser/{application}_commands_metadata")]
     final_dict = {}
     for file_name in json_file_names:
-        with open(os.path.join(metadata_folder, file_name), "r") as file:
-            data = json.loads(file.read())
-            if data is not None:
-                final_dict.update(data)
+        data = json.loads(sublime.load_resource(file_name))
+        if data is not None:
+            final_dict.update(data)
     return final_dict
