@@ -11,3 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Various settings to filter based on host/command type etc.
 - Key binding to auto open the documentation panel for core commands.
 - Using modifier keys to copy command signature to clipboard.
+
+## [1.0.1] - 2021-11-15
+### Fixed
+- Fix situation when the installed package fails to read the .json files due to using wrong logic for loading the appropriate resources.
