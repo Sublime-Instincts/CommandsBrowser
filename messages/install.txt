@@ -18,8 +18,8 @@ CommandsBrowser. To get started, open the command palette and choose
 any of the following options depending on whether you are interested in
 viewing core or plugin based commands.
 
-1. CommandsBrowser: Browse available ST core commands.
-2. CommandsBrowser: Browse available SM core commands.
+1. CommandsBrowser: Browse available Sublime Text core commands.
+2. CommandsBrowser: Browse available Sublime Merge core commands.
 3. CommandsBrowser: Browse available plugin/package core commands.
 
 Having Problems ?

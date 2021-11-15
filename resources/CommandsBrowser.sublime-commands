@@ -1,13 +1,13 @@
 [
     {
-        "caption": "CommandsBrowser: Browse available ST core commands.",
+        "caption": "CommandsBrowser: Browse available Sublime Text core commands.",
         "command": "commands_browser_core_commands",
         "args": {
             "application": "st"
         },
     },
     {
-        "caption": "CommandsBrowser: Browse available SM core commands.",
+        "caption": "CommandsBrowser: Browse available Sublime Merge core commands.",
         "command": "commands_browser_core_commands",
         "args": {
             "application": "sm"

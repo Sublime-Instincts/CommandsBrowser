@@ -24,9 +24,9 @@ If you are interested in contributing to this repository, then you need to follo
 ### How to use this package ?
 
 This package provides 3 items to the command palette.
-1. `CommandsBrowser: Browse available ST core commands.`
+1. `CommandsBrowser: Browse available Sublime Text core commands.`
 This will show you all of the core commands that are present in Sublime Text. Selecting one would bring up a panel that would show the documentation for that command.
-2. `CommandsBrowser: Browse available SM core commands.`
+2. `CommandsBrowser: Browse available Sublime Merge core commands.`
 This will show you all of the core commands that are present in Sublime Merge. Selecting one would bring up a panel that would show the documentation for that command.
 3. `CommandsBrowser: Browse available plugin/package commands.`
 This will show you all of the plugin/package commands that are present in Sublime Text. Selecting one would open the corresponding plugin file & navigate to that location where the command class is implemented.
