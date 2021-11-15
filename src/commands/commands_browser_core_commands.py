@@ -53,16 +53,18 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
 
         self.window.show_quick_panel(
             items = items,
-            on_select = lambda idx: self.on_select(idx, commands_data.items()),
+            on_select = lambda idx, event: self.on_select(idx, event, commands_data.items()),
             on_highlight = lambda idx: self.on_highlight(idx, commands_data.items()),
-            flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT,
+            flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT | sublime.WANT_EVENT,
             placeholder = f"Browse through {len(items)} available {application.upper()} commands ..."
         )
 
 
-    def on_select(self, idx, commands_data):
+    def on_select(self, idx, event, commands_data):
         """ The callback that runs after picking a quick panel item. When the
-        user selects an item, we show the relevant command docs in a panel.
+        user selects an item, we show the relevant command docs in a panel. If
+        the user, holds a configured modifier key while selecting, we also copy
+        the command signature to clipboard.
 
         Args:
             idx (int): The index of the selected command item.
@@ -74,6 +76,34 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
         if idx < 0:
             return
         core_commands_doc_panel(self.window, list(commands_data)[idx])
+
+        if not event:
+            return
+
+        if "ctrl" in event["modifier_keys"]:
+            command_data = list(commands_data)[idx]
+            type = command_data[1]["command_type"]
+
+            if type == "text":
+                final_string = f"view.run_command("
+            if type == "application":
+                final_string = f"sublime.run_command("
+            if type in ["window", "find"]:
+                final_string = f"window.run_command("
+
+            if not command_data[1].get("args"):
+                sublime.set_clipboard(final_string + f'"{command_data[0]}")')
+                sublime.status_message("Command signature copied to clipboard.")
+                return
+
+            arg_string = ""
+            for arg in command_data[1].get("args"):
+                arg_name = arg['name']
+                arg_string = arg_string + f'"{arg_name}": , '
+
+            final_string = final_string + f'"{command_data[0]}", ' + "{ " + arg_string + " })"
+            sublime.set_clipboard(final_string)
+            sublime.status_message("Command signature copied to clipboard.")
 
 
     def on_highlight(self, idx, commands_data):
@@ -93,3 +123,17 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
             return
         if commands_browser_settings("auto_open_doc_panel_on_navigate"):
             core_commands_doc_panel(self.window, list(commands_data)[idx])
+
+
+    def want_event(self):
+        """ We need to use this method, if we want to receive the event object
+        using which we can trigger different behavior when modifier keys are
+        pressed.
+
+        Args:
+            None
+
+        Returns:
+            (bool): Whether to receive the event object.
+        """
+        return True
