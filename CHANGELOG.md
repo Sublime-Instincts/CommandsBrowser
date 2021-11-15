@@ -15,3 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] - 2021-11-15
 ### Fixed
 - Fix situation when the installed package fails to read the .json files due to using wrong logic for loading the appropriate resources.
+
+## [1.0.2] - 2021-11-15
+### Fixed
+- Fix core command documentation panel scrolling to the bottom when it's opened.
