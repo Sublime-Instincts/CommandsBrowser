@@ -19,6 +19,7 @@ def load_commands_browser_settings():
         "filter_core_commands_on_type": ["text", "window", "application", "find"],
         "copy_command_signature_modifier_key": "ctrl"
     }
+    print(commands_browser_settings.default)
 
 
 def commands_browser_settings(key):
@@ -30,6 +31,7 @@ def commands_browser_settings(key):
     Returns:
         value (Any): The value of said key.
     """
+    print(commands_browser_settings.default)
     default = commands_browser_settings.default.get(key, None)
     print(f"[CommandsBrowser]: {key} - {commands_browser_settings.obj.get(key, default)}")
     return commands_browser_settings.obj.get(key, default)
