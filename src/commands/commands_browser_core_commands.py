@@ -51,12 +51,14 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
             sublime.status_message("No commands available for preview.")
             return
 
+        app_name = "Sublime Text" if application == "st" else "Sublime Merge"
+
         self.window.show_quick_panel(
             items = items,
             on_select = lambda idx, event: self.on_select(idx, event, commands_data.items()),
             on_highlight = lambda idx: self.on_highlight(idx, commands_data.items()),
             flags = sublime.KEEP_OPEN_ON_FOCUS_LOST | sublime.MONOSPACE_FONT | sublime.WANT_EVENT,
-            placeholder = f"Browse through {len(items)} available {application.upper()} commands ..."
+            placeholder = f"Browse through {len(items)} available {app_name} commands ..."
         )
 
 
