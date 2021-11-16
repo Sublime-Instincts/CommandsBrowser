@@ -9,7 +9,7 @@ version: 2
 variables:
   simple_arg_types: |-
     (?x:
-      string|int|object|boolean
+      string|int|object|boolean|float
     )
 
 contexts:
