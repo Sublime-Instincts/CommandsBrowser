@@ -12,6 +12,11 @@
                 "name": "args",
                 "doc_string": "The arguments to be passed to the command.",
                 "type": "object"
+            },
+            {
+                "name": "description",
+                "doc_string": "The arguments to be passed to the command.",
+                "type": "string"
             }
         ],
         "added": 1055,
@@ -155,11 +160,6 @@
         "doc_string": "Sets the given setting with the given value in the user preferences.",
         "args": [
             {
-                "name": "event",
-                "doc_string": "A xy coordinates object. This is something passed by the application and can be ignored.",
-                "type": "Dict[string, float]"
-            },
-            {
                 "name": "setting",
                 "doc_string": "The setting name.",
                 "type": "string"
@@ -187,7 +187,7 @@
     },
     "save_commit_message": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Saves the edited commit message while the commit message is in an edit mode.",
         "added": 1055,
         "type": "core"
     }

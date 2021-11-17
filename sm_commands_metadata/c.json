@@ -159,7 +159,7 @@
     },
     "cancel_edit_commit_message": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Cancels any changes done to the commit message while it's in edit mode.",
         "added": 1055,
         "type": "core"
     }

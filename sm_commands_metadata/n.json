@@ -1,13 +1,13 @@
 {
     "navigate_back": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the previous commit based on commit visit history.",
         "added": 1055,
         "type": "core"
     },
     "navigate_forward": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the next commit based on commit visit history.",
         "added": 1055,
         "type": "core"
     },
@@ -37,7 +37,14 @@
     },
     "navigate_to_tag": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the specific commit that has the referenced tag.",
+        "args": [
+            {
+                "name": "ref",
+                "doc_string": "The reference/name of the tag.",
+                "type": "string"
+            }
+        ],
         "added": 1100,
         "type": "core"
     },

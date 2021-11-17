@@ -44,6 +44,11 @@
                 "name": "remote",
                 "doc_string": null,
                 "type": "string"
+            },
+            {
+                "name": "url",
+                "doc_string": null,
+                "type": "string"
             }
         ],
         "added": 2057,

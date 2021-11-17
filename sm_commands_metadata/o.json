@@ -14,22 +14,22 @@
     },
     "open_in_editor": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Opens the given file in the configured editor, additionally navigating to the specified line & column.",
         "args": [
             {
                 "name": "path",
-                "doc_string": null,
+                "doc_string": "The absolute path to the file to be opened.",
                 "type": "string"
             },
             {
                 "name": "line",
-                "doc_string": null,
-                "type": "string"
+                "doc_string": "The line number. Use the '$line' variable to be passed the line number of the right click.",
+                "type": "string | int"
             },
             {
                 "name": "col",
-                "doc_string": null,
-                "type": "string"
+                "doc_string": "The column number. Use the '$col' variable to be passed the column number of the right click.",
+                "type": "string | int"
             },
             {
                 "name": "default",
@@ -42,11 +42,11 @@
     },
     "open_dir_in_sublime_text": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Opens the given directory/repository in Sublime Text.",
         "args": [
             {
                 "name": "dir",
-                "doc_string": null,
+                "doc_string": "The absolute path to the directory to be opened. Use the '$dir' variable to open the current repository.",
                 "type": "string"
             }
         ],
