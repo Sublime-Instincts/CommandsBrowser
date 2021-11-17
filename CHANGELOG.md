@@ -19,3 +19,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] - 2021-11-15
 ### Fixed
 - Fix core command documentation panel scrolling to the bottom when it's opened.
+
+## [Unreleased]
+### Changed
+- The command palette entries, quick panel placeholders, all use full forms for ST & SM to avoid any ambiguity (#5).
+
+### Added
+- Improved documentation for the following commands
+
+Sublime Merge
+-------------
+
+1. `cancel_edit_commit_message`
+2. `navigate_back`
+3. `navigate_forward`
+4. `navigate_to_tag`
+5. `open_in_editor`
+6. `open_dir_in_sublime_text`
+7. `show_command_palette`
+8. `save_commit_message`
+
+Sublime Text
+------------
