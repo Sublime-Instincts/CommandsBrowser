@@ -91,17 +91,17 @@ The default value for this setting is `"ctrl"`.
 
 This package just ships with one key binding to make it easier to open the core commands documentation panel (If it exists). The key binding for that is <kbd>ctrl + shift + c, ctrl + shift + d</kbd>
 
-### Discussions
+## Discussions
 
 [Discussions](https://github.com/Sublime-Instincts/CommandsBrowser/discussions) are enabled for this repo so that constructive discussions can be had on how to effectively use commands (especially core) to improve your ST/SM workflows. Any questions on core commands can be done in the respective channels i.e. [Sublime Text](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-text-commands) and [Sublime Merge](https://github.com/Sublime-Instincts/CommandsBrowser/discussions/categories/sublime-merge-commands).
 
 Since plugin based commands are specific to plugin/package, it's best to ask them in the specific repository for that plugin/package. Of course, your free to ask relevant questions to get help.
 
-### Indepth documentation on commands.
+## Indepth documentation on commands.
 
 A few commands can be a bit complicated (either because they might have different ways of doing the same thing or may have different options that need explanations) and hence is skipped from the documentation panel. The [wiki](https://github.com/Sublime-Instincts/CommandsBrowser/wiki) documents such commands with examples. Note that it's still a work in progress.
 
-### Issues & feature requests
+## Issues & feature requests
 
 Please use the issues and feature requests template, whenever filing an issue/feature request, so as to stay as organised as possible.
 
