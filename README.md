@@ -97,6 +97,10 @@ This package just ships with one key binding to make it easier to open the core 
 
 Since plugin based commands are specific to plugin/package, it's best to ask them in the specific repository for that plugin/package. Of course, your free to ask relevant questions to get help.
 
+### Indepth documentation on commands.
+
+A few commands can be a bit complicated (either because they might have different ways of doing the same thing or may have different options that need explanations) and hence is skipped from the documentation panel. The [wiki](https://github.com/Sublime-Instincts/CommandsBrowser/wiki) documents such commands with examples. Note that it's still a work in progress.
+
 ### Issues & feature requests
 
 Please use the issues and feature requests template, whenever filing an issue/feature request, so as to stay as organised as possible.
