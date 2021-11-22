@@ -96,6 +96,12 @@
         "added": 1104,
         "type": "core"
     },
+    "discard_all_modified": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2061,
+        "type": "core"
+    },
     "delete_tag_on_remote": {
         "command_type": "window",
         "doc_string": null,

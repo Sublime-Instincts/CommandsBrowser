@@ -45,6 +45,11 @@
                 "name": "ref",
                 "doc_string": null,
                 "type": "string"
+            },
+            {
+                "name": "remote",
+                "doc_string": null,
+                "type": "string"
             }
         ],
         "added": 1055,

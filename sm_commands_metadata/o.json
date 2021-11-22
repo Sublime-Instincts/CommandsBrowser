@@ -33,7 +33,7 @@
             },
             {
                 "name": "default",
-                "doc_string": null,
+                "doc_string": "Populates the file with the contents set in this argument, if the opened file happens to be empty.",
                 "type": "string"
             }
         ],

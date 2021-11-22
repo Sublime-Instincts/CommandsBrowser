@@ -58,6 +58,18 @@
         "added": 1113,
         "type": "core"
     },
+    "stage_all_untracked": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2061,
+        "type": "core"
+    },
+    "stage_all_unmerged": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2061,
+        "type": "core"
+    },
     "search": {
         "command_type": "window",
         "doc_string": "Opens the search mode.",

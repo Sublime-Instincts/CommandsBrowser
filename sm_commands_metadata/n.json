@@ -13,8 +13,14 @@
     },
     "navigate_to_commit_message": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Brings the focus to the commit message dialog.",
         "added": 1055,
+        "type": "core"
+    },
+    "navigate_to_context_commit": {
+        "command_type": "window",
+        "doc_string": "Navigates to the commit referenced (through it's hash) in the commit message.",
+        "added": 2060,
         "type": "core"
     },
     "navigate_to_head": {
@@ -25,13 +31,27 @@
     },
     "navigate_to_commit": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the given commit.",
+        "args": [
+            {
+                "name": "commit",
+                "doc_string": "The hash of the commit you want to navigate to. Passing in a non existent commit hash will throw an error dialog.",
+                "type": "string"
+            }
+        ],
         "added": 1055,
         "type": "core"
     },
     "navigate_to_branch": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the given branch.",
+        "args": [
+            {
+                "name": "branch",
+                "doc_string": "The name of the branch.",
+                "type": "string"
+            }
+        ],
         "added": 1100,
         "type": "core"
     },
@@ -50,13 +70,13 @@
     },
     "navigate_to_child": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the child commit of the currently focussed commit.",
         "added": 1200,
         "type": "core"
     },
     "navigate_to_parent": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Navigates to the parent commit of the currently focussed commit.",
         "added": 1104,
         "type": "core"
     },
