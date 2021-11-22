@@ -50,5 +50,14 @@
     // The default value for this setting is "ctrl".
     "copy_command_signature_modifier_key": "ctrl",
 
+    // This setting allows a user to filter the plugin commands based on the
+    // package name.
+    //
+    // Examples:
+    // "all"                     - Shows all plugin commands.
+    // ["PackageDev"]            - Show only 'PackageDev' commands.
+    // ["User", "OverrideAudti"] - Show 'OverrideAudit' & 'User' commands.
+    //
+    // The default value for this setting is "all".
     "filter_plugin_commands_on_package": "all"
 }
