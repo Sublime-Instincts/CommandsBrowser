@@ -1,4 +1,6 @@
 import os
+import sys
+import imp
 import shutil
 import sublime
 from .src.settings import load_commands_browser_settings
@@ -6,6 +8,17 @@ from .src import (
     CommandsBrowserCoreCommandsCommand,
     CommandsBrowserPluginCommandsCommand, CommandsBrowserCommandJumpListener
 )
+
+
+def reload(prefix, modules=[""]):
+    prefix = "CommandsBrowser.%s." % prefix
+
+    for module in modules:
+        module = (prefix + module).rstrip(".")
+        if module in sys.modules:
+            imp.reload(sys.modules[module])
+
+reload("src")
 
 
 def plugin_loaded():
