@@ -21,6 +21,19 @@
                                 "Include commands from 3.8 plugin host only.",
                             ]
                         },
+                        "filter_plugin_commands_on_package": {
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "default": "all"
+                                },
+                                {
+                                    "type": "array",
+                                }
+                            ],
+                            "default": "all",
+                            "markdownDescription": "This setting allows a user to filter plugin/package commands based on the package name.",
+                        },
                         "copy_command_signature_modifier_key": {
                             "type": "string",
                             "default": "ctrl",
