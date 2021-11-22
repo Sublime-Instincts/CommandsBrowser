@@ -24,7 +24,7 @@
             {
                 "name": "options",
                 "doc_string": null,
-                "type": "List<string>"
+                "type": "List[string]"
             }
         ],
         "added": 1055,
@@ -55,7 +55,7 @@
     },
     "create_branch": {
         "command_type": "window",
-        "doc_string": "Create the given branch.",
+        "doc_string": "Creates the given branch.",
         "args": [
             {
                 "name": "commit",
@@ -64,6 +64,16 @@
             },
             {
                 "name": "prefix",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "doc_string": "The name of the branch.",
+                "type": "string"
+            },
+            {
+                "name": "branch",
                 "doc_string": null,
                 "type": "string"
             }
@@ -84,6 +94,16 @@
             {
                 "name": "commit",
                 "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "message",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "name",
+                "doc_string": "The name of the tag.",
                 "type": "string"
             }
         ],
@@ -111,7 +131,14 @@
     },
     "clean_working_dir": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Deletes all of the untracked files in the given repository.",
+        "args": [
+            {
+                "name": "prompt",
+                "doc_string": "Whether to show a confirmation dialog, asking the user to confirm the action.",
+                "type": "boolean"
+            }
+        ],
         "added": 1055,
         "type": "core"
     },
@@ -136,6 +163,13 @@
     "checkout_local_branch": {
         "command_type": "window",
         "doc_string": null,
+        "args": [
+            {
+                "name": "remote_branch",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
         "added": 2042,
         "type": "core"
     },

@@ -11,7 +11,7 @@
         "args": [
             {
                 "name": "prompt",
-                "doc_string": null,
+                "doc_string": "Whether to show a confirmation dialog, asking the user to confirm the action.",
                 "type": "boolean"
             },
             {
@@ -52,8 +52,13 @@
         "args": [
             {
                 "name": "prompt",
-                "doc_string": null,
+                "doc_string": "Whether to show a confirmation dialog, asking the user to confirm the action.",
                 "type": "boolean"
+            },
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "string"
             }
         ],
         "added": 1055,
@@ -119,7 +124,14 @@
     },
     "discard_hunk": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Discards the changes present in the given hunk.",
+        "args": [
+            {
+                "name": "prompt",
+                "doc_string": "Whether to show a confirmation dialog, asking the user to confirm the action.",
+                "type": "boolean"
+            }
+        ],
         "added": 1055,
         "type": "core"
     }

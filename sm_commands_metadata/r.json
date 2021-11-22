@@ -19,11 +19,16 @@
     },
     "rename_branch": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Renames the given branch.",
         "args": [
             {
                 "name": "branch",
                 "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "new_name",
+                "doc_string": "The new name for the branch.",
                 "type": "string"
             }
         ],
@@ -66,7 +71,7 @@
             },
             {
                 "name": "mode",
-                "doc_string": "Valid values are 'soft', 'Hard', 'mixed'",
+                "doc_string": "Valid values are 'soft', 'hard' and 'mixed'.",
                 "type": "string"
             }
         ],

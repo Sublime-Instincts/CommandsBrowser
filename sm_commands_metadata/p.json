@@ -7,7 +7,7 @@
     },
     "prompt_open_repository": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Opens the default OS dialog to select a git repository. The repository is opened in a seperate tab.",
         "added": 1055,
         "type": "core"
     },

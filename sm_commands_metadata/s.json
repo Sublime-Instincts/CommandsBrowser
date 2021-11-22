@@ -190,5 +190,18 @@
         "doc_string": "Saves the edited commit message while the commit message is in an edit mode.",
         "added": 1055,
         "type": "core"
+    },
+    "set_word_wrap": {
+        "command_type": "window",
+        "doc_string": "Sets the word wrap for the diff hunks.",
+        "args": [
+            {
+                "name": "word_wrap",
+                "doc_string": "The mode for the word wrap. Valid values are 'true', 'false' & 'auto'. 'true' enables the wordwrap & 'false' disables the word wrap.",
+                "type": "string | boolean"
+            }
+        ],
+        "added": 1088,
+        "type": "core"
     }
 }
