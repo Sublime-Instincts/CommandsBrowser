@@ -3,11 +3,6 @@ import sys
 import imp
 import shutil
 import sublime
-from .src.settings import load_commands_browser_settings
-from .src import (
-    CommandsBrowserCoreCommandsCommand,
-    CommandsBrowserPluginCommandsCommand, CommandsBrowserCommandJumpListener
-)
 
 
 def reload(prefix, modules=[""]):
@@ -19,6 +14,13 @@ def reload(prefix, modules=[""]):
             imp.reload(sys.modules[module])
 
 reload("src")
+
+
+from .src.settings import load_commands_browser_settings
+from .src import (
+    CommandsBrowserCoreCommandsCommand,
+    CommandsBrowserPluginCommandsCommand, CommandsBrowserCommandJumpListener
+)
 
 
 def plugin_loaded():
