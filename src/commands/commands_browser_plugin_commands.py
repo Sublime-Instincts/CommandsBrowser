@@ -6,7 +6,7 @@ from ..utils.plugin_command_utils import (
 )
 
 from ..settings import commands_browser_settings
-from ..utils.miscellaneous_utils import log, filter_command_types
+from ..utils.miscellaneous_utils import log, filter_command_types, filter_package_setting
 
 
 class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
@@ -39,6 +39,7 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
             host = "all"
 
         cmd_type_filter_list = filter_command_types("filter_plugin_commands_on_type")
+        package_filter = filter_package_setting()
 
         for _, details in cmd_dict.items():
 
@@ -48,6 +49,12 @@ class CommandsBrowserPluginCommandsCommand(sublime_plugin.ApplicationCommand):
 
             if details["type"] not in cmd_type_filter_list:
                 continue
+
+            if package_filter == "all":
+                pass
+            else:
+                if details["pkg"] not in package_filter:
+                    continue
 
             items.append(
                 sublime.QuickPanelItem(

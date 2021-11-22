@@ -67,3 +67,26 @@ def filter_command_types(setting_name):
         cmd_type_filter_list = commands_browser_settings.default.get(f"{setting_name}")
 
     return cmd_type_filter_list
+
+
+def filter_package_setting():
+    """ Filters the setting 'filter_plugin_commands_on_package' to get rid of
+    any invalid values a user may set and sanitize it to sane defaults.
+
+    Args:
+        None
+
+    Returns:
+        package_filter (string | List[str]): The sanitised package filter list.
+    """
+    package_filter = commands_browser_settings("filter_plugin_commands_on_package")
+
+    if (
+        ((type(package_filter) != str) and (type(package_filter) != list)) or
+        (package_filter == "all")
+    ):
+        log(f"""'{package_filter}' is an invalid value for the setting
+        'filter_plugin_commands_on_package'. Falling back to default value.""")
+        package_filter = "all"
+
+    return package_filter

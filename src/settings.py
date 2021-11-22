@@ -16,7 +16,8 @@ def load_commands_browser_settings():
         "filter_plugin_commands_on_host": "all",
         "filter_plugin_commands_on_type": ["text", "window", "application"],
         "filter_core_commands_on_type": ["text", "window", "application", "find"],
-        "copy_command_signature_modifier_key": "ctrl"
+        "copy_command_signature_modifier_key": "ctrl",
+        "filter_plugin_commands_on_package": "all"
     }
 
 
