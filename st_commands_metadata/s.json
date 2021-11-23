@@ -89,11 +89,11 @@
     },
     "select_lines": {
         "command_type": "text",
-        "doc_string": "Select the current or next line, if the full current line is selected.",
+        "doc_string": "Adds a new selection (cursor) to the line above or below.",
         "args": [
             {
                 "name": "forward",
-                "doc_string": null,
+                "doc_string": "Whether to add the new selection (cursor) below the line.",
                 "type": "boolean"
             }
         ],
@@ -105,7 +105,7 @@
         "args": [
             {
                 "name": "file",
-                "doc_string": "Accepts a 'Packages/' relative path to a sublime build file to set as the current build system. An empty string will set it to the Automatic option as seen in 'Tools -> Build System'.",
+                "doc_string": "Accepts a 'Packages/' relative path to a sublime build file to set as the current build system. An empty string will set it to the 'Automatic' option as seen in 'Tools -> Build System'.",
                 "type": "string"
             }
         ],
@@ -135,11 +135,11 @@
     },
     "set_file_type": {
         "command_type": "text",
-        "doc_string": "Set the syntax for the view.",
+        "doc_string": "Sets the syntax for the active view.",
         "args": [
             {
                 "name": "syntax",
-                "doc_string": "The syntax to be set for the view. Can either be a package relative path like 'Packages/Foo/Bar.sublime-syntax' or 'scope:' prefixed syntax names.",
+                "doc_string": "The syntax to be set for the active view. Can either be a package relative path like 'Packages/Foo/Bar.sublime-syntax' or 'scope:' prefixed syntax name.",
                 "type": "string"
             }
         ],
@@ -147,7 +147,7 @@
     },
     "set_line_ending": {
         "command_type": "text",
-        "doc_string": "Set the line endings for the files.",
+        "doc_string": "Sets the line endings for the files.",
         "args": [
             {
                 "name": "type",
@@ -191,7 +191,7 @@
     },
     "show_overlay": {
         "command_type": "window",
-        "doc_string": "Show the overlay from the argument.",
+        "doc_string": "Shows the overlay from the argument.",
         "args": [
             {
                 "name": "overlay",
@@ -210,7 +210,7 @@
             },
             {
                 "name": "command",
-                "doc_string": "The name of the command. Only makes sense when 'name' is set to 'command_palette'",
+                "doc_string": "The name of the command. Only makes sense when 'overlay' is set to 'command_palette'",
                 "type": "string"
             },
             {
@@ -242,57 +242,57 @@
             },
             {
                 "name": "regex",
-                "doc_string": "Whether to activate the Regular Expression option.",
+                "doc_string": "Whether to activate the 'Regular Expression' option.",
                 "type": "boolean"
             },
             {
                 "name": "case_sensitive",
-                "doc_string": "Whether to activate the Case sensitive option.",
+                "doc_string": "Whether to activate the 'Case sensitive' option.",
                 "type": "boolean"
             },
             {
                 "name": "whole_word",
-                "doc_string": "Whether to activate the Whole word option.",
+                "doc_string": "Whether to activate the 'Whole word' option.",
                 "type": "boolean"
             },
             {
                 "name": "wrap",
-                "doc_string": "Whether to activate the Wrap option.",
+                "doc_string": "Whether to activate the 'Wrap' option.",
                 "type": "boolean"
             },
             {
                 "name": "in_selection",
-                "doc_string": "Whether to activate the In selection option.",
+                "doc_string": "Whether to activate the 'In selection' option.",
                 "type": "boolean"
             },
             {
                 "name": "highlight",
-                "doc_string": "Whether to activate the Highlight matches option.",
+                "doc_string": "Whether to activate the 'Highlight matches' option.",
                 "type": "boolean"
             },
             {
                 "name": "preserve_case",
-                "doc_string": "Whether to activate the Preserve Case option.",
+                "doc_string": "Whether to activate the 'Preserve Case' option.",
                 "type": "boolean"
             },
             {
                 "name": "show_context",
-                "doc_string": "Whether to activate the Show Context option.",
+                "doc_string": "Whether to activate the 'Show Context' option.",
                 "type": "boolean"
             },
             {
                 "name": "use_buffer",
-                "doc_string": "Whether to activate the Use Buffer option.",
+                "doc_string": "Whether to activate the 'Use Buffer' option.",
                 "type": "boolean"
             },
             {
                 "name": "use_gitignore",
-                "doc_string": "Whether to activate the Use gitignore option.",
+                "doc_string": "Whether to activate the 'Use gitignore' option.",
                 "type": "boolean"
             },
             {
                 "name": "where",
-                "doc_string": "The text to be put in the 'Where' field of Find in Files panel. Only makes sense when the 'panel' equals 'find_in_files'.",
+                "doc_string": "The text to be put in the 'Where' field of 'Find in Files' panel. Only makes sense when the 'panel' equals 'find_in_files'.",
                 "type": "string"
             }
         ],
@@ -306,17 +306,17 @@
     },
     "single_selection": {
         "command_type": "text",
-        "doc_string": "Switch to only the first selection.",
+        "doc_string": "Switches to the first selection.",
         "type": "core"
     },
     "slurp_find_string": {
         "command_type": "window",
-        "doc_string": "Use the current selection as the find string.",
+        "doc_string": "Uses the current selection as the find string.",
         "type": "core"
     },
     "slurp_replace_string": {
         "command_type": "window",
-        "doc_string": "Use the current selection as the replacement string.",
+        "doc_string": "Uses the current selection as the replacement string.",
         "type": "core"
     },
     "soft_redo": {
@@ -504,16 +504,16 @@
     },
     "switch_file": {
         "command_type": "window",
-        "doc_string": "",
+        "doc_string": "Switches between files having the same name and the specified extensions, additionally opening the file if it's not already open.",
         "args": [
             {
                 "name": "extensions",
-                "doc_string": null,
+                "doc_string": "The list of allowed extensions.",
                 "type": "List[string]"
             },
             {
                 "name": "side_by_side",
-                "doc_string": null,
+                "doc_string": "Whether to add the file to the group's multiselected sheets while switching.",
                 "type": "boolean"
             }
         ],
