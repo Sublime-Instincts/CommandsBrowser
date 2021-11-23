@@ -12,8 +12,8 @@ A Sublime Text package that allows a user to view all the available core/plugin 
 
 There are several ways of installing & using this package, which are listed below (from the most preferred way to the least preferred way)
 
-1. Use `Package Control: Install Package` and search for `CommandsBrowser` & install it. Restart ST after you install it.
-2. Use `Package Control: Add Repository`. Copy the GitHub url for this repository (without the `.git` at the end) and enter it into the input panel that pops up at the bottom when you select `Package Control: Add Repository`. Now use `Package Control: Install Package` and search for `CommandsBrowser` and install it. Restart ST after you install it.
+1. Use `Package Control: Install Package` and search for `CommandsBrowser` & install it.
+2. Use `Package Control: Add Repository`. Copy the GitHub url for this repository (without the `.git` at the end) and enter it into the input panel that pops up at the bottom when you select `Package Control: Add Repository`. Now use `Package Control: Install Package` and search for `CommandsBrowser` and install it.
 3. Simply `git clone` this repository in your `Packages` directory.
 4. Whenever a new tagged release is pushed, grab the attached zip file for that release, rename it to remove the `.zip` extension & add `.sublime-package` extension and drop it into your `Installed Packages` directory (You however, loose the goodness of Package Control automatically updating the package, when there is a new tagged release).
 
@@ -110,7 +110,7 @@ Since plugin based commands are specific to plugin/package, it's best to ask the
 
 ## Indepth documentation on commands.
 
-A few commands can be a bit complicated (either because they might have different ways of doing the same thing or may have different options that need explanations) and hence is skipped from the documentation panel. The [wiki](https://github.com/Sublime-Instincts/CommandsBrowser/wiki) documents such commands with examples. Note that it's still a work in progress.
+A few commands can be a bit complicated (either because they might have different ways of doing the same thing or may have different options that need explanations) and hence, such indepth documentation is skipped from the documentation panel. The [wiki](https://github.com/Sublime-Instincts/CommandsBrowser/wiki) documents such commands with examples. Note that it's still a work in progress.
 
 ## Issues & feature requests
 
