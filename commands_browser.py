@@ -9,16 +9,15 @@ from .src import (
 )
 
 
-def plugin_loaded():
-    """ This function is called when the package is loaded, but before the API
-    functions are made available. We need to do 2 things here.
+def loaded():
+    """ Wraps what needs to be present in plugin_loaded so that it can be used
+    in sublime.set_timeout.
 
-    1. Load the settings file.
+    Args:
+        None
 
-    2. Since we need a way to collect commands from the 3.3 host, we need to
-       create an additional folder (CommandsBrowser33) with a plugin that can
-       register a command to help collect that data. This is similar to the
-       strategy followed by APR.
+    Returns:
+        None
     """
     load_commands_browser_settings()
 
@@ -32,6 +31,25 @@ def plugin_loaded():
     if not os.path.exists(dest_file_path):
         with open(dest_file_path, "w") as f:
             f.write(sublime.load_resource(browse_33_resource))
+
+
+def plugin_loaded():
+    """ This function is called when the package is loaded, but before the API
+    functions are made available. We need to do 2 things here.
+
+    1. Load the settings file.
+
+    2. Since we need a way to collect commands from the 3.3 host, we need to
+       create an additional folder (CommandsBrowser33) with a plugin that can
+       register a command to help collect that data. This is similar to the
+       strategy followed by APR.
+    """
+
+    # I have no idea why the contents of loaded() needs to happen on the next
+    # UI refresh tick. If it's placed directly in plugin_loaded(), then the
+    # settings somehow return None instead of their default values and
+    # find_resources fails to find the py33 file.
+    sublime.set_timeout(loaded, 0)
 
 
 def plugin_unloaded():
