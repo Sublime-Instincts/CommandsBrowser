@@ -47,6 +47,7 @@ contexts:
     - match: \(
       scope: punctuation.section.parens.begin.doc_panel
       push: arg_type_brackets_body
+    - include: arg_options
 
   arg_type_brackets_body:
     - meta_scope: meta.parens.doc_panel

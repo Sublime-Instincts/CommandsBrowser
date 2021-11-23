@@ -1,20 +1,6 @@
 import os
-import sys
-import imp
 import shutil
 import sublime
-
-
-def reload(prefix, modules=[""]):
-    prefix = "CommandsBrowser.%s." % prefix
-
-    for module in modules:
-        module = (prefix + module).rstrip(".")
-        if module in sys.modules:
-            imp.reload(sys.modules[module])
-
-reload("src")
-
 
 from .src.settings import load_commands_browser_settings
 from .src import (
