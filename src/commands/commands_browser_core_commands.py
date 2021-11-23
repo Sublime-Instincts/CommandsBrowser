@@ -111,7 +111,7 @@ class CommandsBrowserCoreCommandsCommand(sublime_plugin.WindowCommand):
                 arg_name = arg['name']
                 arg_string = arg_string + f'"{arg_name}": , '
 
-            final_string = final_string + f'"{command_data[0]}", ' + "{ " + arg_string + " })"
+            final_string = final_string + f'"{command_data[0]}", ' + "{ " + arg_string.rstrip(", ") + " })"
             sublime.set_clipboard(final_string)
             sublime.status_message("Command signature copied to clipboard.")
 
