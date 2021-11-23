@@ -15,7 +15,7 @@
             },
             {
                 "name": "description",
-                "doc_string": "The arguments to be passed to the command.",
+                "doc_string": "The description for the command shown as an InputHandler label.",
                 "type": "string"
             }
         ],
@@ -60,7 +60,7 @@
     },
     "stage_all_untracked": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Stages all untracked files in the given repository.",
         "added": 2061,
         "type": "core"
     },

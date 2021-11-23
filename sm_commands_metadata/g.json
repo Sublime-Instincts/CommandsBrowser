@@ -203,21 +203,26 @@
     },
     "git_config": {
         "command_type": "window",
-        "doc_string": "Sets the given key value pair in your git config. Shows a dialog box asking whether the key value pair must be set for the global git config or only for the current repository.",
+        "doc_string": "Sets the given key value pair in your git config.",
         "args": [
             {
                 "name": "key",
-                "doc_string": "The target key. Refer to the official git docs https://git-scm.com/docs/git-config for more information on key value pairs.",
+                "doc_string": "The target key. Refer to the official git docs https://git-scm.com/docs/git-config for more information on available key value pairs.",
                 "type": "string"
             },
             {
                 "name": "value",
-                "doc_string": "The target value.",
+                "doc_string": "The target value to be set for the given key.",
                 "type": "string"
             },
             {
                 "name": "is_default_value",
                 "doc_string": "Whether to set this as the default checked item in the menu.",
+                "type": "boolean"
+            },
+            {
+                "name": "is_global",
+                "doc_string": "Whether to set this key value pair for the global git config or the local one. If the argument is not provided, then a dialog is shown asking the user to pick.",
                 "type": "boolean"
             }
         ],
