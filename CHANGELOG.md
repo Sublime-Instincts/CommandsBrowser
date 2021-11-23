@@ -26,3 +26,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Improved documentation for `cancel_edit_commit_message`, `navigate_back`, `navigate_forward`, `navigate_to_tag`, `open_in_editor`, `open_dir_in_sublime_text`, `show_command_palette`, `save_commit_message`, `commit`, `create_branch`, `create_tag`, `clean_working_dir`, `checkout_local_branch`, `delete_branch`, `delete_tag`, `discard_hunk`, `prompt_open_repository`, `rename_branch`, `reset` and `set_word_wrap`
+
+## [1.2.0] - 2021-11-23
+
+### Added
+- A new setting `filter_plugin_commands_on_package` to filter plugin commands based on the package.
+- Improved documentation for `select_lines`, `set_build_system`, `set_file_type`, `set_line_ending`, `show_overlay`,
+`show_panel`, `single_selection`, `slurp_find_string`, `slurp_replace_string`,
+`switch_file`, `discard_all_modified`, `git_config`, `navigate_to_commit_message`, `navigate_to_context_commit`
+`navigate_to_commit`, `navigate_to_branch`, `navigate_to_child`, `navigate_to_parent`,
+`open_in_editor`, `push_tag`, `quick_open_repository`, `stage_all_untracked`, `stage_all_unmerged` and `show_command_palette`
