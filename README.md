@@ -25,9 +25,9 @@ If you are interested in contributing to this repository, then you need to follo
 
 This package provides 3 items to the command palette.
 1. `CommandsBrowser: Browse available Sublime Text core commands.`
-This will show you all of the core commands that are present in Sublime Text. Selecting one would bring up a panel that would show the documentation for that command.
+This will show you all of the core commands that are present in Sublime Text. Selecting one would bring up a panel that would show the documentation for that command. You can also hold down <kbd>ctrl</kbd> while selecting a command to copy it's signature to clipboard.
 2. `CommandsBrowser: Browse available Sublime Merge core commands.`
-This will show you all of the core commands that are present in Sublime Merge. Selecting one would bring up a panel that would show the documentation for that command.
+This will show you all of the core commands that are present in Sublime Merge. Selecting one would bring up a panel that would show the documentation for that command. You can also hold down <kbd>ctrl</kbd> while selecting a command to copy it's signature to clipboard.
 3. `CommandsBrowser: Browse available plugin/package commands.`
 This will show you all of the plugin/package commands that are present in Sublime Text. Selecting one would open the corresponding plugin file & navigate to that location where the command class is implemented.
 
@@ -86,6 +86,17 @@ This setting allows a user to configure the modifier key that is used to copy th
 For a list of valid modifier key values, see https://www.sublimetext.com/docs/api_reference.html#type-event_dict
 
 The default value for this setting is `"ctrl"`.
+
+##### `filter_plugin_commands_on_package` (`str | List[str]`)
+
+This setting allows a user to filter the plugin commands based on the package name.
+
+Examples:
+1. `"all"`                     - Shows all plugin commands.
+2. `["PackageDev"]`            - Show only `PackageDev` commands.
+2. `["User", "OverrideAudti"]` - Show `OverrideAudit` & `User` commands.
+
+The default value for this setting is `"all"` (which is also the only valid string value this setting can take).
 
 ### Key bindings.
 
