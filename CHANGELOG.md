@@ -35,4 +35,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 `show_panel`, `single_selection`, `slurp_find_string`, `slurp_replace_string`,
 `switch_file`, `discard_all_modified`, `git_config`, `navigate_to_commit_message`, `navigate_to_context_commit`
 `navigate_to_commit`, `navigate_to_branch`, `navigate_to_child`, `navigate_to_parent`,
-`open_in_editor`, `push_tag`, `quick_open_repository`, `stage_all_untracked`, `stage_all_unmerged` and `show_command_palette`
+`open_in_editor`, `push_tag`, `quick_open_repository`, `stage_all_untracked`, `stage_all_unmerged` and `show_command_palette`.
+
+## [1.2.1] - 2021-11-23
+
+### Fixed
+- Fixed a situation where installing the package for the first time causes the `py33` file to be not detected by `sublime.find_resources` & settings returns `None`, thus forcing the user to restart inorder to let changes pick up
+properly (#4)
