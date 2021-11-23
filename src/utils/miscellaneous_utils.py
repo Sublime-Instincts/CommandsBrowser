@@ -83,7 +83,7 @@ def filter_package_setting():
 
     if (
         ((type(package_filter) != str) and (type(package_filter) != list)) or
-        (package_filter == "all")
+        (package_filter != "all")
     ):
         log(f"""'{package_filter}' is an invalid value for the setting
         'filter_plugin_commands_on_package'. Falling back to default value.""")
