@@ -42,3 +42,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Fixed a situation where installing the package for the first time causes the `py33` file to be not detected by `sublime.find_resources` & settings returns `None`, thus forcing the user to restart inorder to let changes pick up
 properly (#4)
+
+## [1.3.0] - 2021-11-24
+
+### Fixed
+- Fixed a situation where `"all"` was considered an invalid option for `filter_plugin_commands_on_package` (But it continued to work because the default fallback was `"all"`).
+- Removed the trailing `, ` from command signature when <kbd>ctrl</kbd> (or the configured modifier key) is used to copy command signature to clipboard.
+
+### Added
+- Added command palette and main menu entries for viewing documentation.
+- Added command palette entry for opening key bindings.
