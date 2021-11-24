@@ -22,7 +22,15 @@
         "command": "edit_settings",
         "args": {
             "base_file": "${packages}/CommandsBrowser/resources/CommandsBrowser.sublime-settings",
-            "default": "// Settings in here override those in \"CommandsBrowser/CommandsBrowser.sublime-settings\"\n\n{\n\t$0\n}\n",
+            "default": "// Settings in here override those in \"CommandsBrowser/resources/CommandsBrowser.sublime-settings\"\n\n{\n\t$0\n}\n",
+        },
+    },
+    {
+        "caption": "Preferences: CommandsBrowser Key Bindings.",
+        "command": "edit_settings",
+        "args": {
+            "base_file": "${packages}/CommandsBrowser/resources/Default.sublime-keymap",
+            "default": "// Key bindings in here override those in \"CommandsBrowser/resources/Default.sublime-keymap\"\n\n[\n\t$0\n]\n",
         },
     },
 ]
