@@ -31,6 +31,8 @@ This will show you all of the core commands that are present in Sublime Merge. S
 3. `CommandsBrowser: Browse available plugin/package commands.`
 This will show you all of the plugin/package commands that are present in Sublime Text. Selecting one would open the corresponding plugin file & navigate to that location where the command class is implemented.
 
+If you want to view the documentation for the package, simply use `CommandsBrowser: View Documentation` which will open the README for the project in your default browser.
+
 **Note:**
 
 1. Since the core command list is not exposed by ST like plugin commands are, the only way to keep track of it would be to manually maintain a list of commands and show it. So, the list is probably incomplete. As far as I know, it should be fairly close to a complete list (It's probably the most comprehensive public list available).
@@ -40,6 +42,13 @@ This will show you all of the plugin/package commands that are present in Sublim
 This package should be upto date with commands as of **ST Build 4122** & **SM Build 2062**
 
 ### Settings
+
+`CommandsBrowser` adds several settings for various customizations and filtering of commands which are documented below.
+
+You can change the settings in 2 ways (Both will open the same side by side view for settings).
+
+1. Use `Preferences -> Package Settings -> CommandsBrowser -> Settings` from the main menu.
+2. Use `Preferences: CommandsBrowser Settings` from the command palette.
 
 The package ships with necessary helper files for users of [LSP](https://packagecontrol.io/packages/LSP) + [LSP-json](https://packagecontrol.io/packages/LSP-json) to take full advantage of intelligent autocompletions for settings.
 
@@ -101,6 +110,11 @@ The default value for this setting is `"all"` (which is also the only valid stri
 ### Key bindings.
 
 This package just ships with one key binding to make it easier to open the core commands documentation panel (If it exists). The key binding for that is <kbd>ctrl + shift + c, ctrl + shift + d</kbd>
+
+You can change the key binding in 2 ways (Both will open the same side by side view for key bindings).
+
+1. Use `Preferences -> Package Settings -> CommandsBrowser -> Key Bindings` from the main menu.
+2. Use `Preferences: CommandsBrowser Key Bindings` from the command palette.
 
 ## Discussions
 
