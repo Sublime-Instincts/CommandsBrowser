@@ -18,6 +18,13 @@
         "command": "commands_browser_plugin_commands_33",
     },
     {
+        "caption": "CommandsBrowser: View Documentation.",
+        "command": "open_url",
+        "args": {
+            "url": "https://github.com/Sublime-Instincts/CommandsBrowser#readme"
+        },
+    },
+    {
         "caption": "Preferences: CommandsBrowser Settings.",
         "command": "edit_settings",
         "args": {
