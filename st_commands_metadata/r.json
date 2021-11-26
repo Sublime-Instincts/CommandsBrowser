@@ -16,7 +16,7 @@
     },
     "reindent": {
         "command_type": "text",
-        "doc_string": "Reindent the lines.",
+        "doc_string": "Reindents the line(s) at cursor location(s).",
         "args": [
             {
                 "name": "single_line",
@@ -45,7 +45,7 @@
     },
     "remove_license": {
         "command_type": "application",
-        "doc_string": "Removes the license. This will cause Sublime Text to go into an unregistered state.",
+        "doc_string": "Removes the license. This will cause Sublime Text/Merge to go into an unregistered state.",
         "type": "core"
     },
     "reopen": {

@@ -70,7 +70,7 @@
     },
     "close_by_index": {
         "command_type": "window",
-        "doc_string": "Close a view of a group by index. A value of -1 means active group/view.",
+        "doc_string": "Closes a view of the given group by it's index.",
         "args": [
             {
                 "name": "group",
@@ -110,7 +110,7 @@
     },
     "close_others_by_index": {
         "command_type": "window",
-        "doc_string": "Close all views of a group but the one identified by group and index. A value of -1 means active group/view.",
+        "doc_string": "Closes all views of a group but the one identified by group and index.",
         "args": [
             {
                 "name": "group",
@@ -128,7 +128,7 @@
     },
     "close_selected": {
         "command_type": "window",
-        "doc_string": "Close all selected views in a group. A value of -1 means active group.",
+        "doc_string": "Closes all selected views in a group.",
         "args": [
             {
                 "name": "group",
@@ -153,7 +153,7 @@
     },
     "close_to_right_by_index": {
         "command_type": "window",
-        "doc_string": "Closes all views of a group right of the one identified by index. A value of -1 means active group/view.",
+        "doc_string": "Closes all views of a group right of the one identified by index.",
         "args": [
             {
                 "name": "group",
@@ -177,7 +177,7 @@
     },
     "close_unmodified": {
         "command_type": "window",
-        "doc_string": "Closes all unmodified views of a group. A value of -1 means active group.",
+        "doc_string": "Closes all unmodified views of a group.",
         "args": [
             {
                 "name": "group",
@@ -195,7 +195,7 @@
     },
     "close_unmodified_to_right_by_index": {
         "command_type": "window",
-        "doc_string": "Closes all unmodified views of a group right of the one identified by index. A value of -1 means active group/view.",
+        "doc_string": "Closes all unmodified views of a group right of the one identified by index.",
         "args": [
             {
                 "name": "group",
