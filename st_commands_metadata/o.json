@@ -37,6 +37,11 @@
                 "type": "string"
             },
             {
+                "name": "group",
+                "doc_string": "The group to open the file into. The group needs to exist for this argument to work.",
+                "type": "int"
+            },
+            {
                 "name": "add_to_selection",
                 "doc_string": "Whether to add the opened file as a part of the current group's multiselected sheet(s).",
                 "type": "boolean"
