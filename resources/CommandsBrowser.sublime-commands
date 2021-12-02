@@ -25,6 +25,13 @@
         },
     },
     {
+        "caption": "CommandsBrowser: Open Wiki.",
+        "command": "open_url",
+        "args": {
+            "url": "https://github.com/Sublime-Instincts/CommandsBrowser/wiki"
+        },
+    },
+    {
         "caption": "Preferences: CommandsBrowser Settings.",
         "command": "edit_settings",
         "args": {
