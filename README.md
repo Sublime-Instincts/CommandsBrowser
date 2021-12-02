@@ -33,6 +33,8 @@ This will show you all of the plugin/package commands that are present in Sublim
 
 If you want to view the documentation for the package, simply use `CommandsBrowser: View Documentation` which will open the README for the project in your default browser.
 
+Similarly, you can use `CommandsBrowser: Open Wiki` to open the wiki of the repository in the default browser to view in depth documentation on certain commands.
+
 **Note:**
 
 1. Since the core command list is not exposed by ST like plugin commands are, the only way to keep track of it would be to manually maintain a list of commands and show it. So, the list is probably incomplete. As far as I know, it should be fairly close to a complete list (It's probably the most comprehensive public list available).
