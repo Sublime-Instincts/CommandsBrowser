@@ -292,7 +292,17 @@
             },
             {
                 "name": "where",
-                "doc_string": "The text to be put in the 'Where' field of 'Find in Files' panel. Only makes sense when the 'panel' equals 'find_in_files'.",
+                "doc_string": "The text to be populated in the 'Where' field of 'Find in Files' panel. Only makes sense when the 'panel' equals 'find_in_files'.",
+                "type": "string"
+            },
+            {
+                "name": "pattern",
+                "doc_string": "The text to be populated in the 'Find' field.",
+                "type": "string"
+            },
+            {
+                "name": "replace_pattern",
+                "doc_string": "The text to be populated in the 'Replace' field.",
                 "type": "string"
             }
         ],
