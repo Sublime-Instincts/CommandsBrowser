@@ -196,5 +196,11 @@
         "doc_string": "Cancels any changes done to the commit message while it's in edit mode.",
         "added": 1055,
         "type": "core"
+    },
+    "clear_recent_missing": {
+        "command_type": "window",
+        "doc_string": "Clears missing repositories from the quick switch repository window.",
+        "added": 2066,
+        "type": "core"
     }
 }
