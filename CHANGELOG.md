@@ -52,3 +52,14 @@ properly (#4)
 ### Added
 - Added command palette and main menu entries for viewing documentation.
 - Added command palette entry for opening key bindings.
+
+## [1.4.0] - 2021-02-
+
+### Fixed
+- Use color based kind ids instead of semantic kind ids for command type icons so that the command icons looks similar on theme using image textures (#6).
+
+### Added
+- Document `patter` & `replace_pattern` arguments for `show_panel` & `group` for `open_file` commands.
+- Document `clear_recent_missing`, `open_repository` commands on Sublime Merge.
+- Improved documentation for
+- Added command palette entry for opening the wiki documentation.
