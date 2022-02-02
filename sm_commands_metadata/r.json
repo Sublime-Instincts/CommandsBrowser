@@ -101,5 +101,11 @@
         "doc_string": null,
         "added": 1055,
         "type": "core"
+    },
+    "revert_diff_hunk": {
+        "command_type": "window",
+        "doc_string": null,
+        "added": 2051,
+        "type": "core"
     }
 }

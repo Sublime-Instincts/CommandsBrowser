@@ -19,6 +19,21 @@
                 "name": "prompt",
                 "doc_string": null,
                 "type": "boolean"
+            },
+            {
+                "name": "branch",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "remote",
+                "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "mode",
+                "doc_string": null,
+                "type": "string"
             }
         ],
         "added": 1055,

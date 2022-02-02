@@ -71,5 +71,18 @@
         ],
         "added": 1072,
         "type": "core"
+    },
+    "open_repository": {
+        "command_type": "window",
+        "doc_string": null,
+        "args": [
+            {
+                "name": "path",
+                "doc_string": null,
+                "type": "string"
+            }
+        ],
+        "added": null,
+        "type": "core"
     }
 }

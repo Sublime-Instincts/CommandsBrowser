@@ -108,6 +108,16 @@
         "args": [
             {
                 "name": "prompt",
+                "doc_string": "Whether to show a confirmation dialog, asking the user to confirm the action.",
+                "type": "boolean"
+            },
+            {
+                "name": "ref",
+                "doc_string": null,
+                "type": "boolean"
+            },
+            {
+                "name": "remote",
                 "doc_string": null,
                 "type": "boolean"
             }

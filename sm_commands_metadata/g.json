@@ -32,11 +32,11 @@
     },
     "gitflow_finish_feature": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Merges the given feature branch back into the development branch. Execute 'git flow feature finish <feature_branch> behind the scenes.'",
         "args": [
             {
                 "name": "branch",
-                "doc_string": null,
+                "doc_string": "The target feature branch. The name should be prefixed by the feature branch prefix set in the git flow config.",
                 "type": "string"
             }
         ],
@@ -63,6 +63,11 @@
             {
                 "name": "branch",
                 "doc_string": null,
+                "type": "string"
+            },
+            {
+                "name": "message",
+                "doc_string": "An optional message for the release.",
                 "type": "string"
             }
         ],
@@ -149,13 +154,27 @@
     },
     "gitflow_start_feature": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Creates the given feature branch for git flow.",
+        "args": [
+            {
+                "name": "name",
+                "doc_string": "The name of the feature branch.",
+                "type": "string"
+            }
+        ],
         "added": 1072,
         "type": "core"
     },
     "gitflow_start_bugfix": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Creates the given release branch for git flow.",
+        "args": [
+            {
+                "name": "name",
+                "doc_string": "The name of the release branch.",
+                "type": "string"
+            }
+        ],
         "added": 1072,
         "type": "core"
     },

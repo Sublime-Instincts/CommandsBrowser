@@ -16,16 +16,16 @@ def command_kind_type(command_type):
     """
 
     if command_type == "text":
-        return (sublime.KIND_ID_NAMESPACE, "T", "Text Command")
+        return (sublime.KIND_ID_COLOR_BLUISH, "T", "Text Command")
 
     if command_type == "window":
-        return (sublime.KIND_ID_FUNCTION, "W", "Window Command")
+        return (sublime.KIND_ID_COLOR_REDISH, "W", "Window Command")
 
     if command_type == "application":
-        return (sublime.KIND_ID_TYPE, "A", "Application Command")
+        return (sublime.KIND_ID_COLOR_PURPLISH, "A", "Application Command")
 
     if command_type == "find":
-        return (sublime.KIND_ID_MARKUP, "F", "Find Command")
+        return (sublime.KIND_ID_COLOR_YELLOWISH, "F", "Find Command")
 
 
 def log(message):

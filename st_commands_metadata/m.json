@@ -70,6 +70,7 @@
                 "type": "boolean"
             }
         ],
-        "type": "core"
+        "type": "default",
+        "location": "Default/pane.py"
     }
 }

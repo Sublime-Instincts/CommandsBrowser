@@ -19,7 +19,7 @@
     },
     "init_gitflow": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Intializes git flow for the given repository.",
         "added": 1072,
         "type": "core"
     }
