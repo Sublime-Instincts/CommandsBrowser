@@ -53,7 +53,7 @@ properly (#4)
 - Added command palette and main menu entries for viewing documentation.
 - Added command palette entry for opening key bindings.
 
-## [1.4.0] - 2021-02-
+## [1.4.0] - 2021-02-02
 
 ### Fixed
 - Use color based kind ids instead of semantic kind ids for command type icons so that the command icons looks similar on theme using image textures (#6).
@@ -61,5 +61,6 @@ properly (#4)
 ### Added
 - Document `patter` & `replace_pattern` arguments for `show_panel` & `group` for `open_file` commands.
 - Document `clear_recent_missing`, `open_repository` commands on Sublime Merge.
-- Improved documentation for
+- Improved documentation for following SM commands: `close_by_index`, `close_deleted_files`, `close_others_by_index`, `close_selected`, `close_to_right_by_index`, `close_unmodified`, `close_unmodified_to_right_by_index`, `delete_tag_on_remote`, `gitflow_finish_feature`, `gitflow_finish_release`, `gitflow_start_feature`, `gitflow_start_bugfix`, `init_gitflow`, `push`.
+- Improved documentation for the following ST commands: `move_to_neighboring_group`
 - Added command palette entry for opening the wiki documentation.
