@@ -45,6 +45,11 @@
                 "name": "add_to_selection",
                 "doc_string": "Whether to add the opened file as a part of the current group's multiselected sheet(s).",
                 "type": "boolean"
+            },
+            {
+                "name": "encoded_position",
+                "doc_string": "Whether to open the file at the given line & column. The line & column information must be specified in the 'file' argument.",
+                "type": "boolean"
             }
         ],
         "type": "core"
