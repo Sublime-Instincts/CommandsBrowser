@@ -27,6 +27,11 @@
                 "name": "lines",
                 "doc_string": null,
                 "type": "boolean"
+            },
+            {
+                "name": "ignore_auto_complete",
+                "doc_string": null,
+                "type": "boolean"
             }
         ],
         "type": "core"
