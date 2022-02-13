@@ -30,7 +30,7 @@
             },
             {
                 "name": "ignore_auto_complete",
-                "doc_string": null,
+                "doc_string": "Whether to skip navigating the AC items when the AC is open.",
                 "type": "boolean"
             }
         ],
