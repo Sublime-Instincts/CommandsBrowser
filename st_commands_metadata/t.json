@@ -173,6 +173,11 @@
                 "name": "block",
                 "doc_string": "Whether the comment to be toggled should be a block comment.",
                 "type": "boolean"
+            },
+            {
+                "name": "variant",
+                "doc_string": "The line/block comment variant to pick from the preferences file. As an example, 'TM_COMMENT_START_2' - variant of 2, 'TM_COMMENT_START_3' - variant of 3 and so on.",
+                "type": "int"
             }
         ],
         "type": "default",
