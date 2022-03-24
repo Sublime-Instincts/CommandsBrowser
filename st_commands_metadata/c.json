@@ -396,5 +396,29 @@
         "doc_string": "Opens a new side by side window layout, with the current color scheme (default version) on the left & the user version on the right side. To make color scheme customization easier.",
         "type": "default",
         "location": "Default/ui.py"
+    },
+    "convert_ident_case": {
+        "command_type": "text",
+        "doc_string": "Transforms the target selection(s) based on the specified casing.",
+        "args": [
+            {
+                "name": "case",
+                "doc_string": "The target casing. Valid values are 'upper', 'lower' & 'title'.",
+                "type": "string"
+            },
+            {
+                "name": "first_case",
+                "doc_string": "The casing of the first word. Defaults to the value of the argument 'case', if not specified.",
+                "type": "string"
+            },
+            {
+                "name": "separator",
+                "doc_string": "The string to use to seperate words.",
+                "type": "string"
+            }
+        ],
+        "added": 4128,
+        "type": "default",
+        "location": "Default/transform.py"
     }
 }
