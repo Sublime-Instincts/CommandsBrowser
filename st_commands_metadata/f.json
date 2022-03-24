@@ -127,13 +127,13 @@
     },
     "focus_to_left": {
         "command_type": "window",
-        "doc_string": null,
+        "doc_string": "Changes the focus to the left sheet (if any) of the current sheet in multi selected sheet(s).",
         "type": "core",
         "added": 4097
     },
     "focus_to_right": {
-        "command_type": "text",
-        "doc_string": null,
+        "command_type": "window",
+        "doc_string": "Changes the focus to the right sheet (if any) of the current sheet in multi selected sheet(s).",
         "type": "core",
         "added": 4097
     },
