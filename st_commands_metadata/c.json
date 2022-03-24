@@ -134,9 +134,32 @@
                 "name": "group",
                 "doc_string": "The index of the target group.",
                 "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": "The index within the target group.",
+                "type": "int"
             }
         ],
         "added": 4050,
+        "type": "core"
+    },
+    "close_unselected": {
+        "command_type": "window",
+        "doc_string": "Closes all unselected views in a group.",
+        "args": [
+            {
+                "name": "group",
+                "doc_string": "The index of the target group.",
+                "type": "int"
+            },
+            {
+                "name": "index",
+                "doc_string": "The index within the target group.",
+                "type": "int"
+            }
+        ],
+        "added": 4128,
         "type": "core"
     },
     "close_tag": {
