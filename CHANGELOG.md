@@ -59,8 +59,20 @@ properly (#4)
 - Use color based kind ids instead of semantic kind ids for command type icons so that the command icons looks similar on theme using image textures (#6).
 
 ### Added
-- Document `patter` & `replace_pattern` arguments for `show_panel` & `group` for `open_file` commands.
+- Document `pattern` & `replace_pattern` arguments for `show_panel` & `group` for `open_file` commands.
 - Document `clear_recent_missing`, `open_repository` commands on Sublime Merge.
 - Improved documentation for following SM commands: `close_by_index`, `close_deleted_files`, `close_others_by_index`, `close_selected`, `close_to_right_by_index`, `close_unmodified`, `close_unmodified_to_right_by_index`, `delete_tag_on_remote`, `gitflow_finish_feature`, `gitflow_finish_release`, `gitflow_start_feature`, `gitflow_start_bugfix`, `init_gitflow`, `push`.
 - Improved documentation for the following ST commands: `move_to_neighboring_group`
 - Added command palette entry for opening the wiki documentation.
+
+## [1.5.0] - 2022
+
+### Added
+- Document `encoded_position` argument for the `open_file` command.
+- Document `ignore_auto_complete` argument for the `move` command.
+- Document `variant` argument for the `toggle_comment` command.
+- Document `close_unselected` & `convert_ident_case` commands.
+- Improved documentation for the following ST commands: `close_selected`
+
+### Removed
+- Remove the `quick_diff` command. This command was found to not exist.
