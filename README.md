@@ -41,7 +41,7 @@ Similarly, you can use `CommandsBrowser: Open Wiki` to open the wiki of the repo
 
 2. The list of Sublime Merge commands are limited to what is specific to Sublime Merge (95% of which is git related). However, since Sublime Text & Sublime Merge share a common codebase, there is a decent possibility that a good number of ST commands work in SM as well. They are not listed in SM, because they are already listed in ST. So, together, ST + SM command list should be a good overview of the total number of commands present in both applications together.
 
-This package should be upto date with commands as of **ST Build 4125** & **SM Build 2067**
+This package should be upto date with commands as of **ST Build 4131** & **SM Build 2069**
 
 ### Settings
 
@@ -152,7 +152,7 @@ He has an amazing [YouTube channel](https://www.youtube.com/c/OdatNurd) that you
 ## License
 The MIT License (MIT)
 
-Copyright 2021 &copy; Ashwin Shenoy
+Copyright 2021-22 &copy; Ashwin Shenoy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sub license, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

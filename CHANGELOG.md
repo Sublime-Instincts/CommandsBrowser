@@ -65,14 +65,14 @@ properly (#4)
 - Improved documentation for the following ST commands: `move_to_neighboring_group`
 - Added command palette entry for opening the wiki documentation.
 
-## [1.5.0] - 2022
+## [1.5.0] - 2022-03-31
 
 ### Added
 - Document `encoded_position` argument for the `open_file` command.
 - Document `ignore_auto_complete` argument for the `move` command.
 - Document `variant` argument for the `toggle_comment` command.
 - Document `close_unselected` & `convert_ident_case` commands.
-- Improved documentation for the following ST commands: `close_selected`
+- Improved documentation for the following ST commands: `close_selected`, `focus_to_left`, `focus_to_right`.
 
 ### Removed
 - Remove the `quick_diff` command. This command was found to not exist.
