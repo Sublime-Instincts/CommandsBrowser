@@ -16,7 +16,7 @@
             {
                 "name": "kind",
                 "doc_string": null,
-                "type": null
+                "type": "sublime.KindId"
             },
             {
                 "name": "side_by_side",
