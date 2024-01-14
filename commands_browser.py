@@ -1,6 +1,7 @@
-import os
-import shutil
 import sublime
+
+from pathlib import Path
+from zipfile import ZipFile
 
 from .src.settings import load_commands_browser_settings
 from .src import (
@@ -21,16 +22,25 @@ def loaded():
     """
     load_commands_browser_settings()
 
-    browse_33_resource = [a for a in sublime.find_resources("*.py") if a.startswith("Packages/CommandsBrowser/src/py33")][0]
+    package_root = Path(sublime.installed_packages_path())
+    package_name = __package__ + "33.sublime-package"
+    package_file = package_root / package_name
+    if package_file.exists():
+        return
 
-    commands_browser_33_path = os.path.join(sublime.packages_path(), "CommandsBrowser33")
-    dest_file_path = os.path.join(commands_browser_33_path, "browse.py")
+    # static list of resources to pack into python 3.3 package
+    res_dir = "Packages/" + __package__ + "/src/py33/"
+    res_files = ["browse.py"]
 
-    if not os.path.exists(commands_browser_33_path):
-        os.makedirs(commands_browser_33_path)
-    if not os.path.exists(dest_file_path):
-        with open(dest_file_path, "w") as f:
-            f.write(sublime.load_resource(browse_33_resource))
+    # Create intermediate package file, which is not yet loaded by ST
+    tmp_file = package_root / (package_name + "-new")
+    with ZipFile(tmp_file, "w") as pkg:
+        pkg.writestr(".hidden-sublime-package", "")
+        for res in res_files:
+            pkg.writestr(res, sublime.load_resource(res_dir + res))
+
+    # Enable package by renaming to target name
+    tmp_file.rename(package_file)
 
 
 def plugin_loaded():
@@ -65,7 +75,6 @@ def plugin_unloaded():
        the panel to throw error dialogs because it now refernces a non existing
        syntax file.
     """
-    commands_browser_33_path = os.path.join(sublime.packages_path(), "CommandsBrowser33")
 
     # Since we do not have a reference to the window object for which the panel
     # was created, we simply loop through the available windows and destroy the
@@ -73,7 +82,11 @@ def plugin_unloaded():
     for window in sublime.windows():
         window.destroy_output_panel("CommandsBrowser")
 
+    package_root = Path(sublime.installed_packages_path())
+    package_name = __package__ + "33.sublime-package"
+    package_file = package_root / package_name
+
     try:
-        shutil.rmtree(commands_browser_33_path)
+        package_file.unlink()
     except Exception as e:
-        print(f"[CommandsBrowser]: Failed to remove CommandsBrowser33 with exception {e}")
+        print(f"[CommandsBrowser]: Failed to remove {package_name} with exception {e}")
